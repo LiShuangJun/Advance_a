@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{$site_title}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/bower_components/bootstrap/dist/css/bootstrap.min.css?_={$site_version}">
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/flexslider.css?_={$site_version}">
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/font-awesome.min.css?_={$site_version}">
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/perfect-scrollbar.min.css?_={$site_version}">
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/DateTimePicker.css?_={$site_version}">
+  <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="./css/DateTimePicker-ltie9.min.css">
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/app.css?_={$site_version}">
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/forms.css?_={$site_version}">
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/new.css?_={$site_version}">
+  {block name="style"}{/block}
+</head>
+<body class="loading">
+{block name="header"}
+{include file="common/header"/}
+{/block}
+{block name="content"}{/block}
+{block name="footer"}
+{include file="common/footer"/}
+{/block}   
+    
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/jquery-1.12.0.min.js?_={$site_version}"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/jquery.validate.min.js?_={$site_version}"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/jquery.flexslider.js?_={$site_version}"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/jquery.city.select.min.js?_={$site_version}"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/perfect-scrollbar.min.js?_={$site_version}"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/perfect-scrollbar.jquery.min.js?_={$site_version}"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/DateTimePicker.min.js?_={$site_version}"></script>
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="{$static_path}/advance/js/vendor/DateTimePicker-ltie9.min.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/DatetimePicker-i18n-zh-CN.js?_={$site_version}"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/main.js?_={$site_version}"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/forms.js?_={$site_version}"></script>
+
+ 
+  <script type="text/javascript">
+      window.__addurl__='{:url(\'Index/addCase\')}';
+      window.__loginurl__='{:url(\'Login/index\')}';
+    $(function(){
+        
+
+
+               function isChina(){
+             var country_val=$("select[name='country']").val();
+             if(country_val!=1){
+                 $("#province").hide();
+                 $("#city").hide();
+                 $("#district").hide();
+                 $("#zip_code").parent().parent().hide();
+                 $("#e_province").parent().parent().show();
+             }else{
+                 $("#province").show();
+                 $("#city").show();
+                 $("#district").show();
+                 $("#zip_code").parent().parent().show();
+                 $("#e_province").parent().parent().hide();
+             }
+         }
+            
+
+    isChina();
+
+      $("select[name='country']").change(function(){
+          
+            isChina();
+      });
+  
+      
+      function getcity(id){
+          		var current_province_id=id;
+                  
+		
+		$.ajax({
+			url:"{:url('@module/cases/Interfaces/getCity')}",
+			data:{ParentId:current_province_id},
+			dataType:'json',
+			type:'post',
+                        async: false,
+			success:function(re){
+				var html='<option value="0">请选择</option>';
+                                $("[name='district']").html(html);
+				var item=re.data;
+				for(var i in item){
+					html +='<option value="'+item[i]['id']+'" >'+item[i]['area_name']+'</option>';
+				}
+				$("[name='city']").html(html);
+                                
+			}
+		})
+      }
+      
+      
+      function getdistrict(id){
+          		var current_city=id;
+		$.ajax({
+			url:"{:url('@module/cases/Interfaces/getDistrict')}",
+			data:{ParentId:current_city},
+			dataType:'json',
+			type:'post',
+			success:function(re){
+				var html='<option value="0">请选择</option>';
+				var item=re.data;
+				for(var i in item){
+					html +='<option value="'+item[i]['id']+'" >'+item[i]['area_name']+'</option>';
+				}
+				$("[name='district']").html(html);
+			}
+		})
+      }
+      	$("[name='province']").change(function(){
+		$("[name='city']").html('<option value="0">请选择</option>');
+                getcity($(this).val());
+                $("[name='district']").val();
+	})
+	$("[name='city']").change(function(){
+		$("[name='district']").html('<option value="0">请选择</option>');
+
+                getdistrict($(this).val());
+	})
+	var pro_id=$("[name='province']").val();
+        if(pro_id>0){
+            $("[name='city']").html('<option value="0">请选择</option>');
+            getcity($("[name='province']").val());
+            $("[name='district']").html('<option value="0">请选择</option>');
+            getdistrict($("[name='province']").val());
+        }
+
+
+});
+ $.each($('.logvilad'),function(i){
+     $(this).click(function(){
+         if({$userid}==0){
+             window.location.href='{:url(\'Login/index\')}';
+         }
+     })
+     
+ })
+
+// 上传文件
+	$('#upload_file').on('change', function(){
+		
+		var uploadFile = $(this).get(0).files[0];
+		
+		if(typeof uploadFile == 'undefined'){
+			return false;
+		}
+		
+		var formData = new FormData();
+		
+		formData.append('upload_file', uploadFile);
+		var ajaxOption = {
+			url 	: '{:url("advance/Upload/upload")}',
+			type	: 'post',
+			data	: formData,
+			dataType: 'json',
+			timeout	: 0,
+			processData : false,
+			contentType : false,
+			success	: function(res){
+				
+				if(res.code == 1){
+					$('#upload_result').html('<span >['+res.data.hash+'.'+res.data.ext+']</span>');
+				       $('#upload_file').before('<input type="hidden" value="'+res.data.url+'" name="options"/>');
+				}else{
+					$('#upload_result').html('<span >['+res.msg+']</span>');
+				}
+			},
+			error : function(xhr){
+				
+				$('#upload_result').html('<span >[网络链接错误]</span>');
+			}
+		};
+		$.ajax(ajaxOption);
+	});
+</script>
+  {block name="jscode"}{/block}
+</body>
+</html>
+
+

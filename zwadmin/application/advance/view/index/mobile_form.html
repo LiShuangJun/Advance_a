@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{$site_title}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/perfect-scrollbar.min.css">
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/DateTimePicker.css">
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/DateTimePicker-ltie9.min.css">
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/app.css">
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/m_form.css">
+</head>
+<body>
+  <div id="page-wrapper">
+    <div class="form-wrapper">
+      <div class="mobile-form-logo-header"><a class="logo-wrapper" href="{:url('/am')}"><span class="logo1"><img src="{$static_path}/advance/img/logo.png" alt=""></span></a></div>
+      <div class="m-form-step-indicator clearfix"><div><span>患者信息</span></div><div><span>申请人信息</span></div><div><span>描述信息</span></div></div>
+      <form class="medical-form  form-horizontal" role="form">
+        <input type="hidden" id="form-type" name="case_type" value="{$service_id}">
+        <div class="form-section current">
+          <div class="form-group">
+            <label for="patient-name" class="col-xs-4 col-sm-3 control-label medical-label">患者姓名</label>
+            <div class="col-xs-8 col-sm-9">
+              <input type="text" class="form-control" id="patient-name" name="username">
+            </div>
+          </div>
+          <div class="form-group date-select">
+            <label for="birth-date" class="col-xs-4 col-sm-3 control-label medical-label">出生日期</label>
+            <div class="col-xs-8 col-sm-9">
+              <input type="text" class="form-control" id="patient-birth" name="birthday" data-field="date" readonly="">
+              <div class="box-container"><div id="dtBox"></div></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="patient-gender" class="col-xs-4 col-sm-3 control-label medical-label">患者性别</label>
+            <div class="col-xs-8 col-sm-9">
+              <div class="col-xs-6 col-sm-4 gender-single">
+                <label for="patient-gender1"><input type="radio" name="sex" id="patient-gender1" value="1" checked><span>男</span></label>
+              </div>
+              <div class="col-xs-6 col-sm-4 gender-single">
+                <label for="patient-gender2"><input type="radio" name="sex" id="patient-gender2" value="0"><span>女</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-group">
+            <label for="" class="col-xs-6 col-sm-4 control-label medical-label">是否为患者本人</label>
+            <div class="col-xs-6 col-sm-8 relation-between">
+              <div class="col-xs-6 col-sm-6 relation-single">
+                <label for="is-patient-self1"><input type="radio" name="isme" id="is-patient-self1" value="1" checked><span>是</span></label>
+              </div>
+              <div class="col-xs-6 col-sm-6 relation-single">
+                <label for="is-patient-self2"><input type="radio" name="isme" id="is-patient-self2" value="0"><span>否</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="other-relation" class="col-xs-5 col-sm-4 control-label medical-label">与患者关系</label>
+            <div class="col-xs-7 col-sm-8">
+              <div class="select-wrapper"><select id="other-relation" disabled="" name="relationship" class="not-mandatory">
+                
+                <option value="父母">父母</option>
+                <option value="子女">子女</option>
+                <option value="配偶">配偶</option>
+                <option value="其他">其他</option>
+              </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="applicant-name" class="col-xs-5 col-sm-4 control-label medical-label">申请人姓名</label>
+            <div class="col-xs-7 col-sm-8">
+              <input type="text" class="form-control" id="applicant-name" name="applicant_name">
+            </div>
+          </div>
+        <div class="form-group">
+              <label for="country" class="col-xs-5 col-sm-4 control-label medical-label">国家</label>
+              <div class="col-xs-7 col-sm-8">
+                <select id="country" name="country" >
+                  {volist name="country_list" id="cl"}
+                    <option  value="{$cl['value']}" >{$cl['name']}</option>
+                  {/volist}
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="country" class="col-xs-5 col-sm-4 control-label medical-label">省(州)</label>
+              <div class="col-xs-7 col-sm-8">
+                  <input type="text" class="form-control" id="e_province" name="e_province">
+              </div>
+            </div>
+            
+             <div class="form-group">
+              <label for="user-address" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">地址</span></label>
+              <div class="col-xs-7 col-sm-8">
+                <div class="col-xs-4 col-sm-4 address-choose">
+                    <div class="select-wrapper">
+                  <select id="province" name="province">
+                      <option value="">省</option>
+                       {volist name="area" id="vo"}
+                         <option  value="{$vo['id']}" >{$vo['area_name']}</option>
+                         {/volist}
+                  </select>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 address-choose">
+                    <div class="select-wrapper">
+                  <select id="city" name="city">
+                      <option value="">市</option>
+                  
+                  </select>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 address-choose">
+                    <div class="select-wrapper">
+                  <select id="district" name="district">
+                      <option value="">区</option>
+                  
+                  </select>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 address-details">
+                  <input type="text" class="form-control" id="address-details" name="address" placeholder="详细地址">
+                </div>
+              </div>
+            </div>
+
+          <div class="form-group">
+            <label for="user-zip" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">邮编</span></label>
+            <div class="col-xs-7 col-sm-8">
+              <input type="text" class="form-control" id="zip_code" name="zip_code">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="user-first-phone" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">首选电话</span></label>
+            <div class="col-xs-7 col-sm-8">
+              <input type="text" class="form-control" id="user-first-phone" name="preferred_phone">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="user-second-phone" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">备用电话</span></label>
+            <div class="col-xs-7 col-sm-8">
+              <input type="text" class="form-control" id="user-second-phone" name="standby_phone">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="user-email" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width"><span class="little-character">E&#45;mail</span>地址</span></label>
+            <div class="col-xs-7 col-sm-8">
+              <input type="text" class="form-control" id="user-email" name="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="user-time" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label medical-label special-label"><div class="time-grid"><span>接听电话</span><span>优选时间</span></div><div>&#40;可多选&#41;</div></label>
+            <div class="col-xs-7 mobile-time-trigger"><button class="btn">选择时间</button></div>
+            <div class="col-sm-6 col-md-7 col-lg-8 user-time">
+              <div class="user-time-wrapper">
+                  <div class="time-wrapper"><div class="time-inner-wrapper"><label><input type="checkbox" name="preferred_time" value="9am-12pm"><span>9am-12pm</span></label></div><div class="time-inner-wrapper"><label><input type="checkbox" name="preferred_time" value="12pm-3pm"><span>12pm-3pm</span></label></div></div>
+                  <div class="time-wrapper"><div class="time-inner-wrapper"><label><input type="checkbox" name="preferred_time" value="3pm-6pm"><span>3pm-6pm</span></label></div><div class="time-inner-wrapper"><label><input type="checkbox" name="preferred_time" value="6pm-9pm"><span>6pm-9pm</span></label></div></div>
+                  <div class="user-time-close">确定</div>
+                </div>
+                <div class="user-time-error"></div>
+            </div>
+          </div>
+        </div>
+        <div class="form-section">
+        <div class="form-group">
+          <label class="col-xs-12 col-sm-12 control-label medical-label change-label">请详细描述您的情况和需求</label>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12 col-sm-12">
+            <textarea class="info-details" name="illness"></textarea>
+          </div>
+        </div>
+        <a href="javascript:;" class="a-uploadphone">
+                <input type="file" name="upload_file" id="upload_file">上传我的病史资料(可选)
+                
+        </a><span id="upload_result"></span>
+        <p>文件仅支持单个JPG,PDF,JPEG,PNG,DOC,ZIP格式,多个文件请压缩ZIP上传,最大上传大小为10M</p>
+        <div class="form-group optional-checkbox">
+          <div class="col-sm-12">
+            <input type="checkbox" id="doctor-checkbox" name="doctor_checkbox">
+            <label for="doctor-checkbox">我当前的治疗医生的信息（选填）</label>
+          </div>
+        </div>
+        <div class="form-group doctor-group">
+          <label for="doctor-name" class="col-xs-5 col-sm-4 control-label medical-label">医生姓名</label>
+          <div class="col-xs-7 col-sm-8">
+            <input type="text" class="form-control doctor-name doctor"  name="treatment_doctor">
+          </div>
+        </div>
+        <div class="form-group doctor-group">
+          <label for="doctor-hospital" class="col-xs-5 col-sm-4 control-label medical-label">医院</label>
+          <div class="col-xs-7 col-sm-8">
+            <input type="text" class="form-control doctor-hospital doctor"  name="treatment_hospital">
+          </div>
+        </div>
+        <div class="form-group doctor-group">
+          <label for="doctor-major" class="col-xs-5 col-sm-4 control-label medical-label">专科</label>
+          <div class="col-xs-7 col-sm-8">
+            <input type="text" class="form-control doctor-major doctor"  name="specialty">
+          </div>
+        </div>
+        </div>
+        <div class="checkbox-wrapper">
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="checkbox" id="contract-checkbox" name="contract-checkbox" checked>
+              <label for="contract-checkbox">我已阅读并接受</label><span class="contract-click">授权协议</span>
+            </div>
+          </div>
+        </div>
+        <div class="contract-check-error"></div>
+        <div class="form-navigation clearfix">
+          <a type="button" class="back-to-home btn btn-navigate pull-left" href="{:url('/am')}">返回</a>
+          <button type="button" class="previous btn btn-navigate pull-left">上一步</button>
+          <button type="button" class="next btn btn-navigate pull-right">下一步</button>
+          <input type="submit" value="提交" class="btn btn-navigate pull-right">
+        </div>
+      </form>
+    </div>
+    <div class="form-feedback-wrapper">
+      <div class="form-feedback">
+        <p>感谢！我们将尽快与您联系。</p>
+        <a class="btn form-feedback-btn" href="{:url('/am')}">我知道了</a>
+      </div>
+    </div>
+    <div class="contract-context">
+    <div class="contract-header">
+      <span>授权协议</span><span class="contract-close-button"><i class="fa fa-times"></i></span>
+    </div>
+    <div class="contract-para" id="contract-para">
+      <div class="para-outter-wrapper"><p><!-- 在开始医疗专家意见书服务之前，您必须阅读，理解并同意以下条款和条件。 -->
+      本人在上文提供的信息是真实的。本人了解专家医疗意见计划的服务内容并同意以下条款：</p></div>
+      <div class="para-outter-wrapper"><span>1、</span><p><!-- 您在此授权您的治疗医师和其他医疗服务提供者将所有相关的个人和医疗数据披露给高级医疗公司，用于获得第二个意见，并授予高级医疗公司，许可其按在我们的隐私声明中所描述方式使用和披露这一信息。如果需要，您将为每个医师或其他医疗服务提供者签署单独的授权表，允许他们与我们分享保护的健康信息。您同意，您提供给我们的信息尽您所知将是准确和完整的。您有责任确保所有相关资料已提供给高级医疗公司。 -->本申请表中提供给中德安联/汇医(包括电话方式)的所有个人和医疗数据等“个人隐私信息”,仅被用于此保险产品涵盖的健康顾问和医疗专家意见服务,在必要时与相关与医疗专家和医疗机构分享。</p></div>
+      <div class="para-outter-wrapper"><span>2、</span><p><!-- 该报告是关于您的案件的医疗专家的意见，这基于您提供给我们的，以及我们经您许可，从您的医生获得的医疗信息。润色医疗专家意见报告的医生，不会获得亲自为您检查，订购额外的测试，或者获取超出您所提供的信息之外的任何信息的利益。由于医学专家将没有亲自检查您，或订购额外的测试，它不属于医疗诊断。通过医疗专家意见书项目的医学专家，不会并不能仅基于我们收到的信息，为您的医疗负责。医疗决策应在亲自检查和诊断测试之后做出，如您的检查和病史所示。该报告旨在为您提供信息来补充您已经从您的治疗医生那里获得的信息。医疗专家意见报告中包含的信息不得用于替代您的医生的建议。您应该与自己的、负责您的医疗的医生讨论此报告。 -->我们会妥善安全地使用您的资料。您的数据在咨询相关专家是将被匿名,以保护您的隐私。</p></div>
+      <div class="para-outter-wrapper"><span>3、</span><p><!-- 您确认，您的健康保险可能不包括建议在医疗专家意见报告中推荐的特定测试或治疗，因为涵盖范围取决于您的健康保险条款。高级医疗公司和医疗专家不会为您的健康保险决定健康福利涵盖范围的决定。请参考您的保险公司，以核实涵盖范围和预授权处理。 -->您在此接受中德安联及其合作伙伴的员工与您联系,以获得必要的信息为您提供服务。</p></div>
+      <div class="para-outter-wrapper"><span>4、</span><p><!-- 为了给您进行服务，高级医疗公司将从您和您的医疗服务提供者收集您的医疗信息，并转交给我们在美国的办公室，或其他的高级医疗公司办公室。可应要求提供涉及您的案件中涉及的个人和国家的详细信息。 -->您在此同意根据服务要求提供所有相关的准确、完整的个人和医疗数据,以推进健康顾问和医疗意见流程。</p></div>
+      <div class="para-outter-wrapper"><span>5、</span><p><!-- 如果申请人不是病人或病人的代表，我们需要患者的书面授权，才能披露其任何医疗或个人识别数据。 -->您在此同意汇医向承担您所使用的服务的费用的保险公司分享您的专家医疗意见报告。 </p></div>
+      <div class="para-outter-wrapper"><span>6、</span><p><!-- 本人保证上述信息尽我所知是准确的。我已阅读并理解了上述信息，并同意这些条款。 -->给您出具专家医疗意见报告的医生将不会从您做医疗检查中获取利益。给您提供的是健康顾问和医疗意见服务，不涉及直接诊断及治疗。顾问和意见报告服务旨在为您提供补充信息，不可用来代替您医生的建议。
+      </p></div>
+      <div class="para-outter-wrapper"><span>7、</span><p><!-- 我保证医疗专家意见书的参与者是公司的员工，或其合格的配偶，或公司的员工的家庭伴侣，或公司员工的有资格的、受抚养的子女。 -->接收到顾问和意见报告之后，由您做出相关的决策和选择。安联及其合作伙伴不对您做任何倾向性的推荐，不对您的主观意志和决 定及其后果负责。</p></div>
+    </div>
+  </div>
+  </div>
+      <script type="text/javascript" src="{$static_path}/advance/js/vendor/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+    window.__addurl__='{:url(\'Index/addCase\')}';
+    window.__loginurl__='{:url(\'Login/index\')}';
+     $(function(){
+        
+
+function isChina(){
+             var country_val=$("select[name='country']").val();
+             if(country_val!=1){
+                 $("#province").hide();
+                 $("#city").hide();
+                 $("#district").hide();
+                 $("#zip_code").parent().parent().hide();
+                 $("#e_province").parent().parent().show();
+             }else{
+                 $("#province").show();
+                 $("#city").show();
+                 $("#district").show();
+                 $("#zip_code").parent().parent().show();
+                 $("#e_province").parent().parent().hide();
+             }
+         }
+            
+
+    isChina();
+
+      $("select[name='country']").change(function(){
+          
+            isChina();
+      });
+  
+      
+      function getcity(id){
+          		var current_province_id=id;
+                  
+		
+		$.ajax({
+			url:"{:url('@module/cases/Interfaces/getCity')}",
+			data:{ParentId:current_province_id},
+			dataType:'json',
+			type:'post',
+                        async: false,
+			success:function(re){
+				var html='<option value="0">请选择</option>';
+                                $("[name='district']").html(html);
+				var item=re.data;
+				for(var i in item){
+					html +='<option value="'+item[i]['id']+'" >'+item[i]['area_name']+'</option>';
+				}
+				$("[name='city']").html(html);
+                                
+			}
+		})
+      }
+      
+      
+      function getdistrict(id){
+          		var current_city=id;
+		$.ajax({
+			url:"{:url('@module/cases/Interfaces/getDistrict')}",
+			data:{ParentId:current_city},
+			dataType:'json',
+			type:'post',
+			success:function(re){
+				var html='<option value="0">请选择</option>';
+				var item=re.data;
+				for(var i in item){
+					html +='<option value="'+item[i]['id']+'" >'+item[i]['area_name']+'</option>';
+				}
+				$("[name='district']").html(html);
+			}
+		})
+      }
+      	$("[name='province']").change(function(){
+		$("[name='city']").html('<option value="0">请选择</option>');
+                getcity($(this).val());
+                $("[name='district']").val();
+	})
+	$("[name='city']").change(function(){
+		$("[name='district']").html('<option value="0">请选择</option>');
+
+                getdistrict($(this).val());
+	})
+	var pro_id=$("[name='province']").val();
+        if(pro_id>0){
+            $("[name='city']").html('<option value="0">请选择</option>');
+            getcity($("[name='province']").val());
+            $("[name='district']").html('<option value="0">请选择</option>');
+            getdistrict($("[name='province']").val());
+        }
+
+// 上传文件
+	$('#upload_file').on('change', function(){
+		
+		var uploadFile = $(this).get(0).files[0];
+		
+		if(typeof uploadFile == 'undefined'){
+			return false;
+		}
+		
+		var formData = new FormData();
+		
+		formData.append('upload_file', uploadFile);
+		var ajaxOption = {
+			url 	: '{:url("advance/Upload/upload")}',
+			type	: 'post',
+			data	: formData,
+			dataType: 'json',
+			timeout	: 0,
+			processData : false,
+			contentType : false,
+			success	: function(res){
+				
+				if(res.code == 1){
+					$('#upload_result').html('<span >['+res.data.hash+'.'+res.data.ext+']</span>');
+				       $('#upload_file').before('<input type="hidden" value="'+res.data.url+'" name="options"/>');
+				}else{
+					$('#upload_result').html('<span >['+res.msg+']</span>');
+				}
+			},
+			error : function(xhr){
+				
+				$('#upload_result').html('<span >[网络链接错误]</span>');
+			}
+		};
+		$.ajax(ajaxOption);
+	});
+   
+})
+</script>
+
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/jquery.flexslider.js"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/imagesloaded.pkgd.min.js"></script>
+
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/perfect-scrollbar.min.js"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/perfect-scrollbar.jquery.min.js"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/DateTimePicker.min.js"></script>
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="{$static_path}/advance/js/vendor/DateTimePicker-ltie9.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="{$static_path}/advance/js/vendor/DatetimePicker-i18n-zh-CN.js"></script>
+    <script type="text/javascript" src="{$static_path}/advance/js/m_form.js"></script>
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,438 @@
+{extend name="common/base"}
+
+
+{block name="style"}
+
+<link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/sub_page.css?_={$site_version}">
+
+{/block}
+
+{block name="content"}
+{if condition="$service_id eq 1"}
+<!--服务1-->
+<div class="expert-opinion-wrapper">
+      <div class="expert-section expert-section-1">
+         <h2 id="diagnose"><span class="title">诊疗意见</span></h2>
+        <div class="expert-sub expert-sub-1">
+          <h3><span>全球医学专家意见</span></h3>
+          <div class="expert-feature-wrapper clearfix">
+            <div class="expert-feature clearfix">
+              <div class="image-wrapper"><img src="{$static_path}/advance/img/icon/1.png" alt=""></div>
+              <div class="feature-caption">
+                <span class="feature-title">
+                经验丰富专案医生
+                </span>
+                <span>行医执照严格筛选</span>
+                <span>平均执业10年以上</span>
+              </div>
+            </div>
+            <div class="expert-feature clearfix">
+              <div class="image-wrapper"><img src="{$static_path}/advance/img/icon/2.png" alt=""></div>
+              <div class="feature-caption">
+              <span class="feature-title">
+              医学委员会
+              </span>
+              <span>全球范围匹配专家</span>
+              </div>
+            </div>
+            <div class="expert-feature clearfix">
+              <div class="image-wrapper"><img src="{$static_path}/advance/img/icon/3.png" alt=""></div>
+              <div class="feature-caption">
+              <span class="feature-title">
+              国际顶级专家
+              </span>
+              <span class="special-caption">就个案问题针对性</span><!--
+              --><span class="special-caption">出具书面意见报告</span>
+              </div>
+            </div>
+            <div class="expert-feature clearfix">
+              <div class="image-wrapper"><img src="{$static_path}/advance/img/icon/4.png" alt=""></div>
+              <div class="feature-caption">
+              <span class="feature-title">
+              专案医生
+              </span>
+              <span class="special-caption">详尽解释，辅助决策，</span><!--
+              --><span class="special-caption">定期跟进</span>
+              </div>
+            </div>
+          </div>
+        <!-- <h2 id="diagnose"><span class="title">诊疗意见</span></h2>
+          <div class="new_moble" style="width:100%;height:auto;">
+            <div class="moble_centent_left" ></div>
+            <div class="moble_centent_right">
+              <div class="moble_border_top" ></div>
+              <div class="moble_text">对任何面临重大医疗决策的人来说，重要的是与医生一起沟通的时间。我们的专案医生会竭尽所能，帮助您了解病情并致力于为您最关心的问题提供最佳答案。</div>
+              <div style="float:right;">
+                <div class="moble_border_center" ></div>
+                <div class="moble_border_bottom"></div>
+              </div>
+            </div>
+         </div>
+          <div style="clear:both "></div> -->
+       <!--  <div class="expert-sub expert-sub-1">
+          <h3><span>国际权威专家意见报告</span></h3>
+         
+          <div class="expert-feature-wrapper clearfix">
+            <div class="expert-feature clearfix">
+              <div class="image-wrapper"><img src="{$static_path}/advance/img/icon/1.png" alt=""></div>
+              <div class="feature-caption">
+                <span class="feature-title">
+                专案医生
+                </span>
+                <span style="height:180px;display:inline-block;border:2px solid #017f4f;padding:16px;border-radius:3px;">我们将指派一位资深的专案医生与您对接，作为您的私人健康顾问，医生将充分收集您的病史资料，并帮助您罗列出需要专家建议的一系列重要问题</span>
+              </div>
+            </div>
+            <div class="expert-feature clearfix">
+              <div class="image-wrapper"><img src="{$static_path}/advance/img/icon/2.png" alt=""></div>
+              <div class="feature-caption">
+              <span class="feature-title">
+              专家评估
+              </span>
+              <span style="height:180px;display:inline-block;border:2px solid #017f4f;padding:16px;border-radius:3px;">我们拥有覆盖全球范围的临床医疗委员会，在世界各地为您搜寻并鉴定顶级医疗专家。团队的通力合作将为您确定正确的诊断以及最佳的治疗计划。</span>
+              </div>
+            </div>
+            <div class="expert-feature clearfix">
+              <div class="image-wrapper"><img src="{$static_path}/advance/img/icon/3.png" alt=""></div>
+              <div class="feature-caption">
+              <span class="feature-title">
+              医疗方向
+              </span>
+              <span style="height:180px;display:inline-block;border:2px solid #017f4f;padding:16px;border-radius:3px;">专案医生将根据您的需要提供帮助，协助您和家人了解整个治疗过程并将预后以及可能发生的结果做预估。在您的问题得到充分解答后，您的案例将视为结束。</span>
+              </div>
+            </div>
+            
+          </div>
+        </div> -->
+        <div class="expert-sub expert-sub-2">
+          <h3><span>部分国际权威专科专家示例</span></h3>
+          <div class="expert-main-example">
+            <div class="image-wrapper">
+              <img src="{$static_path}/advance/img/expert-opinion01.jpg" alt="">
+            </div>
+            <div class="expert-info-wrapper">
+              <span class="expert-remark expert-remark-1">&ldquo;当您对您的诊断、预后或可选的治疗方案范围有所顾虑的时候 - 那就是需要更多信息的时候了。专家医疗意见将针对能影响您治疗护理的医疗信息进行各项审查及衡量。&rdquo;</span>
+              <span class="expert-info">哈佛医学院</span>
+              <span class="expert-info">Theodore Steinman</span>
+              <span class="expert-info">医学博士</span>
+              <span class="expert-info">临床医学教授</span>
+            </div>
+          </div>
+        </div>
+        <div class="expert-example-wrapper clearfix">
+          <div class="expert special-expert">
+            <div class="image-wrapper">
+              <img src="{$static_path}/advance/img/portrait/potrait01.png" alt="">
+            </div>
+            <span>哈佛医学院</span>
+            <div class="expert-details">
+              <span class="expert-margin">
+              </span>
+              <span class="expert-name">Theodore Steinman</span>
+              <span class="expert-info"><span>医学博士</span>
+              <span> 临床医学教授</span>
+             
+            </div>
+          </div>   
+          <div class="expert">
+            <div class="image-wrapper">
+              <img src="{$static_path}/advance/img/portrait/potrait02.png" alt="">
+            </div>
+            <span class="special-expert-name">Monica Castiglione‐Gertsch医生博士</span>
+            <div class="expert-details">
+              <span class="expert-margin">
+              </span>
+              <span class="expert-name">日内瓦大学医院</span>
+              <span class="expert-info">妇科和乳腺肿瘤中心主任</span>
+              <span class="text-center">瑞士苏黎世顾问</span>
+            </div>
+          </div>
+          <div class="expert">
+            <div class="image-wrapper">
+              <img src="{$static_path}/advance/img/portrait/potrait03.png" alt="">
+            </div>
+            <span>FRANCO M. MUGGIA医学博士</span>
+            <div class="expert-details">
+              <span class="expert-margin">
+              </span>
+              <span class="expert-name">纽约大学</span>
+              <span class="expert-info">纽约大学医学院和Perimutter癌症研究所</span>
+              <span class="text-center">医学肿瘤学教授，乳腺癌项目</span>
+            </div>
+          </div>
+          <div class="expert">
+            <div class="image-wrapper">
+              <img src="{$static_path}/advance/img/portrait/potrait04.png" alt="">
+            </div>
+            <span>DONALD I. ABRAMS医学博士</span>
+            <div class="expert-details">
+              <span class="expert-margin">
+              </span>
+              <span class="expert-name">加州大学</span>
+              <span class="expert-info">加州大学，旧金山奥舍综合医学中心</span><!-- <span>旧金山总医院主任</span> --><span class="text-center">血液科/肿瘤科</span>
+            </div>
+          </div>
+          <div class="expert expert-next">
+            <div class="image-wrapper">
+              <img src="{$static_path}/advance/img/portrait/potrait05.png" alt="">
+            </div>
+            <span>ELLIOT S. KRAMES医学博士</span>
+            <div class="expert-details">
+            <span class="expert-margin">
+              </span>
+              <span class="expert-name">国际神经医学协会名誉主任</span>
+              <span class="expert-info"><span>学习期刊:“神经调节”的荣誉编辑</span><!-- <span>学会期刊:《神经调控》名誉主编</span> --></span>
+            </div>
+          </div>
+        </div>
+       <!--  <div class="expert-example-caption">
+          <span>我们的全球医疗团队包括10,000多名国际权威专科专家</span>
+          <span>选择与您病症相关领域的权威医生是我们专家匹配的首要原则</span>
+        </div> -->
+      <!--   <div class="expert-summary clearfix">
+          <div class="expert-satisfication">
+            <div class="expert-satis-1"><span class="expert-satis-text">满意率</span><span>98</span>&percnt;</div>
+            <div class="expert-satis-2">Patient satisfaction</div>
+            <div class="expert-satis-3">创新服务&nbsp;卓越品质</div>
+          </div>
+          <div class="expert-circle">
+            <img src="{$static_path}/advance/img/circle.png" alt="">
+            <div class="expert-circle-caption expert-circle-caption1">
+              <h4>专业团队</h4>
+              <p>业界唯一全部使用执照医生为患者引导完成个案的服务。资深的国际权威专家团队资源</p>
+            </div>
+            <div class="expert-circle-caption expert-circle-caption2">
+              <h4>计划价值</h4>
+              <p>权威专家严谨审阅病历报告之后，提出客观意见，并且书面回复病人的特定问题。高度私密、个性化的服务。避免不必要的诊疗护理花费，确保得到最优质的医疗关爱</p>
+            </div>
+            <div class="expert-circle-caption expert-circle-caption3">
+              <h4>用户体验</h4>
+              <p>与私人健康顾问无压力地顺畅沟通。经过咨询，获得关键信息，对自身病况及医疗建议十分明了</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="expert-section expert-section-2">
+        <!-- <h2 id="foreign"><span class="title">海外治疗</span></h2>
+        <div class="expert-sub expert-sub-3">
+          <h3><span>海外诊疗计划</span></h3>
+          <div class="expert-feature-wrapper2 clearfix">
+            <div class="expert-feature2">
+              <div class="image-wrapper"><img src="{$static_path}/advance/img/icon/1.png" alt=""></div>
+              <div class="feature-caption">
+                <span>匹配顶级</span><span>专科专家</span>
+              </div>
+            </div>
+            <div class="expert-feature2">
+              <div class="image-wrapper"><img src="{$static_path}/advance/img/icon/5.png" alt=""></div>
+              <div class="feature-caption">
+                <span>预约及安排</span><span>诊疗计划</span>
+              </div>
+            </div>
+            <div class="expert-feature2">
+              <div class="image-wrapper"><img src="{$static_path}/advance/img/icon/6.png" alt=""></div>
+              <div class="feature-caption">
+                <span>预估、优化</span><span>诊疗成本</span>
+              </div>
+            </div>
+            <div class="expert-feature2">
+              <div class="image-wrapper"><img src="{$static_path}/advance/img/icon/7.png" alt=""></div>
+              <div class="feature-caption">
+                <span>专案医生</span><span>定期跟进</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="expert-big-image">
+          <img src="{$static_path}/advance/img/expert-opinion02.jpg" alt="">
+        </div>
+        <div class="expert-sub expert-sub-4">
+          <h3><span>海外诊疗计划安排</span></h3>
+          <div class="diagnose-example-wrapper clearfix">   
+          <div class="diagnose">
+            <div class="image-wrapper">
+              <img src="{$static_path}/advance/img/arrange01.png" alt="">
+            </div>
+            <div class="diagnose-details">
+              <span class="diagnose-margin">
+              </span>
+              <span>病人个案建立，</span>
+              <span>私人健康顾问全程跟踪，</span>
+              <span>
+                收集医疗记录数据
+              </span>
+            </div>
+          </div>
+          <div class="diagnose">
+            <div class="image-wrapper">
+              <img src="{$static_path}/advance/img/arrange02.png" alt="">
+            </div>
+            <div class="diagnose-details">
+              <span class="diagnose-margin">
+              </span>
+              <span>全球匹配适合专家，</span>
+              <span>并根据客观需要和病人意见</span>
+              <span>
+                锁定诊疗专家
+              </span>
+            </div>
+          </div>
+          <div class="diagnose">
+            <div class="image-wrapper">
+              <img src="{$static_path}/advance/img/arrange03.png" alt="">
+            </div>
+            <div class="diagnose-details">
+              <span class="diagnose-margin">
+              </span>
+              <span>安排与世界一流</span>
+              <span>诊疗专家约见，给出</span>
+              <span>
+                最优惠的治疗解决方案
+              </span>
+            </div>
+          </div>
+          <div class="diagnose">
+            <div class="image-wrapper">
+              <img src="{$static_path}/advance/img/arrange04.png" alt="">
+            </div>
+            <div class="diagnose-details">
+              <span class="diagnose-margin">
+              </span>
+              <span>最终确认、</span>
+              <span>安排治疗、后期跟进</span>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="diagnose-process-wrapper">
+          <div class="diagnose-step diagnose-step-1 m-diagnose-step">
+            <div class="diagnose-step-inner-wrapper1">
+              <div class="diagnose-num m-num m-num1">1</div>
+              <div class="diagnose-step-text">
+                专案医生与病人联络收集病历病史及相关检查资料，并且撰写病案报告。
+              </div>
+            </div>
+          </div>
+          <div class="diagnose-step2 diagnose-step-2 m-diagnose-step2">
+            <div class="diagnose-step-inner-wrapper2">
+            <div class="diagnose-num diagnose-num2 m-num m-num2">2</div>
+            <div class="diagnose-step-text">
+              全球的医学委员会根据病案报告在全球匹配顶尖的专家，并且获得他们的日程安排。
+            </div>
+            </div>
+          </div>
+          <div class="diagnose-step diagnose-step-3 m-diagnose-step2">
+            <div class="diagnose-step-inner-wrapper1">
+            <div class="diagnose-num m-num m-num3">3</div>
+            <div class="diagnose-step-text">
+              专家医生与病人联络，协调安排就诊预约。
+            </div>
+            </div>
+          </div>
+          <div class="diagnose-step2 diagnose-step-4 m-diagnose-step">
+            <div class="diagnose-step-inner-wrapper2">
+            <div class="diagnose-num diagnose-num2 m-num m-num4">4</div>
+            <div class="diagnose-step-text">
+              相关专科专家出具治疗方案意见以及治疗费用建议。
+            </div>
+            </div>
+          </div>
+          <div class="diagnose-step diagnose-step-5 m-diagnose-step">
+            <div class="diagnose-step-inner-wrapper1">
+            <div class="diagnose-num m-num m-num1">5</div>
+            <div class="diagnose-step-text">
+              专案医生将方案的信息与病人做详尽讲解和沟通，取得病人书面确认。
+            </div>
+            </div>
+          </div>
+          <div class="diagnose-step2 diagnose-step-6 m-diagnose-step2">
+            <div class="diagnose-step-inner-wrapper2">
+            <div class="diagnose-num diagnose-num2 m-num m-num2">6</div>
+            <div class="diagnose-step-text">
+              病人支付定金。
+            </div>
+            </div>
+          </div>
+          <div class="diagnose-step diagnose-step-7 m-diagnose-step2">
+            <div class="diagnose-step-inner-wrapper1">
+            <div class="diagnose-num m-num m-num3">7</div>
+            <div class="diagnose-step-text">
+              汇医将与相关的医疗服务机构协商，优化整体治疗的费用。
+            </div>
+            </div>
+          </div>
+          <div class="diagnose-step2 diagnose-step-8 m-diagnose-step">
+            <div class="diagnose-step-inner-wrapper2">
+            <div class="diagnose-num diagnose-num2 m-num m-num4">8</div>
+            <div class="diagnose-step-text">
+              确保治疗开始，专案管理医生监督诊疗的执行，并随时提供专家审阅和负责其他转诊。医疗记录将以私人密件形式加以收录归档，以供专业医疗审计与专案管理报告的撰写。
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="expert-sub expert-sub-5">
+          <h3><span>疗程之后</span></h3>
+        </div> -->
+        <div class="diagnose-process-wrapper2 clearfix">
+          <div class="diagnose-step">
+            <div class="step-wrapper">
+              <div class="diagnose-step-num">1</div>
+              <div class="diagnose-step-context">
+                <div class="diagnose-step-text">
+                  <span class="step-title">全球医学专家意见服务适用场景</span>
+                  
+                  <ul>
+                    <li>对于已有的疾病诊断有疑虑，需要专家确认 （例如癌症，心血管疾病）</li>
+                    <li>对于病症在不同的医院得到不同的诊断</li>
+                    <li>想了解对于目前治疗方案的其他选项分析</li>
+                    <li>做重大医疗决策的时候，例如手术</li>
+                    <li>注：以上场景适用于服务日生效后的新发疾病。</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="diagnose-step">
+            <div class="step-wrapper step-wrapper2">
+              <div class="diagnose-step-num diagnose-step-num2">10</div>
+              <div class="diagnose-step-context">
+                <div class="diagnose-step-text">
+                  <span class="step-title">付款：</span>
+                  <span class="step-text">
+                  病人将治疗费用支付给相关医疗机构。
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="diagnose-step">
+            <div class="step-wrapper">
+              <div class="diagnose-step-num">2</div>
+              <div class="diagnose-step-context">
+                <div class="diagnose-step-text">
+                  <span class="step-title">全球医学专家意见服务不适用场景</span>
+                  
+                  <!-- <span class="step-text">
+                  病人接受治疗后一周内，汇医将致电联系，了解病人的反馈以及回答问题，如有必要会做进一步调查。
+                  </span> -->
+                  <ul>
+                    <li>需要紧急处理的病症，包括意外受伤和疾病的急性发作期，例如心肌梗塞、脑卒中等</li>
+                    <li> 生命体征不稳定时，例如在ICU病房看护期间</li>
+                    <li>日常健康类咨询，如普通感冒、发热、头痛</li>
+                    <li>资料和信息不完整时，例如没有初次诊断、单一验血验尿报告等，具体由专案医生判定</li>
+                    <li>病人或保险公司与医疗机构发生潜在纠纷时</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{/if}
+
+{/block}
+
+
+
+{/extend}
