@@ -1,0 +1,1258 @@
+---------------------------------------------------------------
+[ 2017-10-31T10:45:43+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] test.mlxyadmin.com:8080/ [运行时间：0.341168s][吞吐率：2.93req/s] [内存消耗：5,975.70kb] [文件加载：85]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.124669s ]
+[ info ] [ RUN ] app\advance\controller\Index->index[ D:\www\mlxyadmin\application\advance\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\advance\view\index\index.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037572s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_manage_config` [ RunTime:0.046293s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_manage_config` [ RunTime:0.006412s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.011533s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.001910s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.010485s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.019022s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.009263s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.004614s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.009817s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.009948s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 30[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 481[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 485[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 502[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 505[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 512[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 517[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 523[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 525[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 574[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 577[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 582[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2017-10-31T10:46:16+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] test.mlxyadmin.com:8080/ [运行时间：0.144720s][吞吐率：6.91req/s] [内存消耗：5,642.85kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.005007s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\advance\controller\Index->index[ D:\www\mlxyadmin\application\advance\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\advance\view\index\index.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011307s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.009577s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000553s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.009596s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.011942s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.007616s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001555s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.007911s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.004420s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 30[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 481[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 485[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 502[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 505[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 512[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 517[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 523[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 525[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 574[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 577[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 582[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2017-10-31T10:58:07+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] test.mlxyadmin.com:8080/ [运行时间：0.174183s][吞吐率：5.74req/s] [内存消耗：5,974.48kb] [文件加载：85]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.041961s ]
+[ info ] [ RUN ] app\advance\controller\Index->index[ D:\www\mlxyadmin\application\advance\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\advance\view\index\index.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011475s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_manage_config` [ RunTime:0.009460s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_manage_config` [ RunTime:0.000713s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.009856s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.009756s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.012250s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.009238s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001162s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.009410s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.004606s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 30[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 482[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 486[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 503[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 506[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 513[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 518[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 524[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 526[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 575[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 578[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 583[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2017-10-31T10:58:11+08:00 ] 127.0.0.1 127.0.0.1 GET /advance/Login/index.html
+[ info ] test.mlxyadmin.com:8080/advance/Login/index.html [运行时间：0.056701s][吞吐率：17.64req/s] [内存消耗：3,453.20kb] [文件加载：68]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'advance',
+    1 => 'Login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.006445s ]
+[ info ] [ RUN ] app\advance\controller\Login->index[ D:\www\mlxyadmin\application\advance\controller\Login.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\advance\view\login\index.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T10:58:16+08:00 ] 127.0.0.1 127.0.0.1 GET /asss
+[ info ] test.mlxyadmin.com:8080/asss [运行时间：0.038430s][吞吐率：26.02req/s] [内存消耗：2,336.02kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asss',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:08:51+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.039544s][吞吐率：25.29req/s] [内存消耗：2,336.04kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:20:03+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.043872s][吞吐率：22.79req/s] [内存消耗：2,336.38kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:20:05+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.059277s][吞吐率：16.87req/s] [内存消耗：2,336.38kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:20:05+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.054287s][吞吐率：18.42req/s] [内存消耗：2,336.38kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:20:05+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.035278s][吞吐率：28.35req/s] [内存消耗：2,336.38kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:20:05+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.039701s][吞吐率：25.19req/s] [内存消耗：2,336.38kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:20:05+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.055484s][吞吐率：18.02req/s] [内存消耗：2,336.38kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:20:06+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.036409s][吞吐率：27.47req/s] [内存消耗：2,336.38kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:20:06+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.035047s][吞吐率：28.53req/s] [内存消耗：2,336.38kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:22:53+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.039717s][吞吐率：25.18req/s] [内存消耗：2,336.21kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:22:54+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.039794s][吞吐率：25.13req/s] [内存消耗：2,336.21kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:22:55+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.038504s][吞吐率：25.97req/s] [内存消耗：2,336.21kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:22:55+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.036423s][吞吐率：27.46req/s] [内存消耗：2,336.21kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:22:56+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.045776s][吞吐率：21.85req/s] [内存消耗：2,336.21kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:22:56+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.036511s][吞吐率：27.39req/s] [内存消耗：2,336.21kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:22:56+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.037849s][吞吐率：26.42req/s] [内存消耗：2,336.21kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:22:56+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.039173s][吞吐率：25.53req/s] [内存消耗：2,336.21kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:22:56+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.038617s][吞吐率：25.90req/s] [内存消耗：2,336.21kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:22:57+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.035699s][吞吐率：28.01req/s] [内存消耗：2,336.21kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:23:04+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.045178s][吞吐率：22.13req/s] [内存消耗：2,373.34kb] [文件加载：46]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected 'public' (T_PUBLIC)[D:\www\mlxyadmin\thinkphp\library\think\exception\HttpException.php:23]
+---------------------------------------------------------------
+[ 2017-10-31T11:23:05+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.035872s][吞吐率：27.88req/s] [内存消耗：2,373.34kb] [文件加载：46]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected 'public' (T_PUBLIC)[D:\www\mlxyadmin\thinkphp\library\think\exception\HttpException.php:23]
+---------------------------------------------------------------
+[ 2017-10-31T11:23:05+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.036275s][吞吐率：27.57req/s] [内存消耗：2,373.34kb] [文件加载：46]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected 'public' (T_PUBLIC)[D:\www\mlxyadmin\thinkphp\library\think\exception\HttpException.php:23]
+---------------------------------------------------------------
+[ 2017-10-31T11:23:06+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.035199s][吞吐率：28.41req/s] [内存消耗：2,373.34kb] [文件加载：46]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected 'public' (T_PUBLIC)[D:\www\mlxyadmin\thinkphp\library\think\exception\HttpException.php:23]
+---------------------------------------------------------------
+[ 2017-10-31T11:23:06+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.034343s][吞吐率：29.12req/s] [内存消耗：2,373.34kb] [文件加载：46]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected 'public' (T_PUBLIC)[D:\www\mlxyadmin\thinkphp\library\think\exception\HttpException.php:23]
+---------------------------------------------------------------
+[ 2017-10-31T11:23:06+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.035838s][吞吐率：27.90req/s] [内存消耗：2,373.34kb] [文件加载：46]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected 'public' (T_PUBLIC)[D:\www\mlxyadmin\thinkphp\library\think\exception\HttpException.php:23]
+---------------------------------------------------------------
+[ 2017-10-31T11:23:06+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.037905s][吞吐率：26.38req/s] [内存消耗：2,373.34kb] [文件加载：46]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected 'public' (T_PUBLIC)[D:\www\mlxyadmin\thinkphp\library\think\exception\HttpException.php:23]
+---------------------------------------------------------------
+[ 2017-10-31T11:23:07+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.037315s][吞吐率：26.80req/s] [内存消耗：2,373.34kb] [文件加载：46]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected 'public' (T_PUBLIC)[D:\www\mlxyadmin\thinkphp\library\think\exception\HttpException.php:23]
+---------------------------------------------------------------
+[ 2017-10-31T11:23:13+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.041910s][吞吐率：23.86req/s] [内存消耗：2,387.18kb] [文件加载：47]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Wrong parameters for Exception([string $exception [, long $code [, Exception $previous = NULL]]])[D:\www\mlxyadmin\thinkphp\library\think\App.php:360]
+---------------------------------------------------------------
+[ 2017-10-31T11:23:19+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.037735s][吞吐率：26.50req/s] [内存消耗：2,335.75kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:23:28+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.037356s][吞吐率：26.77req/s] [内存消耗：2,385.62kb] [文件加载：47]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined method think\exception\HttpException::getStatusCode()[D:\www\mlxyadmin\thinkphp\library\think\exception\Handle.php:102]
+---------------------------------------------------------------
+[ 2017-10-31T11:23:29+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.036899s][吞吐率：27.10req/s] [内存消耗：2,385.62kb] [文件加载：47]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined method think\exception\HttpException::getStatusCode()[D:\www\mlxyadmin\thinkphp\library\think\exception\Handle.php:102]
+---------------------------------------------------------------
+[ 2017-10-31T11:23:29+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.038498s][吞吐率：25.98req/s] [内存消耗：2,385.62kb] [文件加载：47]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined method think\exception\HttpException::getStatusCode()[D:\www\mlxyadmin\thinkphp\library\think\exception\Handle.php:102]
+---------------------------------------------------------------
+[ 2017-10-31T11:38:49+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.051173s][吞吐率：19.54req/s] [内存消耗：2,337.23kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:38:49+08:00 ] 127.0.0.1 127.0.0.1 GET /asssa
+[ info ] test.mlxyadmin.com:8080/asssa [运行时间：0.067615s][吞吐率：14.79req/s] [内存消耗：2,337.23kb] [文件加载：45]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'asssa',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-10-31T11:38:53+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] test.mlxyadmin.com:8080/ [运行时间：0.152471s][吞吐率：6.56req/s] [内存消耗：5,712.56kb] [文件加载：83]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2F',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.032260s ]
+[ info ] [ RUN ] app\advance\controller\Index->index[ D:\www\mlxyadmin\application\advance\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\advance\view\index\index.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001775s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_manage_config` [ RunTime:0.010392s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_manage_config` [ RunTime:0.000569s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.008627s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.009517s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.011542s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.009940s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000983s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.008799s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.004825s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 30[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 482[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 486[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 503[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 506[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 513[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 518[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 524[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 526[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 575[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 578[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 583[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="__COMMON__/layui/css/layui.mobile.css">
+    <link id="layuicss-skinlayim-mobilecss" rel="stylesheet" href="__COMMON__/layui/css/modules/layim/mobile/layim.css?v=2.1" media="all">
+</head>
+<body>
+
+<script src="__COMMON__/layui/layui.js"></script>
+<script src="__COMMON__/js/jquery.min.js"></script>
+
+<script>
+    var userlist = {$userlist};
+    var uid = "{$uinfo.id}";
+    var uname = "{$uinfo.username}";
+    var avatar = "{$uinfo.avatar}";
+    var sign = "{$uinfo.sign}";
+    layui.use('mobile', function(){
+        var mobile = layui.mobile
+                ,layim = mobile.layim
+                ,layer = mobile.layer;
+
+        layim.config({
+//            //上传图片接口
+//            uploadImage: {
+//                url: '/upload/image' //（返回的数据格式见下文）
+//                ,type: '' //默认post
+//            }
+//
+//            //上传文件接口
+//            ,uploadFile: {
+//                url: '/upload/file' //（返回的数据格式见下文）
+//                ,type: '' //默认post
+//            }
+
+            init: userlist
+
+            //扩展更多列表
+            // ,moreList: [{
+            //     alias: 'find'
+            //     ,title: '发现'
+            //     ,iconUnicode: '&#xe628;' //图标字体的unicode，可不填
+            //     ,iconClass: '' //图标字体的class类名
+            // },{
+            //     alias: 'share'
+            //     ,title: '分享与邀请'
+            //     ,iconUnicode: '&#xe641;' //图标字体的unicode，可不填
+            //     ,iconClass: '' //图标字体的class类名
+            // }]
+           // ,brief:true
+            ,isNewFriend: false //是否开启“新的朋友”
+            ,isgroup: true //是否开启“群聊”
+            //,chatTitleColor: '#c00' //顶部Bar颜色
+            //,title: 'LayIM' //应用名，默认：我的IM
+        });
+     
+                  //创建一个会话
+         window.groupid="{$chat_alert.id}";
+         window.logdata={$chatlogs};
+         window.mineid={$mineid};
+     
+       layim.chat({
+         id: '{$chat_alert.id}'
+         ,name: '{$chat_alert.group_name}'
+         ,type: 'group' //friend、group等字符，如果是group，则创建的是群聊
+         ,avatar: '{$chat_alert.avatar}'
+       });
+ 
+
+
+       
+
+         //socket = new WebSocket('ws://121.42.207.83:8282');
+        socket = new WebSocket('ws://127.0.0.1:8282');
+// 连接发生错误的回调方法
+socket.onerror = function () {
+   // layer.msg('连接失败');
+};
+
+//连接成功时触发
+socket.onopen = function(){
+    // 登录
+    var servername='{$server_name}';
+    var login_data = '{"type":"init","id":"' + uid + '", "username":"' + uname + '", "avatar":"' + avatar + '", "sign":"' + sign + '","servername":"'+servername+'","groupid":"'+window.groupid+'"}';
+    socket.send( login_data );
+  //  layer.msg('连接成功');
+};
+//监听返回
+layim.on('back', function(i){
+  //比如返回到上一页面（而不是界面）：
+
+});
+//监听查看更多记录
+ //console.log(layim.getChat());
+ var scroheight=layim.getChat()[0].scrollHeight;
+ 
+var page=2;
+layim.on('chatlog', function(data, ul){
+  //console.log(data); //得到当前会话对象的基本信息
+  //console.log(ul); //得到当前聊天列表所在的ul容器，比如可以借助他来实现往上插入更多记录
+ 
+  //chatMain.scrollTop(ulheight[0].scrollHeight + 1000)
+  
+  $.ajax({
+      url:'{:url(\'Chatlog/detail\')}',
+      data:{id:window.groupid,type:'group',page:page},
+      dataType:'json',
+      success:function(data){
+
+          var logstr='';
+          var prevtime=new Date().getTime();
+          var idstr='';
+          if(data.data.data.length>0){
+             
+             var logsdata=data.data.data.reverse();
+             
+             $.each(logsdata,function(i){
+                   if(i==0){
+                       var idstr=' id="addid" ';
+                   }
+                 var listr='layim-chat-li ';
+
+                    if( prevtime - logsdata[i].timestamp*1000 > 60*1000){
+                        
+                        logstr+='<li class="layim-chat-system" '+idstr+'><span>'+layui.data.date(logsdata[i].timestamp*1000)
+                                +'</span></li>';
+                         }
+                 if(logsdata[i].id ==layim.cache().mine.id){
+                     var minestr=' layim-chat-mine';
+                 }else{
+                     var minestr='';
+                 }
+                 logstr+='<li class=" '+listr+minestr+'">';
+                 logstr+='<div class="layim-chat-user">'+
+                         '<img src="'+logsdata[i].avatar+'">'+
+                         '<cite>'+logsdata[i].username+'</cite>'+
+                         '</div>'+
+                         '<div class="layim-chat-text">'+layui.data.content(logsdata[i].content)+'</div>';
+                 logstr+='</li>'
+                 
+                 prevtime=logsdata[i].timestamp*1000;
+             });
+              
+              ul.prepend(logstr);
+             
+          }else{
+          layer.msg('暂无更多记录');
+          return;
+         }
+        layim.getChat().scrollTop(layim.getChat()[0].scrollHeight-scroheight);
+        scroheight=layim.getChat()[0].scrollHeight;
+        page++;
+      }
+  });
+
+
+ 
+
+
+
+});
+
+//监听发送消息
+layim.on('sendMessage', function(data){
+    var mine = JSON.stringify(data.mine);
+    var to = JSON.stringify(data.to);
+
+    var login_data = '{"type":"chatMessage","data":{"mine":'+mine+', "to":'+to+'}}';
+
+    socket.send( login_data );
+
+
+});
+
+//监听收到的消息
+socket.onmessage = function(res){
+    //console.log(res.data);
+    var data = eval("("+res.data+")");
+    switch(data['message_type']){
+        // 服务端ping客户端
+        case 'ping':
+            //console.log(data);
+            socket.send('{"type":"ping","groupid":"'+window.groupid+'"}');
+            break;
+        // 在线
+        case 'online':
+            layim.setFriendStatus(data.id, 'online');
+            break;
+      // 离线短信
+        case 'sendmsg':
+            $.ajax({
+                url:"{:url('Phone/sendMsg')}",
+                type:"post",
+                data:{data:JSON.stringify(data.data)},
+                success:function(){
+                    
+                }
+            });
+            break;
+        // 下线
+        case 'offline':
+            layim.setFriendStatus(data.id, 'offline');
+            break;
+        // 检测聊天数据
+        case 'chatMessage':
+            //console.log(res.data);
+            layim.getMessage(data.data);
+            break;
+       
+        // 离线消息推送
+        case 'logMessage':
+            setTimeout(function(){layim.getMessage(data.data)}, 1000);
+            break;
+        // 用户退出 更新用户列表
+        case 'logout':
+            layim.setFriendStatus(data.id, 'offline');
+            break;
+    }
+};
+
+    });
+</script>
+</body>
+</html>

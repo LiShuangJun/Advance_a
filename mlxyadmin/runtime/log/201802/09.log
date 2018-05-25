@@ -1,0 +1,3019 @@
+---------------------------------------------------------------
+[ 2018-02-09T13:54:38+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/dcp
+[ info ] test.mlxyadmin.com:8080/Allianz/dcp [运行时间：0.301527s][吞吐率：3.32req/s] [内存消耗：5,729.05kb] [文件加载：83]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.067635s ]
+[ info ] [ RUN ] app\dcp\controller\Index->service_details[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\dcp\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002740s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_manage_config` [ RunTime:0.013509s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_manage_config` [ RunTime:0.000586s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.011652s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000297s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.012279s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.047546s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.013363s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000933s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.012973s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.007016s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 597[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 601[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 618[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 621[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 628[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 633[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 639[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 641[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 690[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 693[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 698[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T13:54:43+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/DCP.html
+[ info ] test.mlxyadmin.com:8080/Allianz/DCP.html [运行时间：0.380359s][吞吐率：2.63req/s] [内存消耗：5,658.59kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/dcp',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Fdcp',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.011649s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\dcp\controller\Index->service_details[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\dcp\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012853s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.023057s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.014526s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.016202s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.014196s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000952s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.017630s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.009551s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 597[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 601[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 618[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 621[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 628[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 633[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 639[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 641[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 690[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 693[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 698[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T13:54:45+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.075972s][吞吐率：13.16req/s] [内存消耗：2,944.46kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/DCP.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2FDCP.html',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.013080s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T13:54:45+08:00 ] 127.0.0.1 127.0.0.1 GET /dcp/Login/index.html
+[ info ] test.mlxyadmin.com:8080/dcp/Login/index.html [运行时间：0.143452s][吞吐率：6.97req/s] [内存消耗：3,460.93kb] [文件加载：68]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/DCP.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2FDCP.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.028141s ]
+[ info ] [ RUN ] app\dcp\controller\Login->index[ D:\www\mlxyadmin\application\dcp\controller\Login.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\dcp\view\login\index.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T13:54:49+08:00 ] 127.0.0.1 127.0.0.1 POST /dcp/login/dologin.html
+[ info ] test.mlxyadmin.com:8080/dcp/login/dologin.html [运行时间：0.092755s][吞吐率：10.78req/s] [内存消耗：4,283.69kb] [文件加载：63]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'login',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => '*/*',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://test.mlxyadmin.com:8080/dcp/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2FDCP.html',
+)
+[ info ] [ PARAM ] array (
+  'user_name' => 'wangqiang@meetuuu.com',
+  'pwd' => '123',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.011033s ]
+[ info ] [ RUN ] app\dcp\controller\Login->doLogin[ D:\www\mlxyadmin\application\dcp\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001747s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.013258s ]
+[ sql ] [ SQL ] SELECT `id`,`user_name`,`pwd`,`sign`,`avatar`,`is_manager` FROM `nd_cases_chatuser` WHERE  `user_name` = 'wangqiang@meetuuu.com'  AND `u_status` = 1 LIMIT 1 [ RunTime:0.000515s ]
+[ sql ] [ SQL ] UPDATE `nd_cases_chatuser`  SET `status`=1  WHERE  `id` = 31 [ RunTime:0.000489s ]
+---------------------------------------------------------------
+[ 2018-02-09T13:54:50+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/DCP.html
+[ info ] test.mlxyadmin.com:8080/Allianz/DCP.html [运行时间：0.227092s][吞吐率：4.40req/s] [内存消耗：5,660.81kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/dcp/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2FDCP.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.011085s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\dcp\controller\Index->service_details[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\dcp\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001673s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.016255s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.016635s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.014878s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.016007s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001134s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.016918s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000737s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 598[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 602[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 619[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 622[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 629[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 634[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 640[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 642[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 691[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 694[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 699[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T13:54:51+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.082998s][吞吐率：12.05req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/DCP.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2FDCP.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.007982s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T13:55:01+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/getCity.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/getCity.html [运行时间：0.101651s][吞吐率：9.84req/s] [内存消耗：4,618.23kb] [文件加载：70]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '15',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/DCP.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2FDCP.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  'ParentId' => '110000',
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'getCity',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.008409s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->getCity[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011425s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.010119s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  (  parent_id=110000 ) [ RunTime:0.011932s ]
+---------------------------------------------------------------
+[ 2018-02-09T13:55:33+08:00 ] 127.0.0.1 127.0.0.1 POST /dcp/Index/addCase.html
+[ info ] test.mlxyadmin.com:8080/dcp/Index/addCase.html [运行时间：0.209595s][吞吐率：4.77req/s] [内存消耗：5,568.81kb] [文件加载：83]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'addCase',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '360',
+  'accept' => '*/*',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/DCP.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2FDCP.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  'case_type' => '2',
+  'firstname' => 'da',
+  'lastname' => 'asd',
+  'birthday' => '2018-02-09',
+  'sex' => '1',
+  'isme' => '1',
+  'applicant_name' => 'da asd',
+  'country' => '3',
+  'e_province' => 'asd',
+  'province' => '110000',
+  'city' => '0',
+  'district' => '0',
+  'address' => 'asd',
+  'zip_code' => '',
+  'preferred_phone' => '18721667531',
+  'standby_phone' => '',
+  'email' => '972270516@qq.com',
+  'preferred_time' => '9am-12am',
+  'illness' => 'asdsd',
+  'treatment_doctor' => '',
+  'treatment_hospital' => '',
+  'specialty' => '',
+  'contract-checkbox' => 'on',
+  'user_time' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.007379s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\dcp\controller\Index->addCase[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011596s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.012045s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.010522s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.012779s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.010192s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001169s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.011953s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case` [ RunTime:0.012145s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000279s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `nd_cases_case` LIMIT 1 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SELECT `company` FROM `nd_cases_chatuser` WHERE  `id` = 31 LIMIT 1 [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_company` [ RunTime:0.010206s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_company` WHERE  `id` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.000485s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `nd_cases_case` WHERE  `case_code` = 'MYSXXXX49BXGS' LIMIT 1 [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_company_email` [ RunTime:0.009338s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_company_email` WHERE  `c_id` = 2 [ RunTime:0.000220s ]
+[ error ] [8]未定义数组索引: addcase_content[D:\www\mlxyadmin\application\core\cases\model\CaseModel.php:299]
+---------------------------------------------------------------
+[ 2018-02-09T13:56:42+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/DCP.html
+[ info ] test.mlxyadmin.com:8080/Allianz/DCP.html [运行时间：0.224959s][吞吐率：4.45req/s] [内存消耗：5,661.42kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/dcp/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2Fdcp%2FIndex%2FaddCase.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.010490s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\dcp\controller\Index->service_details[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\dcp\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003179s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.011039s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.013334s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.012943s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.013860s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000830s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.015176s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000861s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 598[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 602[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 619[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 622[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 629[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 634[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 640[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 642[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 691[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 694[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 699[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T13:56:44+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.091687s][吞吐率：10.91req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/DCP.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2FDCP.html',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.011046s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T13:56:58+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/getCity.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/getCity.html [运行时间：0.127516s][吞吐率：7.84req/s] [内存消耗：4,618.23kb] [文件加载：70]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '15',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/DCP.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2FDCP.html',
+)
+[ info ] [ PARAM ] array (
+  'ParentId' => '110000',
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'getCity',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.011747s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->getCity[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012916s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.015788s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  (  parent_id=110000 ) [ RunTime:0.013691s ]
+---------------------------------------------------------------
+[ 2018-02-09T13:57:11+08:00 ] 127.0.0.1 127.0.0.1 POST /dcp/Index/addCase.html
+[ info ] test.mlxyadmin.com:8080/dcp/Index/addCase.html [运行时间：0.244257s][吞吐率：4.09req/s] [内存消耗：5,568.61kb] [文件加载：83]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'addCase',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '360',
+  'accept' => '*/*',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/DCP.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2FDCP.html',
+)
+[ info ] [ PARAM ] array (
+  'case_type' => '2',
+  'firstname' => 'dsa',
+  'lastname' => 'asd',
+  'birthday' => '2018-02-09',
+  'sex' => '1',
+  'isme' => '1',
+  'applicant_name' => 'dsa asd',
+  'country' => '3',
+  'e_province' => 'asd',
+  'province' => '110000',
+  'city' => '0',
+  'district' => '0',
+  'address' => 'asd',
+  'zip_code' => '',
+  'preferred_phone' => '18721667531',
+  'standby_phone' => '',
+  'email' => 'assdas@qq.com',
+  'preferred_time' => '9am-12am',
+  'illness' => 'asdsad',
+  'treatment_doctor' => '',
+  'treatment_hospital' => '',
+  'specialty' => '',
+  'contract-checkbox' => 'on',
+  'user_time' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.010308s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\dcp\controller\Index->addCase[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011840s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.009489s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.011846s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.012260s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.011144s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000894s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.012041s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case` [ RunTime:0.012154s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000535s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `nd_cases_case` LIMIT 1 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SELECT `company` FROM `nd_cases_chatuser` WHERE  `id` = 31 LIMIT 1 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_company` [ RunTime:0.012963s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_company` WHERE  `id` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.000562s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `nd_cases_case` WHERE  `case_code` = 'MYSXXXX49BXGS' LIMIT 1 [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_company_email` [ RunTime:0.015113s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_company_email` WHERE  `c_id` = 2 [ RunTime:0.000410s ]
+[ error ] [8]未定义数组索引: addcase_content[D:\www\mlxyadmin\application\core\cases\model\CaseModel.php:299]
+---------------------------------------------------------------
+[ 2018-02-09T13:57:48+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/DCP.html
+[ info ] test.mlxyadmin.com:8080/Allianz/DCP.html [运行时间：0.235435s][吞吐率：4.25req/s] [内存消耗：5,661.02kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/dcp/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2Fdcp%2FIndex%2FaddCase.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.009605s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\dcp\controller\Index->service_details[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\dcp\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003148s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.012999s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.024129s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.014146s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.013583s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001049s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.015077s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000544s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 598[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 602[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 619[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 622[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 629[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 634[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 640[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 642[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 691[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 694[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 699[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T13:57:51+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.086403s][吞吐率：11.57req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/DCP.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2FDCP.html',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.012133s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T13:57:59+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/getCity.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/getCity.html [运行时间：0.116198s][吞吐率：8.61req/s] [内存消耗：4,618.23kb] [文件加载：70]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '15',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/DCP.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2FDCP.html',
+)
+[ info ] [ PARAM ] array (
+  'ParentId' => '110000',
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'getCity',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.010824s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->getCity[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011575s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.011839s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  (  parent_id=110000 ) [ RunTime:0.012058s ]
+---------------------------------------------------------------
+[ 2018-02-09T13:58:11+08:00 ] 127.0.0.1 127.0.0.1 POST /dcp/Index/addCase.html
+[ info ] test.mlxyadmin.com:8080/dcp/Index/addCase.html [运行时间：0.405161s][吞吐率：2.47req/s] [内存消耗：6,002.81kb] [文件加载：92]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'addCase',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '355',
+  'accept' => '*/*',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/DCP.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2FDCP.html',
+)
+[ info ] [ PARAM ] array (
+  'case_type' => '2',
+  'firstname' => 'dsa',
+  'lastname' => 'asd',
+  'birthday' => '2018-02-09',
+  'sex' => '1',
+  'isme' => '1',
+  'applicant_name' => 'dsa asd',
+  'country' => '3',
+  'e_province' => '',
+  'province' => '110000',
+  'city' => '0',
+  'district' => '0',
+  'address' => 'asd',
+  'zip_code' => '',
+  'preferred_phone' => '18721667531',
+  'standby_phone' => '',
+  'email' => 'asd@qqq.com',
+  'preferred_time' => '9am-12am',
+  'illness' => 'asdasd',
+  'treatment_doctor' => '',
+  'treatment_hospital' => '',
+  'specialty' => '',
+  'contract-checkbox' => 'on',
+  'user_time' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.009644s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\dcp\controller\Index->addCase[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002870s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.012182s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.012170s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.012494s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.010044s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001148s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.012171s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case` [ RunTime:0.013654s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `nd_cases_case` LIMIT 1 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT `company` FROM `nd_cases_chatuser` WHERE  `id` = 31 LIMIT 1 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_company` [ RunTime:0.011809s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_company` WHERE  `id` = 2  AND `status` = 1 LIMIT 1 [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `nd_cases_case` WHERE  `case_code` = 'MYSXXXX49BXGS' LIMIT 1 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_company_email` [ RunTime:0.010838s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_company_email` WHERE  `c_id` = 2 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_email_content` [ RunTime:0.010281s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_email_content` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000186s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000159s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_manage_job` [ RunTime:0.011655s ]
+[ sql ] [ SQL ] INSERT INTO `nd_manage_job` (`queue` , `payload` , `attempts` , `reserved` , `reserved_at` , `available_at` , `created_at`) VALUES ('jobs' , '{\"job\":\"app\\\\common\\\\jobs\\\\QueueClient@sendMAIL\",\"data\":{\"to\":\"j.wang@meetuuu.com\",\"title\":\"Reminder of medical service\",\"content\":\"<div>  A new patient,dsa asd has enrolled in the ALLIANZ MALAYSIA\\/ADVANCE MEDICAL Diabetes Care Program through the online portal. Case details are as follows:<\\/div> \\r\\n                \\r\\n    \\t\\r\\n    \\t<table style=\\\"border:1px solid #ddd;\\\">\\r\\n    \\t\\r\\n    \\t<thead  style=\\\"border:1px solid #ddd;\\\">\\r\\n    \\t\\t<tr>\\r\\n    \\t\\t\\t<th colspan=\\\"2\\\">Case Information<\\/th>\\r\\n    \\t\\t<\\/tr>\\r\\n    \\t<\\/thead>\\r\\n    \\t<tbody style=\\\"margin-top:10px;\\\">\\r\\n    \\t\\t<tr style=\\\"background:#efd3d2;\\\">\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Case Type<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" >Diabetes Care Program<\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n\\t\\t<tr>\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Policy Number<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" ><\\/td>\\r\\n    \\t\\t<\\/tr>\\t\\t\\r\\n    \\t\\t<tr style=\\\"background:#efd3d2;\\\">\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Patient Name<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" >dsa asd<\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n    \\t\\t<tr>\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Date of Birth<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" >2018-02-09<\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n\\t\\t<tr style=\\\"background:#efd3d2;\\\">\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Gender<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" >Male<\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n\\t        <tr>\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >If you are the patient<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" >Yes<\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n\\t\\t<tr style=\\\"background:#efd3d2;\\\">\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Relationship with the patient<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" ><\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n                <tr>\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Name of applicant<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" >dsa asd<\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n\\t\\t<tr style=\\\"background:#efd3d2;\\\">\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Country<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" >Malaysia<\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n                <tr>\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Address<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" >&nbsp;&nbsp;asd<\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n\\t\\t<tr style=\\\"background:#efd3d2;\\\">\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Zip code<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" ><\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n                <tr>\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Preferred Telephone Number<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" >18721667531<\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n\\t\\t<tr style=\\\"background:#efd3d2;\\\">\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Alternative Telephone Number<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" ><\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n                <tr>\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Email<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" >asd@qqq.com<\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n\\t\\t<tr style=\\\"background:#efd3d2;\\\">\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Convenient Time to be Contacted<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" >9am-12am<\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n                <tr>\\r\\n    \\t\\t\\t<td class=\\\"TableLeft\\\" >Description<\\/td>\\r\\n    \\t\\t\\t<td class=\\\"TableRight\\\" >asdasd<\\/td>\\r\\n    \\t\\t<\\/tr>\\r\\n    \\t<\\/tbody>\\r\\n    <\\/table>\"}}' , 0 , 0 , NULL , 1518155891 , 1518155891) [ RunTime:0.005243s ]
+[ sql ] [ SQL ] INSERT INTO `nd_cases_case` (`username` , `birthday` , `sex` , `isme` , `relationship` , `applicant_name` , `address` , `province` , `city` , `district` , `zip_code` , `preferred_phone` , `standby_phone` , `preferred_time` , `illness` , `treatment_doctor` , `treatment_hospital` , `specialty` , `case_type` , `sort` , `country` , `email` , `e_province` , `userid` , `case_code` , `create_time` , `update_time`) VALUES ('dsa asd' , '2018-02-09' , 1 , 1 , NULL , 'dsaasd' , 'asd' , 110000 , 110100 , 110101 , '' , '18721667531' , '' , '9am-12am' , 'asdasd' , '' , '' , '' , 2 , 0 , 3 , 'asd@qqq.com' , '' , 31 , 'MYSXXXX49BXGS' , 1518155891 , 1518155891) [ RunTime:0.132426s ]
+[ error ] [8]未定义数组索引: policy[D:\www\mlxyadmin\application\core\cases\logic\ChatUserLogic.php(155) : eval()'d code:18]
+[ error ] [8]未定义数组索引: policy[D:\www\mlxyadmin\application\core\cases\logic\ChatUserLogic.php(158) : eval()'d code:18]
+---------------------------------------------------------------
+[ 2018-02-09T13:58:14+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/DCP.html
+[ info ] test.mlxyadmin.com:8080/Allianz/DCP.html [运行时间：0.194354s][吞吐率：5.15req/s] [内存消耗：5,660.48kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/DCP.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2Fdcp%2FIndex%2FaddCase.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.008635s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\dcp\controller\Index->service_details[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\dcp\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012605s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.013117s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.011304s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.012681s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.010881s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000963s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.011965s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000441s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 598[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 602[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 619[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 622[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 629[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 634[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 640[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 642[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 691[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 694[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 699[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T15:45:17+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/emo.html
+[ info ] test.mlxyadmin.com:8080/Allianz/emo.html [运行时间：0.220961s][吞吐率：4.53req/s] [内存消耗：5,730.04kb] [文件加载：83]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2FDCP.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.052815s ]
+[ info ] [ RUN ] app\emo\controller\Index->service_details[ D:\www\mlxyadmin\application\emo\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012967s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_manage_config` [ RunTime:0.011391s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_manage_config` [ RunTime:0.000473s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.011604s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.011025s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.013427s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.012972s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001664s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.014260s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.007197s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 670[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 674[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 691[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 694[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 701[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 706[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 712[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 714[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 763[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 766[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 771[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T15:45:21+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.056062s][吞吐率：17.84req/s] [内存消耗：2,944.46kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.008065s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T15:45:21+08:00 ] 127.0.0.1 127.0.0.1 GET /emo/Login/index.html
+[ info ] test.mlxyadmin.com:8080/emo/Login/index.html [运行时间：0.134165s][吞吐率：7.45req/s] [内存消耗：3,686.97kb] [文件加载：70]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.007480s ]
+[ info ] [ RUN ] app\emo\controller\Login->index[ D:\www\mlxyadmin\application\emo\controller\Login.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\login\index.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T15:45:24+08:00 ] 127.0.0.1 127.0.0.1 POST /emo/login/dologin.html
+[ info ] test.mlxyadmin.com:8080/emo/login/dologin.html [运行时间：0.093108s][吞吐率：10.74req/s] [内存消耗：4,283.69kb] [文件加载：63]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'login',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => '*/*',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://test.mlxyadmin.com:8080/emo/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html',
+)
+[ info ] [ PARAM ] array (
+  'user_name' => 'wangqiang@meetuuu.com',
+  'pwd' => '123',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.005884s ]
+[ info ] [ RUN ] app\emo\controller\Login->doLogin[ D:\www\mlxyadmin\application\emo\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011394s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.021707s ]
+[ sql ] [ SQL ] SELECT `id`,`user_name`,`pwd`,`sign`,`avatar`,`is_manager` FROM `nd_cases_chatuser` WHERE  `user_name` = 'wangqiang@meetuuu.com'  AND `u_status` = 1 LIMIT 1 [ RunTime:0.000907s ]
+[ sql ] [ SQL ] UPDATE `nd_cases_chatuser`  SET `status`=1  WHERE  `id` = 31 [ RunTime:0.000668s ]
+---------------------------------------------------------------
+[ 2018-02-09T15:45:24+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/emo.html
+[ info ] test.mlxyadmin.com:8080/Allianz/emo.html [运行时间：0.276767s][吞吐率：3.61req/s] [内存消耗：5,662.76kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/emo/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.013610s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\emo\controller\Index->service_details[ D:\www\mlxyadmin\application\emo\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004290s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.029586s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.020061s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.019581s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.016196s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000838s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.016328s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000455s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 671[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 675[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 692[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 695[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 702[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 707[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 713[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 715[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 764[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 767[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 772[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T15:45:26+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.082243s][吞吐率：12.16req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.015756s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:34:42+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/emo.html
+[ info ] test.mlxyadmin.com:8080/Allianz/emo.html [运行时间：0.204409s][吞吐率：4.89req/s] [内存消耗：5,730.97kb] [文件加载：83]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/emo/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.043853s ]
+[ info ] [ RUN ] app\emo\controller\Index->service_details[ D:\www\mlxyadmin\application\emo\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002256s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_manage_config` [ RunTime:0.010616s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_manage_config` [ RunTime:0.000787s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.011692s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000604s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.011724s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.013178s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.010616s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001050s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.011283s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.006424s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 670[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 674[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 691[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 694[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 701[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 706[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 712[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 714[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 763[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 766[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 771[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:34:46+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.079698s][吞吐率：12.55req/s] [内存消耗：2,944.46kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.014182s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:34:46+08:00 ] 127.0.0.1 127.0.0.1 GET /emo/Login/index.html
+[ info ] test.mlxyadmin.com:8080/emo/Login/index.html [运行时间：0.097218s][吞吐率：10.29req/s] [内存消耗：3,460.92kb] [文件加载：68]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.014113s ]
+[ info ] [ RUN ] app\emo\controller\Login->index[ D:\www\mlxyadmin\application\emo\controller\Login.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\login\index.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:34:54+08:00 ] 127.0.0.1 127.0.0.1 POST /emo/login/dologin.html
+[ info ] test.mlxyadmin.com:8080/emo/login/dologin.html [运行时间：0.134499s][吞吐率：7.44req/s] [内存消耗：4,283.69kb] [文件加载：63]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'login',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => '*/*',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://test.mlxyadmin.com:8080/emo/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html',
+)
+[ info ] [ PARAM ] array (
+  'user_name' => 'wangqiang@meetuuu.com',
+  'pwd' => '123',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.016111s ]
+[ info ] [ RUN ] app\emo\controller\Login->doLogin[ D:\www\mlxyadmin\application\emo\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005191s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.017923s ]
+[ sql ] [ SQL ] SELECT `id`,`user_name`,`pwd`,`sign`,`avatar`,`is_manager` FROM `nd_cases_chatuser` WHERE  `user_name` = 'wangqiang@meetuuu.com'  AND `u_status` = 1 LIMIT 1 [ RunTime:0.000887s ]
+[ sql ] [ SQL ] UPDATE `nd_cases_chatuser`  SET `status`=1  WHERE  `id` = 31 [ RunTime:0.000480s ]
+---------------------------------------------------------------
+[ 2018-02-09T16:34:55+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/emo.html
+[ info ] test.mlxyadmin.com:8080/Allianz/emo.html [运行时间：0.284629s][吞吐率：3.51req/s] [内存消耗：5,662.76kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/emo/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.016107s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\emo\controller\Index->service_details[ D:\www\mlxyadmin\application\emo\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013772s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.018789s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000672s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.018028s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.014717s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.021448s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001290s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.023198s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000865s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 671[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 675[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 692[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 695[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 702[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 707[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 713[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 715[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 764[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 767[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 772[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:36:29+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.099194s][吞吐率：10.08req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.016818s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:36:42+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.074016s][吞吐率：13.51req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.011647s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:36:47+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.131010s][吞吐率：7.63req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.029391s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:36:57+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.124289s][吞吐率：8.05req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.020244s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:37:02+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.094193s][吞吐率：10.62req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.015417s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:37:10+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.083817s][吞吐率：11.93req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.014041s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:37:12+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/emo.html
+[ info ] test.mlxyadmin.com:8080/Allianz/emo.html [运行时间：0.191796s][吞吐率：5.21req/s] [内存消耗：5,663.66kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/emo/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.008795s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\emo\controller\Index->service_details[ D:\www\mlxyadmin\application\emo\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011257s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.010106s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.012344s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.012958s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.011932s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000967s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.011496s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000641s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 671[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 675[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 692[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 695[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 702[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 707[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 713[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 715[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 764[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 767[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 772[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:37:14+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.102631s][吞吐率：9.74req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.018939s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:39:16+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/emo.html
+[ info ] test.mlxyadmin.com:8080/Allianz/emo.html [运行时间：0.219137s][吞吐率：4.56req/s] [内存消耗：5,663.10kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/emo/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.011790s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\emo\controller\Index->service_details[ D:\www\mlxyadmin\application\emo\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011943s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.013132s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.011692s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.012099s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.011640s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001192s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.021922s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000593s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 671[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 675[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 692[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 695[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 702[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 707[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 713[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 715[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 764[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 767[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 772[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:39:18+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.094069s][吞吐率：10.63req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.016348s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:39:21+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/emo.html
+[ info ] test.mlxyadmin.com:8080/Allianz/emo.html [运行时间：0.183278s][吞吐率：5.46req/s] [内存消耗：5,663.10kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/emo/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.009113s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\emo\controller\Index->service_details[ D:\www\mlxyadmin\application\emo\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001869s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.011798s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.010091s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.012355s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.011414s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001061s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.011485s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000477s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 671[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 675[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 692[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 695[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 702[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 707[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 713[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 715[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 764[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 767[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 772[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:39:25+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.102422s][吞吐率：9.76req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.012882s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:39:37+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/emo.html
+[ info ] test.mlxyadmin.com:8080/Allianz/emo.html [运行时间：0.184203s][吞吐率：5.43req/s] [内存消耗：5,663.10kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/emo/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.009355s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\emo\controller\Index->service_details[ D:\www\mlxyadmin\application\emo\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001637s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.011716s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.009988s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.012853s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.010915s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.015250s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000684s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 671[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 675[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 692[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 695[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 702[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 707[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 713[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 715[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 764[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 767[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 772[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:39:39+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.088986s][吞吐率：11.24req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.012900s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:41:14+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/emo.html
+[ info ] test.mlxyadmin.com:8080/Allianz/emo.html [运行时间：0.189678s][吞吐率：5.27req/s] [内存消耗：5,663.10kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/emo/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.009017s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\emo\controller\Index->service_details[ D:\www\mlxyadmin\application\emo\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010683s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.011646s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.011243s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.011811s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.011554s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000765s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.011050s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000672s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 671[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 675[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 692[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 695[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 702[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 707[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 713[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 715[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 764[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 767[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 772[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:41:16+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.077638s][吞吐率：12.88req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.010350s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:41:19+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/emo.html
+[ info ] test.mlxyadmin.com:8080/Allianz/emo.html [运行时间：0.248445s][吞吐率：4.03req/s] [内存消耗：5,663.66kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/emo/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.009124s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\emo\controller\Index->service_details[ D:\www\mlxyadmin\application\emo\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010958s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.015676s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.015763s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.012585s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.018150s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001011s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.021071s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000661s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 671[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 675[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 692[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 695[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 702[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 707[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 713[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 715[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 764[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 767[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 772[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:41:21+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.075955s][吞吐率：13.17req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.010289s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:41:26+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/dcp.html
+[ info ] test.mlxyadmin.com:8080/Allianz/dcp.html [运行时间：0.163573s][吞吐率：6.11req/s] [内存消耗：5,661.46kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.007380s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\dcp\controller\Index->service_details[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\dcp\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011491s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.011536s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.011793s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.012295s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.011730s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000895s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.011093s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000486s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 598[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 602[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 619[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 622[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 629[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 634[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 640[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 642[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 691[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 694[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 699[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:41:27+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/dcp.html
+[ info ] test.mlxyadmin.com:8080/Allianz/dcp.html [运行时间：0.187732s][吞吐率：5.33req/s] [内存消耗：5,662.23kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Fdcp.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.008339s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\dcp\controller\Index->service_details[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\dcp\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002040s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.014253s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.010453s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.013953s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.014530s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000813s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.014758s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000592s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 598[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 602[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 619[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 622[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 629[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 634[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 640[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 642[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 691[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 694[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 699[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:41:29+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.088571s][吞吐率：11.29req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/dcp.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Fdcp.html',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.015384s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:42:46+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/dcp.html
+[ info ] test.mlxyadmin.com:8080/Allianz/dcp.html [运行时间：0.193687s][吞吐率：5.16req/s] [内存消耗：5,661.77kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Fdcp.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.010563s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\dcp\controller\Index->service_details[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\dcp\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011339s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.012363s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.011844s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.011888s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.011802s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000755s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.011574s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000653s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 598[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 602[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 619[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 622[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 629[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 634[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 640[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 642[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 691[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 694[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 699[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:42:49+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.085223s][吞吐率：11.73req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/dcp.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Fdcp.html',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.014765s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:42:58+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/dcp.html
+[ info ] test.mlxyadmin.com:8080/Allianz/dcp.html [运行时间：0.184807s][吞吐率：5.41req/s] [内存消耗：5,661.77kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Fdcp.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.011281s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\dcp\controller\Index->service_details[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\dcp\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003189s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.010860s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.013653s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.014003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.011059s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000929s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.011702s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000600s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 598[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 602[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 619[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 622[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 629[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 634[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 640[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 642[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 691[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 694[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 699[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:43:05+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/emo.html
+[ info ] test.mlxyadmin.com:8080/Allianz/emo.html [运行时间：0.196669s][吞吐率：5.08req/s] [内存消耗：5,662.16kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Fdcp.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.010580s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\emo\controller\Index->service_details[ D:\www\mlxyadmin\application\emo\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001701s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.011795s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.012817s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.014336s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.012118s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000965s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.012789s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000770s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 671[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 675[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 692[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 695[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 702[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 707[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 713[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 715[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 764[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 767[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 772[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:43:08+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/emo.html
+[ info ] test.mlxyadmin.com:8080/Allianz/emo.html [运行时间：0.190146s][吞吐率：5.26req/s] [内存消耗：5,663.57kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.008906s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\emo\controller\Index->service_details[ D:\www\mlxyadmin\application\emo\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002348s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.011596s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.013122s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.013427s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.012474s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.000965s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.012796s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000609s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 671[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 675[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 692[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 695[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 702[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 707[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 713[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 715[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 764[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 767[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 772[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:43:10+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.093006s][吞吐率：10.75req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.013026s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:44:28+08:00 ] 127.0.0.1 127.0.0.1 GET /Allianz/emo.html
+[ info ] test.mlxyadmin.com:8080/Allianz/emo.html [运行时间：0.483869s][吞吐率：2.07req/s] [内存消耗：5,662.75kb] [文件加载：82]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'emo',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.011438s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\emo\controller\Index->service_details[ D:\www\mlxyadmin\application\emo\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\emo\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011386s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.012657s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.011171s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.012223s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.298225s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001013s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.012728s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000609s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 34[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 671[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 675[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 692[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 695[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 702[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 707[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 713[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 715[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 764[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 767[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 772[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-02-09T16:44:30+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.117289s][吞吐率：8.53req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.016191s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-09T16:44:35+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.086015s][吞吐率：11.63req/s] [内存消耗：2,944.90kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/Allianz/emo.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2FAllianz%2Femo.html',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.015949s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File

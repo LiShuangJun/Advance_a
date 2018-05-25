@@ -1,0 +1,408 @@
+---------------------------------------------------------------
+[ 2018-05-17T13:58:42+08:00 ] 127.0.0.1 127.0.0.1 GET /allianz/dcp
+[ info ] test.mlxyadmin.com:8080/allianz/dcp [运行时间：0.685466s][吞吐率：1.46req/s] [内存消耗：6,826.26kb] [文件加载：86]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.182775s ]
+[ info ] [ RUN ] app\dcp\controller\Index->service_details[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\dcp\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.113386s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_manage_config` [ RunTime:0.014332s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_manage_config` [ RunTime:0.001260s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.012763s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.000970s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.012198s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.016873s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.011546s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.002972s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.013895s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.008518s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 39[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): ID patient-gender2 already defined in Entity, line: 508[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): ID patient-gender2 already defined in Entity, line: 522[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): ID patient-gender2 already defined in Entity, line: 536[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): ID patient-gender2 already defined in Entity, line: 550[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 834[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 838[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 855[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 858[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 865[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 870[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 876[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 878[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 927[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 930[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 935[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-05-17T13:58:45+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.161971s][吞吐率：6.17req/s] [内存消耗：3,435.43kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/allianz/dcp',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'savedump=dcp; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2Fallianz%2Fdcp',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.018943s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-17T13:58:45+08:00 ] 127.0.0.1 127.0.0.1 GET /dcp/Login/index.html
+[ info ] test.mlxyadmin.com:8080/dcp/Login/index.html [运行时间：0.325153s][吞吐率：3.08req/s] [内存消耗：4,033.87kb] [文件加载：68]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/allianz/dcp',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'savedump=dcp; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2Fallianz%2Fdcp',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.015587s ]
+[ info ] [ RUN ] app\dcp\controller\Login->index[ D:\www\mlxyadmin\application\dcp\controller\Login.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\dcp\view\login\index.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-17T14:02:36+08:00 ] 127.0.0.1 127.0.0.1 POST /dcp/login/dologin.html
+[ info ] test.mlxyadmin.com:8080/dcp/login/dologin.html [运行时间：0.434452s][吞吐率：2.30req/s] [内存消耗：4,951.02kb] [文件加载：62]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'login',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => '*/*',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://test.mlxyadmin.com:8080/dcp/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'savedump=dcp; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2Fallianz%2Fdcp',
+)
+[ info ] [ PARAM ] array (
+  'user_name' => 'wangqiang@meetuuu.com',
+  'pwd' => '123',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.015043s ]
+[ info ] [ RUN ] app\dcp\controller\Login->doLogin[ D:\www\mlxyadmin\application\dcp\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.115912s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.015155s ]
+[ sql ] [ SQL ] SELECT `id`,`user_name`,`pwd`,`sign`,`avatar`,`is_manager`,`company` FROM `nd_cases_chatuser` WHERE  `user_name` = 'wangqiang@meetuuu.com'  AND `u_status` = 1  AND `delete_time` = 0 LIMIT 1 [ RunTime:0.001207s ]
+---------------------------------------------------------------
+[ 2018-05-17T14:02:36+08:00 ] 127.0.0.1 127.0.0.1 POST /dcp/login/dologin.html
+[ info ] test.mlxyadmin.com:8080/dcp/login/dologin.html [运行时间：0.304025s][吞吐率：3.29req/s] [内存消耗：4,951.02kb] [文件加载：62]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'login',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => '*/*',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://test.mlxyadmin.com:8080/dcp/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'savedump=dcp; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2Fallianz%2Fdcp',
+)
+[ info ] [ PARAM ] array (
+  'user_name' => 'wangqiang@meetuuu.com',
+  'pwd' => '123',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.012067s ]
+[ info ] [ RUN ] app\dcp\controller\Login->doLogin[ D:\www\mlxyadmin\application\dcp\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002670s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.020028s ]
+[ sql ] [ SQL ] SELECT `id`,`user_name`,`pwd`,`sign`,`avatar`,`is_manager`,`company` FROM `nd_cases_chatuser` WHERE  `user_name` = 'wangqiang@meetuuu.com'  AND `u_status` = 1  AND `delete_time` = 0 LIMIT 1 [ RunTime:0.001281s ]
+---------------------------------------------------------------
+[ 2018-05-17T14:02:37+08:00 ] 127.0.0.1 127.0.0.1 POST /dcp/login/dologin.html
+[ info ] test.mlxyadmin.com:8080/dcp/login/dologin.html [运行时间：0.315349s][吞吐率：3.17req/s] [内存消耗：4,951.02kb] [文件加载：62]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'login',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => '*/*',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://test.mlxyadmin.com:8080/dcp/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'savedump=dcp; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2Fallianz%2Fdcp',
+)
+[ info ] [ PARAM ] array (
+  'user_name' => 'wangqiang@meetuuu.com',
+  'pwd' => '123',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.012825s ]
+[ info ] [ RUN ] app\dcp\controller\Login->doLogin[ D:\www\mlxyadmin\application\dcp\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011545s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.016069s ]
+[ sql ] [ SQL ] SELECT `id`,`user_name`,`pwd`,`sign`,`avatar`,`is_manager`,`company` FROM `nd_cases_chatuser` WHERE  `user_name` = 'wangqiang@meetuuu.com'  AND `u_status` = 1  AND `delete_time` = 0 LIMIT 1 [ RunTime:0.000597s ]
+---------------------------------------------------------------
+[ 2018-05-17T14:03:23+08:00 ] 127.0.0.1 127.0.0.1 POST /dcp/login/dologin.html
+[ info ] test.mlxyadmin.com:8080/dcp/login/dologin.html [运行时间：0.313384s][吞吐率：3.19req/s] [内存消耗：4,998.40kb] [文件加载：63]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'login',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => '*/*',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://test.mlxyadmin.com:8080/dcp/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'savedump=dcp; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2Fallianz%2Fdcp',
+)
+[ info ] [ PARAM ] array (
+  'user_name' => 'wangqiang@meetuuu.com',
+  'pwd' => '123',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.013006s ]
+[ info ] [ RUN ] app\dcp\controller\Login->doLogin[ D:\www\mlxyadmin\application\dcp\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001828s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.015464s ]
+[ sql ] [ SQL ] SELECT `id`,`user_name`,`pwd`,`sign`,`avatar`,`is_manager`,`company` FROM `nd_cases_chatuser` WHERE  `user_name` = 'wangqiang@meetuuu.com'  AND `u_status` = 1  AND `delete_time` = 0 LIMIT 1 [ RunTime:0.000574s ]
+[ sql ] [ SQL ] UPDATE `nd_cases_chatuser`  SET `status`=1  WHERE  `id` = 31 [ RunTime:0.001112s ]
+---------------------------------------------------------------
+[ 2018-05-17T14:03:24+08:00 ] 127.0.0.1 127.0.0.1 GET /allianz/dcp
+[ info ] test.mlxyadmin.com:8080/allianz/dcp [运行时间：0.475330s][吞吐率：2.10req/s] [内存消耗：6,757.32kb] [文件加载：85]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dcp',
+    1 => 'Index',
+    2 => 'service_details',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://test.mlxyadmin.com:8080/dcp/Login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'savedump=dcp; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2Fallianz%2Fdcp; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.012127s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\dcp\controller\Index->service_details[ D:\www\mlxyadmin\application\dcp\controller\Index.php ]
+[ info ] [ VIEW ] D:\www\mlxyadmin\application\dcp\view\index\service_details.html [ array (
+  0 => 'site_version',
+  1 => 'static_path',
+  2 => 'module_path',
+  3 => 'lib_path',
+  4 => 'service_list',
+  5 => 'area',
+  6 => 'country_list',
+  7 => 'userid',
+  8 => 'minedata',
+  9 => 'service_id',
+  10 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012283s ] mysql:dbname=databases;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_case_type` [ RunTime:0.014882s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_case_type` ORDER BY sort desc [ RunTime:0.001672s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_area` [ RunTime:0.012338s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_area` WHERE  `parent_id` = 0 [ RunTime:0.012595s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_country` [ RunTime:0.013756s ]
+[ sql ] [ SQL ] SELECT * FROM `nd_cases_country` ORDER BY locate('Malaysia',ename) desc [ RunTime:0.001645s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `nd_cases_chatuser` [ RunTime:0.013107s ]
+[ sql ] [ SQL ] SELECT `a_chatuser`.*,a_case_company.name as companyname FROM `nd_cases_chatuser` `a_chatuser` INNER JOIN `nd_cases_company` `a_case_company` ON `a_chatuser`.`company`=`a_case_company`.`id` WHERE  `a_chatuser`.`id` = '31' ORDER BY a_chatuser.sort desc LIMIT 1 [ RunTime:0.000769s ]
+[ error ] [2]DOMDocument::loadHTML(): Tag section invalid in Entity, line: 39[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): ID patient-gender2 already defined in Entity, line: 509[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): ID patient-gender2 already defined in Entity, line: 523[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): ID patient-gender2 already defined in Entity, line: 537[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): ID patient-gender2 already defined in Entity, line: 551[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 835[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 839[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 856[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 859[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 866[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 871[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 877[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : option in Entity, line: 879[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 928[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 931[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+[ error ] [2]DOMDocument::loadHTML(): Unexpected end tag : span in Entity, line: 936[D:\www\mlxyadmin\thinkcms\library\minify\HtmlMinify.php:21]
+---------------------------------------------------------------
+[ 2018-05-17T14:03:27+08:00 ] 127.0.0.1 127.0.0.1 POST /module/cases/Interfaces/valid_login.html
+[ info ] test.mlxyadmin.com:8080/module/cases/Interfaces/valid_login.html [运行时间：0.102629s][吞吐率：9.74req/s] [内存消耗：3,435.95kb] [文件加载：59]
+[ info ] [ LANG ] D:\www\mlxyadmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'manage',
+    1 => 'loader',
+    2 => 'run',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'test.mlxyadmin.com:8080',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://test.mlxyadmin.com:8080',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36',
+  'referer' => 'http://test.mlxyadmin.com:8080/allianz/dcp',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'savedump=dcp; amback=http%3A%2F%2Ftest.mlxyadmin.com%3A8080%2Fallianz%2Fdcp; phone_user_name=wangqiang%40meetuuu.com; phone_user_id=31; phone_user_avatar=http%3A%2F%2Foqi1zfida.bkt.clouddn.com%2Fupload%2Fjpeg%2Fd1f80cdeb3b802bd128bdaa479f01426.jpeg',
+)
+[ info ] [ PARAM ] array (
+  '_module_' => 'cases',
+  '_controller_' => 'Interfaces',
+  '_action_' => 'valid_login',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run \app\common\behaviors\LoadConfigBehavior @module_init [ RunTime:0.020112s ]
+[ info ] [ RUN ] app\manage\controller\Loader->run[ D:\www\mlxyadmin\application\manage\controller\Loader.php ]
+[ info ] [ RUN ] module\cases\controller\Interfaces->valid_login[ D:\www\mlxyadmin\application\module\cases\controller\Interfaces.php ]
+[ info ] [ LOG ] INIT File

@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="__PHONE__/css/aui.css">
+    <link rel="stylesheet" type="text/css" href="__PHONE__/css/new.css?v=1.20">
+    <link rel="stylesheet" type="text/css" href="__PHONE__/font-awesome-4.7.0/css/font-awesome.css">
+</head>
+<body>
+    <section class="aui-content-padded my-mais-content">
+      
+
+    {if condition="$is_manager eq 0"}
+        <!-- 单人头像 --> 
+        <div class="mais-per-logo"><img src="{if condition='!empty($manager_content)'}{$manager_content.avatar}{else/}__PHONE__/img/moren.png{/if}" class="mais-img"></div>
+        <div class="mais-per-mains">
+            <p class="maisa-name">&nbsp;</p>
+            <p class="maisa-names">{if condition='!empty($manager_content)'}{$manager_content.nickname}{else/}case manager{/if}</p>
+        </div>
+   {/if}
+   {if condition="$is_jt eq 1 and $is_manager neq 0"}
+        <!--头像双人-->
+        <div class="mais-per-logo" id="img-double">
+            <div class="mais-double">
+                <div class="mais-img-double">
+                    <img src="{if condition='!empty($manager_content)'}{$manager_content.avatar}{else/}__PHONE__/img/moren.png{/if}">
+                    <p class="mais-double-name">{if condition='!empty($manager_content)'}{$manager_content.nickname}{else/}case manager{/if}</p>
+                </div>
+                <div class="mais-img-doubles">
+                    <img src="{$user_content.avatar}">
+                    <p class="mais-double-name">{$user_content.nickname}</p>
+                </div>
+            </div>
+        </div>
+        {/if}
+        {if condition="$is_jt eq 0 and $is_manager neq 0"}
+      
+        <!-- 单人头像 --> 
+        <div class="mais-per-logo"><img src="{$action_data.mine.avatar}" class="mais-img"></div>
+        <div class="mais-per-mains">
+            <p class="maisa-name">{$action_data.mine.companyname}</p>
+            <p class="maisa-names">{$action_data.mine.nickname}</p>
+        </div>
+        {/if}
+        <div class="mais-per-content">
+            
+            <div class="manegermain"><span class="manegerspan">Case ID:{$case_content.case_code}</span></div>
+            <div class="manegermain"><span class="manegerspan">Type:</span>{$case_content.typename}</div>
+            <div class="manegermain"><span class="manegerspan">Case coordinator:</span>{$case_content.jt_str}</div>
+            <div class="manegermain"><span class="manegerspan">Time:</span>{$case_content.create_time}</div>
+            <div class="maneger-ms"><span class="manegerspan">Case描述:</span></div>
+            <div class="maneger-text">{if condition="$case_content.illness"}{$case_content.illness}{else/}暂无{/if}</div>
+        </div>
+   
+    {if condition="$case_content.case_status neq 2 or $is_jt eq 1 or $is_manager eq 0"}
+    
+        {if condition="$case_content.case_status neq 2 and $case_content.case_status neq 1"}
+        <footer class="aui-bar-mais aui-bar-tab-mais" id="footer">
+            
+             
+            <div class="aui-bar-tab-item-mais aui-active-mais" onclick="tourl()">
+                {$action_data.action}
+            </div>
+            
+         
+         
+        </footer>
+        {/if}
+           
+    {else/}
+                 <footer class="aui-bar-mais aui-bar-tab-mais" id="footer">
+
+          
+             <div class="aui-bar-tab-item-mais aui-active-mais" onclick="updatestatus(1)" >确认
+            </div>
+            <div class="aui-bar-tab-item-cancel aui-active-mais" onclick="updatestatus(0)">拒绝
+            </div>
+         
+        </footer>
+          
+    {/if}
+        
+    </section>
+</body>
+<script type="text/javascript" src="__PHONE__/script/api.js" ></script>
+<script type="text/javascript" src="__PHONE__/script/aui-tab.js" ></script>
+<script type="text/javascript" src="__PHONE__/script/jquery-1.8.3.js" ></script>
+
+
+<script type="text/javascript">
+
+   
+ 
+    function tourl(id){
+        window.location.href="{:url('Phone/index',array('id'=>$case_content['id']))}";
+    }
+    function updatestatus(status){
+        var id="{$case_content.id}";
+        $.ajax({
+            type: "post",
+            url:"{:url('Phone/update_status')}",
+            dataType:"json",
+            data:{status:status,id:id},
+            success:function(data){
+                alert(data.msg);
+                if(data.url){
+                    window.location.href=data.url;
+                }else{
+                    window.history.go(-1);
+                }
+            }
+        });
+    }
+ 
+</script>
+</html>

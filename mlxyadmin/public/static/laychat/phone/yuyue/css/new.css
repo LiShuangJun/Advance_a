@@ -1,0 +1,196 @@
+.customer-logo{
+	text-align: center;
+}
+.customerindex img{
+	border-radius: 50%;
+	border:1px solid transparent; 
+}
+.fh5co-nav #fh5co-logo {
+	display: flex;
+}
+.customername{
+	font-size:13px;
+}
+.img-customer-logo{
+	margin:0 auto;
+}
+.blog-text p{
+	margin-bottom: 0px;
+}
+.caselist-finished{
+	text-align: center;
+	padding-top:15px;
+}
+.caselist-time,.caselist-state,.caselist-id,.caselist-severtype,.caselist-condition,.caselist-manager,.orderlist-number,.orderlist-case,.orderlist-time,.caselist-status,{
+	color: #0097DE;
+}
+.caselist-badge-new{
+	background-color: red;
+}
+.caselist-badge-end{
+	background-color:#777777;
+}
+.caselist-collection-already,.orderlist-collection-already{
+	color:red;
+}
+.caselist-collection-unready,.orderlist-collection-unready{
+	color: #777777;
+}
+.a-upload {
+    padding: 4px 10px;
+    height:30px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+.a-upload  input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+
+.a-upload:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none
+}
+.center-page{
+	text-align: center;
+}
+.oder-maintext{
+	resize: none;
+	padding: 3px 5px;
+}
+.orderlabel{
+	text-align: left;
+}
+.next-button,.submit-button,.submit-button-pc{
+	outline: none;
+	width: 90%;
+	border-radius:5px;
+	margin: 0 auto;
+	color: white;
+	border: 1px solid;
+}
+.next-button{
+	background-color:#0097DE;
+}
+.submit-button{
+	background-color:red;
+}
+.submit-button-pc{
+	width:65%;
+	background-color:#0097DE;
+}
+.submit-time{
+	border:1px solid gray; 
+}
+.orderlist-cancel-button{
+	outline: none;
+	border-radius:4px;
+	border: 1px solid;
+	background-color:#0097DE;
+	color: white;
+}
+
+input , label { vetical-align:middle;}
+@media screen and (max-width: 768px) {
+	.customerindex img{
+		width:70px;
+		height:70px;
+	}
+	.fh5co-nav #fh5co-logo{
+		 margin-top: -15px;
+	}
+	.customername{
+		margin-top: 25px;
+	}
+	.caselist-search{
+		padding:20px 20px 10px;
+	}
+	input[type="text"] {
+    	width:90%;
+	}
+	.oder-tel,.oder-email{
+		margin-bottom: 10px;
+	}
+	.oder-maintext{
+		min-width:90%;
+		min-height:150px;
+	}
+	.orderlabel{
+		padding-left:2px;
+		min-width: 175px;
+	}
+	input[type="mold"] {
+    	height:25px;
+    	width:90%;
+    	line-height: 25px;
+	}
+	input[type="Datepickers"] {
+    	height:25px;
+    	width:100%;
+    	line-height: 25px;
+	}
+}
+@media screen and (min-width: 769px) {
+	.customerindex img{
+		width:80px;
+		height:80px;
+	}
+	.fh5co-nav #fh5co-logo{
+		 margin-top: -15px;
+	}
+	.customername{
+		margin-top:32px;
+	}
+	.caselist-search{
+		padding:20px 100px 10px;
+	}
+	input[type="text"] {
+    	// height:25px;
+    	width:50%;
+    	line-height: 25px;
+	}
+	.oder-tel,.oder-email{
+		margin-bottom: 10px;
+	}
+	.oder-maintext{
+		min-width:100%;
+		min-height:200px;
+	}
+	.orderlabel{
+		padding-left:5px;
+	}
+	input[type="mold"] {
+    	height:25px;
+    	width:42%;
+    	line-height: 25px;
+	}
+	input[type="Datepickers"] {
+    	height:25px;
+    	width:42%;
+    	line-height: 25px;
+	}
+	.timeselect{
+		width: 60%;
+		margin:0 auto; 
+	}
+	.table2h4{
+		margin-top:20px;
+	}
+}

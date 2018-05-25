@@ -1,0 +1,31 @@
+2017-06-02 15:53:16 exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'databases.v3_chatlog' doesn't exist' in E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\gateway-worker-for-win\src\Lib\DbConnection.php:1732
+Stack trace:
+#0 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\gateway-worker-for-win\src\Lib\DbConnection.php(1732): PDO->prepare('INSERT INTO `v3...')
+#1 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\gateway-worker-for-win\src\Lib\DbConnection.php(1820): GatewayWorker\Lib\DbConnection->execute('INSERT INTO `v3...', Array)
+#2 E:\www\tpadmin\vendor\GatewayWorker\Applications\Laychat\Events.php(214): GatewayWorker\Lib\DbConnection->query()
+#3 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"chatMe...')
+#4 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\gateway-worker-for-win\src\BusinessWorker.php(369): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"chatMe...')
+#5 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\workerman-for-win\Connection\TcpConnection.php(480): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#7 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #29)
+#8 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\workerman-for-win\Events\Select.php(257): call_user_func_array(Array, Array)
+#9 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\workerman-for-win\Worker.php(808): Workerman\Events\Select->loop()
+#10 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\gateway-worker-for-win\src\BusinessWorker.php(183): Workerman\Worker->run()
+#11 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\workerman-for-win\Worker.php(457): GatewayWorker\BusinessWorker->run()
+#12 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\workerman-for-win\Worker.php(366): Workerman\Worker::runAllWorkers()
+#13 E:\www\tpadmin\vendor\GatewayWorker\Applications\Laychat\start_businessworker.php(35): Workerman\Worker::runAll()
+#14 {main}
+2017-08-17 10:12:13 exception 'Exception' with message 'You can't send(array) to client, you need to convert it to a string. ' in E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\workerman-for-win\Protocols\Websocket.php:225
+Stack trace:
+#0 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\workerman-for-win\Connection\TcpConnection.php(260): Workerman\Protocols\Websocket::encode(Array, Object(Workerman\Connection\TcpConnection))
+#1 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\gateway-worker-for-win\src\Gateway.php(554): Workerman\Connection\TcpConnection->send(Array)
+#2 [internal function]: GatewayWorker\Gateway->onWorkerMessage(Object(Workerman\Connection\TcpConnection), Array)
+#3 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\workerman-for-win\Connection\TcpConnection.php(480): call_user_func(Array, Object(Workerman\Connection\TcpConnection), Array)
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #35)
+#5 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\workerman-for-win\Events\Select.php(257): call_user_func_array(Array, Array)
+#6 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\workerman-for-win\Worker.php(808): Workerman\Events\Select->loop()
+#7 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\gateway-worker-for-win\src\Gateway.php(279): Workerman\Worker->run()
+#8 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\workerman-for-win\Worker.php(457): GatewayWorker\Gateway->run()
+#9 E:\www\tpadmin\vendor\GatewayWorker\vendor\workerman\workerman-for-win\Worker.php(366): Workerman\Worker::runAllWorkers()
+#10 E:\www\tpadmin\vendor\GatewayWorker\Applications\Laychat\start_gateway.php(65): Workerman\Worker::runAll()
+#11 {main}

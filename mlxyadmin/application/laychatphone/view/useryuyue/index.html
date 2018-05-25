@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CustomerOrderFinished.html</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="CustomerCaseList" />
+	<meta name="keywords" content="CustomerCaseList" />
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="__YUYUE__/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="__YUYUE__/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="__YUYUE__/css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="__YUYUE__/css/magnific-popup.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="__YUYUE__/css/flexslider.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="__YUYUE__/css/style.css">
+	<link rel="stylesheet" href="__YUYUE__/css/new.css">
+
+	<!-- Modernizr JS -->
+	<script src="__YUYUE__/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<div class="container-wrap">
+	<!-- 搜索框 -->
+		<div class="caselist-search">
+		
+		</div>
+	<div style="clear: both;"></div>
+		<h3 class="caselist-finished">我的预约</h3>
+		<div id="fh5co-blog" class="caselist-padding">
+			<div class="row">
+			{volist name="useryuyueinfo" id="vo"}
+				<div class="col-md-4" id="yuyueinfodiv{$vo.id}">
+					<div class="fh5co-blog animate-box">
+						<div class="blog-text">
+							<p><span class="orderlist-number">预约日期:</span>{$vo.submitdate}</p>
+							<p><span class="orderlist-case">预约时间:</span>{$vo.time_quantum}</p>
+							<p><span class="orderlist-case">关联Case:
+							</span>
+							{if condition="$vo.iscase eq 1"}关联
+							{elseif condition="$vo.iscase eq 2"/}没关联
+							{/if}
+							</p>
+							<p><span class="caselist-status">状态:</span>
+							{if condition="$vo.appointment_state eq 1"} 委派中
+							{elseif condition="$vo.appointment_state eq 2"/}预约成功
+							{elseif condition="$vo.appointment_state eq 3"/}已完成
+							{elseif condition="$vo.appointment_state eq 4"/}取消预约
+							{/if}
+							</p>
+							<!-- <ul class="stuff">
+								<li><i class="icon-heart3"></i><span class="orderlist-collection-already">已收藏</span></li>
+								<li><i class="icon-eye2"></i>功能待定</li>
+								<li><a href="#">查看详情<i class="icon-arrow-right22"></i></a></li>
+							</ul> -->
+							{if condition="$vo.appointment_state eq 1"} <button class="orderlist-cancel-button col-lg-12" type="button" id="yuyueinfobto{$vo.id}" onClick="ordercancel({$vo.id});">拒绝</button>
+							{elseif condition="$vo.appointment_state eq 2"/}<button class="orderlist-cancel-button col-lg-12" type="button" id="yuyueinfobto{$vo.id}" onClick="ordercancel({$vo.id});">拒绝</button>
+							{elseif condition="$vo.appointment_state eq 3"/}
+							{elseif condition="$vo.appointment_state eq 4"/}<button style="display:none;" class="orderlist-cancel-button col-lg-12" type="button" id="yuyueinfobtocancel{$vo.id}">已拒绝</button>
+							{/if}
+							
+							
+							
+						</div> 
+					</div>
+				</div>
+			{/volist}	
+				<!-- <div class="col-md-4">
+					<div class="fh5co-blog animate-box">
+						<div class="blog-text">
+							<p><span class="orderlist-number">预约号:</span>20170901</p>
+							<p><span class="orderlist-case">关联Case:</span>none</p>
+							<p><span class="orderlist-time">CaseID:</span>123456789</p>
+							<p><span class="caselist-status">状态:</span>委派中</p>
+							<ul class="stuff">
+								<li><i class="icon-heart3"></i><span class="orderlist-collection-unready">已收藏</span></li>
+								<li><i class="icon-eye2"></i>功能待定</li>
+								<li><a href="#">查看详情<i class="icon-arrow-right22"></i></a></li>
+							</ul>
+							<button class="orderlist-cancel-button col-lg-12" type="button" onClick="ordercancel();">取消</button>
+						</div> 
+					</div>
+				</div> -->
+				
+			</div>
+		</div>
+	</div><!-- END container-wrap -->
+	<br/>
+	<button type="button" class="visible-xs next-button">返回首页</button>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="__YUYUE__/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="__YUYUE__/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="__YUYUE__/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="__YUYUE__/js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="__YUYUE__/js/jquery.flexslider-min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="__YUYUE__/js/jquery.magnific-popup.min.js"></script>
+	<script src="__YUYUE__/js/magnific-popup-options.js"></script>
+	<!-- Counters -->
+	<script src="__YUYUE__/js/jquery.countTo.js"></script>
+	<!-- Main -->
+	<script src="__YUYUE__/js/main.js"></script>
+	<!-- layer.js-->
+	<script src="__YUYUE__/layer-v3.0.3/layer/mobile/layer.js" type="text/javascript"></script>
+
+<script>
+function cases(){
+	
+	 window.location.href="{:url('Phone/case_list')}";
+	
+}
+function yuyuemanage(){
+	
+	 window.location.href="{:url('Yuyue/index')}";
+	
+}
+</script>
+	<script>
+	// 取消预约事件，此处确定方法暂时以刷新代替
+	function ordercancel(id){
+		
+		$.ajax({
+			 url:"{:url('Useryuyue/cancel')}",
+			   type:'post',
+			   dataType:'json',
+			   data:{"id":id},
+			   success:function(data){
+			      if(data){
+			    	    var contentmain = "您确定要取消此次预约吗？"; 
+						layer.open({
+			    			content: contentmain
+			    			,btn: ['确定', '不要']
+			    			,yes: function(index){
+			    				layer.close(index);
+			    				       window.location.href="{:url('Useryuyue/index')}";
+			    				       $("#yuyueinfobto"+id).remove();
+			    				       $("#yuyueinfobtocancel"+id).css("display","block");
+			    				    }
+			  			});	    
+						
+			      }
+
+			   }
+		 
+		 
+		 });
+	
+		
+	}
+	</script>
+
+	</body>
+</html>
+

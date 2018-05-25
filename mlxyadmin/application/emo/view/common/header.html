@@ -1,0 +1,79 @@
+  <div class="hide-image" style="display:none;">
+    <img src="{$static_path}/advance/img/001.jpg">
+  </div>
+  <div id="page-wrapper">
+    <section id="preloader">
+      <div class="loader" id="loader">
+          <div class="loader-img"></div>
+      </div>
+    </section>
+    <div class="top-nav clearfix">
+      <a class="logo-wrapper clearfix" href="{:url('/Allianz/EMO')}">
+        <span class="logo1 visible-lg visible-md visible-sm"><img src="{$static_path}/advance/img/logo.png" alt="logo"></span>
+        {if condition="$userid neq 0"}
+        <span class="logo1 visible-xs"><img src="{$static_path}/advance/img/logo.png" alt=""></span>
+        <span class="logo2 visible-xs">{$minedata.user_name}</span>
+        {else/}
+        <span class="logo3 visible-xs"><img src="{$static_path}/advance/img/logo.png" alt=""></span>
+        {/if}
+      </a>
+        {if condition="$userid neq 0"}
+      <a class="login-wrapper visible-xs clearfix" href="{:url('Login/logout')}">Log out</a>
+       {else/}
+        <a class="login-wrapper visible-xs" href="{:url('Login/index')}">Log In</a>
+       {/if}
+      <ul class="menu-wrapper clearfix">
+        {if condition="$userid neq 0"}
+        <li class="menubar-login hidden-xs">
+          <a href="{:url('Login/logout')}">{$minedata.user_name}丨Log out</a>
+        </li>
+        {else/}
+        <li class="menubar-login hidden-xs">
+          <a href="{:url('Login/index')}"><i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp;Log In</a>
+        </li>
+        {/if}
+         {volist name="service_list" id="sl"}
+         {in name="$sl.id" value="1"}
+         <li class="menubar menubar-{$sl.id}"><a href="{:url('/Allianz/EMO/services/'.$sl.id)}"><span class="bar-background"></span><span class="bar-text">{$sl.typeename}</span><span class="bottom-gradient"></span></a><span class="right-gradient"></span></li>
+
+         {/in}
+         {/volist}
+
+      </ul>
+    </div>
+    <div class="flex-container-outer-wrapper">
+    <div class="flex-container-wrapper mb--l">
+      <div class="flex-container">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="{$static_path}/advance/img/001.jpg">
+            </li>
+            <li>
+              <img src="{$static_path}/advance/img/002.jpg">
+            </li>
+            <li>
+              <img src="{$static_path}/advance/img/003.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex-mask">
+        <div class="diagnose logvilad" >
+          <div class="image-wrapper"><img src="{$static_path}/advance/img/diagnose.png" alt=""></div>
+          <div class="diagnose-text">Get Started</div>
+        </div>
+        <div class="flex-phone-wrapper">
+          <span>1&nbsp;300&nbsp;88&nbsp;1028</span>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="mobile-header mb--s mt--s">
+      <div class="image-wrapper">
+        <img src="{$static_path}/advance/img/444.jpg" alt="">
+      </div>
+    </div>
+    <div class="mobile-diagnose logvilad">
+      <div class="diagnose-text">Get Started</div>
+    </div>

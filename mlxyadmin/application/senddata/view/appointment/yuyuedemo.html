@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div>
+	<form id="Form1" action="{:url('/yuyueApi')}" method="post" enctype="multipart/form-data">
+	              
+   apiid：<input name="apiid" type="text" value="fae1642cca025e189c745da5d8b06a57"/><br />
+apipwd：<input name="apipwd" type="text" value="39dfb57e2b525e81fe68445bfd25cf1a"/><br />
+timestamp：<input name="timestamp" type="text" value="150416528"/><br />
+sign：<input name="sign" type="text" value="c5edbc7e4774af2d89fbbde9855daebb"/><br />
+body：<input name="body" type="text" value="eyJ1c2VybmFtZSI6IndhbmdxaWFuZ0BtZWV0dXV1LmNvbSIsInB3ZCI6IjEyMyIsImlzY2FzZSI6IjEiLCJjYXNlaWQiOiIzIiwicGhvbmUiOiIxODcyMTg4NzIyOSIsImVtYWlsIjoiMTYzNDI1OTk5NUBxcS5jb20iLCJhZHZpc29yeV9kZXRhaWxzIjoiXHU2MjExXHU4MTFhXHU3NWRiXHVmZjBjXHU3NWRiXHU2YjdiXHU0ZTg2Iiwic3VibWl0ZGF0ZSI6IjIwMTctMDktMTAiLCJ0aW1lX3F1YW50dW0iOiIwOTozMDowMCJ9"/><br />
+
+
+姓名：<input name="username" type="text" value="wangqiang@meetuuu.com"/><br />
+密码：<input name="pwd" type="text" value="123"/><br />
+                  
+                  <p>是否关联case<label><input name="iscase" type="checkbox" value="1" />关联 </label><label><input name="iscase" type="checkbox" value="2" />不关联 </label></p>
+                  <p>关联case id<input type="text" name="caseid" id="caseid" value="3"/></p>
+	              <p>联系电话<input type="text" name="phone" id="phone" value="18721887229"/></p>
+	              <p>邮箱<input type="text" name="email" id="email" value="1634259995@qq.com"/></p>
+	              <p>咨询内容简介<input type="text" name="advisory_details" id="advisory_details" value="我脚痛，痛死了"/></p>
+	              <p>预约日期<input type="text" name="submitdate" id="time_quantum" value="2017-09-10"/></p>
+	              <p>预约时间段<input type="text" name="time_quantum" id="time_quantum" value="09:30:00"/></p>
+	              <input type="submit" value="提 交" />
+	</form>
+</div>
+</body>
+</html>
