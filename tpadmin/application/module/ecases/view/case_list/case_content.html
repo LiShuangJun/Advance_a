@@ -1,0 +1,117 @@
+{extend name="common/base" }
+
+{block name="style"}
+<style type="text/css">
+.article-cover{
+    width: 60px;
+    height: 40px;
+    margin: auto;
+    background-size: cover;
+}
+.myam-g{
+    margin-bottom: 10px;
+}
+</style>
+{/block}
+
+{block name="content"}
+ <section class="am-panel am-panel-success">
+  <header class="am-panel-hd">
+    <h3 class="am-panel-title">Case details</h3>
+  </header>
+  <div class="am-panel-bd">
+     <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>case ID</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.case_code}</span></div>
+       <div class="am-u-sm-3"><strong>salesforce ID</strong></div>
+       <div class="am-u-sm-3">**********</div>
+     </div>
+      <div class="am-g myam-g">
+          <div class="am-u-sm-3"><strong>Service Item</strong></div>
+          <div class="am-u-sm-3"><span>{$case_list.typeename}</span></div>
+          <div class="am-u-sm-3"><strong>Department</strong></div>
+          <div class="am-u-sm-3"><span>{$case_list.ks_name}({$case_list.ks_ename})</span></div>
+      </div>
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>Responsible casemanager</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="empty($users) eq 1"}N/N{else/}{$users.nickname}({$users.user_name}){/if}</span></div>
+       <div class="am-u-sm-3"><strong>Client submitting the case</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.case_username}</span></div>
+       </div>
+      <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>Responsible administrator</strong></div>
+       <div class="am-u-sm-9"><span>{if condition="$jtstr eq ''"}N/N{else/}{$jtstr}{/if}</span></div>
+       
+       </div>
+       <hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+       
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>Patient's name</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.username}</span></div>
+       <div class="am-u-sm-3"><strong>Date of birth</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.birthday}</span></div>
+       </div>
+       
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>Gender</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.sex eq 1"}Male{else/}Female{/if}</span></div>
+       <div class="am-u-sm-3"><strong>If you are the patient</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.isme eq 1"}Yes{else/}No{/if}</span></div>
+       </div>
+       
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>Applicant's name</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.applicant_name}</span></div>
+       <div class="am-u-sm-3"><strong>Relationship with the patient</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.relationship eq ''"}本人{else/}{$case_list.relationship}{/if}</span></div>
+       </div>
+       
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>Country</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.country_ename}</span></div>
+       <div class="am-u-sm-3"><strong>Province where the city</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.country eq 1"}{$case_list.province_name}-{$case_list.city_name}-{$case_list.district_name}{else/}{$case_list.e_province}{/if}</span></div>
+       </div>
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>Address</strong></div>
+       <div class="am-u-sm-9"><span>{$case_list.address}</span></div>
+       
+       </div>
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>Zip code</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.zip_code eq ''"}N/N{else/}{$case_list.zip_code}{/if}</span></div>
+       <div class="am-u-sm-3"><strong>Email</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.email}</span></div>
+       </div>
+       
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>Convenient to answer the phone time</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.preferred_time}</span></div>
+       <div class="am-u-sm-3"><strong>The current doctor's name for treatment</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.treatment_doctor eq ''"}N/N{else/}{$case_list.treatment_doctor}{/if}</span></div>
+       </div>
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>The current hospital for treatment</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.treatment_hospital eq ''"}N/N{else/}{$case_list.treatment_hospital}{/if}</span></div>
+       <div class="am-u-sm-3"><strong>Current treatment specialist</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.specialty eq ''"}N/N{else/}{$case_list.specialty}{/if}</span></div>
+       </div>
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>Condition description</strong></div>
+       <div class="am-u-sm-9"><span>{$case_list.illness}</span></div>
+       </div>
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>Case note</strong></div>
+       <div class="am-u-sm-9"><span>{$case_list.case_note}</span></div>
+       </div>
+       
+  </div>
+</section> 
+
+{/block}
+
+{block name="script"}
+
+<script type="text/javascript" src="{$lib_path}/jquery/2.0.0/jquery.min.js?_={$site_version}"></script>
+
+{/block}

@@ -1,0 +1,319 @@
+{extend name="common/base" }
+{block name="style"}
+<style type="text/css">
+    /*20170731*/
+.a-upload {
+    padding: 4px 10px;
+    height:30px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+.a-upload  input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+
+.a-upload:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none
+}
+
+</style>
+{/block}
+{block name="content"}
+
+<div class="am-g">
+	<div class="am-u-sm-12">
+		<form class="am-form ajax-form" method="post" action="{:module_url('edit', ['id' => $_id])}">
+                     <input type="hidden" name="prevtype" />
+			{$widget->form('text', ['title' => 'Patient Name', 'name' => 'username', 'value' => $case_list['username'],'r_md_num'=>2,'attr'=>' maxlength="50"'])}
+	                {$widget->form('date', ['title' => 'Date of Birth', 'name' => 'birthday', 'value' => $case_list['birthday'],'r_md_num'=>3])}
+                        
+			{$widget->form('radio', ['title' => 'Gender', 'name' => 'sex', 'value' =>$case_list['sex'],'list'=>$sexlist])}
+                        {$widget->form('select', ['title' => 'Service Item', 'name' => 'case_type', 'value' =>$case_list['case_type'],'list'=>$typelist])}
+                        {$widget->form('select', ['title' => 'Department', 'name' => 'ks_type', 'value' => $case_list['ks_type'],'list'=>$kslist])}
+                        {if condition="($case_list['case_status'] eq 2) or ($case_list['case_status'] eq 5)"}
+                        {$widget->form('select', ['title' => 'Monitor selection', 'name' => 'jtlist[]', 'value' => $case_list['case_jt'], 'list' => $jt_list, 'attr' => 'multiple','tip'=>'*可多选,重复点击可取消'])}
+                        {/if}
+                         <div class="am-g am-margin-top-sm" >  
+                        <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                                Client submitting the case
+                          </div>
+                           <div class="am-u-sm-8 am-u-md-7 am-u-end">  
+                               <span style="font-weight: bolder;">{$case_list['case_username']}</span>
+                           </div>    
+                       </div>
+                        {$widget->form('radio', ['title' => 'If you are the patient', 'name' => 'isme', 'value' => $case_list['isme'],'list'=>$islist])}
+                        {$widget->form('text', ['title' => 'Relationship with the patient', 'name' => 'relationship', 'value' =>$case_list['relationship'], 'form_id'=>'id="relationbox"','r_md_num'=>2])}
+                        {$widget->form('text', ['title' => 'Name of applicant', 'name' => 'applicant_name', 'value' =>$case_list['applicant_name'],'r_md_num'=>2,'attr'=>' maxlength="50"'])}
+                        {$widget->form('select', ['title' => 'Country', 'name' => 'country', 'value' => $case_list['country'],'list'=>$country_list])}
+                        {$widget->form('text', ['title' => 'Province', 'name' => 'e_province', 'value' =>$case_list['e_province'],'r_md_num'=>2,'attr'=>' maxlength="50" id="e_province"'])}
+                        <div class="am-g am-margin-top-sm" id="address">
+                             <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                                Address
+                             </div> 
+                              <div class="am-u-sm-8 am-u-md-7 am-u-end">  
+                                    <select  name="province"  style="width:20%;display:inline;margin-right: 10px;" data-am-selected="{btnSize: 'sm', searchBox: 1, maxHeight: 300,placeholder:'Please choose'}">
+                                            <option value="">Please choose</option>
+                                            {volist name="area" id="vo"}
+                                                    <option  value="{$vo['id']}"{if condition="$case_list['province'] eq $vo['id']"}selected{/if} >{$vo['area_name']}</option>
+                                            {/volist}
+                                    </select>
+                                    <select  name="city" style="width:20%;display:inline;margin-right: 10px;" data-am-selected="{btnSize: 'sm', searchBox: 1, maxHeight: 300,placeholder:'Please choose'}">
+                                            <option value="">Please choose</option>
+                                    </select>
+                                    <select  name="district" style="width:20%;display:inline;"data-am-selected="{btnSize: 'sm', searchBox: 1, maxHeight: 300,placeholder:'Please choose'}" >
+                                            <option value="">Please choose</option>
+                                    </select>
+                              </div>
+                       </div>
+                        {$widget->form('text', ['title' => 'Zip code', 'name' => 'zip_code', 'value' =>$case_list['zip_code'],'r_md_num'=>2, 'form_id'=>'id="codebox"','attr'=>' maxlength="20"','require'=>false])}
+                        
+                        {$widget->form('textarea', ['title' => 'Residence Address', 'name' => 'address', 'value' =>$case_list['address']])}
+                        {$widget->form('text', ['title' => 'Preferred Telephone Number', 'name' => 'preferred_phone', 'value' =>$case_list['preferred_phone'],'r_md_num'=>3])}
+                        {$widget->form('text', ['title' => 'Alternative Telephone Number', 'name' => 'standby_phone', 'value' =>$case_list['standby_phone'],'r_md_num'=>3,'require'=>false])}
+                        {$widget->form('text', ['title' => 'Email', 'name' => 'email', 'value' =>$case_list['email'],'r_md_num'=>3])}
+                        {$widget->form('textarea', ['title' => 'Convenient Time to be Contacted', 'name' => 'preferred_time', 'value' => $case_list['preferred_time']])}
+                        {volist name="typemore" id="cm" key="j"}
+                        <div id="moreform{$j}" style="display:none;">
+                        {volist name="cm" id="vo"}
+                         {if condition="isset($vo['list'])"}
+                         {$widget->form($vo.type, ['title' => $vo['title'], 'name' => $vo['name'], 'value' => $vo['value'],'list'=>$vo['list'],'require'=>false])}
+                         {else/}
+                         {$widget->form($vo.type, ['title' =>$vo['title'], 'name' => $vo['name'], 'value' =>$vo['value'],'r_md_num'=>3,'require'=>false])}
+                          {/if}
+                        {/volist}
+                        </div>
+                        {/volist}
+                        {$widget->form('textarea', ['title' => 'Description', 'name' => 'illness', 'value' => $case_list['illness'],'attr'=>' maxlength="300"'])}
+                        {$widget->form('text', ['title' => 'Doctor`s name', 'name' => 'treatment_doctor', 'value' =>$case_list['treatment_doctor'],'r_md_num'=>2,'attr'=>' maxlength="20"','require'=>false])}
+                        {$widget->form('text', ['title' => 'Hospital', 'name' => 'treatment_hospital', 'value' =>$case_list['treatment_hospital'],'r_md_num'=>3,'attr'=>' maxlength="40"','require'=>false])}
+                        {$widget->form('text', ['title' => 'Specialist', 'name' => 'specialty', 'value' =>$case_list['specialty'],'r_md_num'=>2,'attr'=>' maxlength="30"','require'=>false])}
+                        {$widget->form('textarea', ['title' => 'Case Remarks', 'name' => 'case_note', 'value' =>$case_list['case_note'],'attr'=>' maxlength="300"','require'=>false])}
+                        <div class="am-g am-margin-top-sm" >
+                             <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                                 Upload Attachment
+                             </div> 
+                          
+                            
+                            <div class="am-u-sm-8 am-u-md-7 am-u-end">  
+                                 <a href="javascript:;" class="a-upload">Upload my medical history
+                                 <input type="file" name="upload_file" id="upload_file">
+                
+                                 </a>
+                                <span id="upload_result">
+                                    {if condition="empty($case_list['options_data'])"}
+                                    [N/A]
+                                     {else/}
+                                     {$case_list['options_data']['file_hash']}.{$case_list['options_data']['file_ext']}
+                                     {/if}
+                                </span>
+                                 
+                                      <p>(*File only supports a single JPG,PDF,JPEP,PNG,DOC,ZIP format. For multiple files please compress and ZIP files. Maximum upload size 10MB.)</p>
+                                {if condition="!empty($case_list['options_data'])"}
+                                      <div > 
+                                          <a href="{:module_url('Interfaces/DownloadFile',['hash_str'=>$case_list['options_data']['file_hash']])}" class="a-upload"  target="_blank">Click to download attachments
+                                 
+                                 </a>
+                                </div>
+                                {/if}
+                            </div>
+                        </div>
+                       
+
+                        
+                        {$widget->form('submit', ['title' => 'Operating','text_ok' => 'Ok','text_cancel' => 'Cancel'])}
+		</form>
+	</div>
+
+</div>
+
+{/block}
+{block name="script"}
+
+<script type="text/javascript" src="{$lib_path}/jquery/2.0.0/jquery.min.js?_={$site_version}"></script>
+
+<script type="text/javascript">
+  $("input[name='prevtype']").val($("select[name='case_type']").val());
+  $("#moreform"+$("select[name='case_type']").val()).show();
+$("select[name='case_type']").change(function(){
+    var typeid=$(this).val();
+    $("#moreform"+typeid).show();
+      var prevtype= $("input[name='prevtype']").val();
+      $("#moreform"+prevtype).hide();
+      $("input[name='prevtype']").val($("select[name='case_type']").val());
+      });
+      
+ 
+</script>
+
+<script type="text/javascript">
+    $(function(){
+        
+        function ismedo(){
+                 var isme=$("input[name='isme']:checked").val();
+                 if(isme==0){
+                      $("#relationbox").show();
+                      $("input[name='applicant_name']").val('');
+                      $("input[name='applicant_name']").removeAttr("readonly");;
+                 }else{
+                     $("#relationbox").hide();
+                    $("input[name='applicant_name']").val($("input[name='username']").val()); 
+                     $("input[name='applicant_name']").attr("readonly","readonly");
+                 }
+        }
+
+         function isChina(){
+             var country_val=$("select[name='country']").val();
+             if(country_val!=1){
+                 $("#address").hide();
+                 $("#codebox").hide();
+                 $("#e_province").parent().parent().show();
+             }else{
+                 $("#address").show();
+                 $("#codebox").show();
+                 $("#e_province").parent().parent().hide();
+             }
+            
+        }
+    ismedo();
+    isChina();
+      $("input[name='isme']").click(function(){
+            ismedo();
+      });
+      $("select[name='country']").change(function(){
+            isChina();
+      });
+     $("input[name='username']").change(function(){
+           ismedo();
+      });
+      
+      function getcity(id){
+          		var current_province_id=id;
+                  
+		
+		$.ajax({
+			url:"{:module_url('Interfaces/getCity')}",
+			data:{ParentId:current_province_id},
+			dataType:'json',
+			type:'post',
+                        async: false,
+			success:function(re){
+				var html='<option value="">Please choose</option>';
+                                $("[name='district']").html(html);
+				var item=re.data;
+				for(var i in item){
+                                    if (item[i]['id']=='{$case_list[\'city\']}'){
+					html +='<option value="'+item[i]['id']+'" selected>'+item[i]['area_name']+'</option>';
+                                        
+                                        }else{
+                                        html +='<option value="'+item[i]['id']+'" >'+item[i]['area_name']+'</option>';
+                                        }
+				}
+				$("[name='city']").html(html);
+                                
+			}
+		})
+      }
+      
+      
+      function getdistrict(id){
+          		var current_city=id;
+		$.ajax({
+			url:"{:module_url('Interfaces/getDistrict')}",
+			data:{ParentId:current_city},
+			dataType:'json',
+			type:'post',
+			success:function(re){
+				var html='<option value="">Please choose</option>';
+				var item=re.data;
+				for(var i in item){
+                                    if (item[i]['id']=='{$case_list[\'district\']}'){
+					html +='<option value="'+item[i]['id']+'" selected>'+item[i]['area_name']+'</option>';
+                                    }else{
+                                        html +='<option value="'+item[i]['id']+'" >'+item[i]['area_name']+'</option>';
+                                    }
+				}
+				$("[name='district']").html(html);
+			}
+		})
+      }
+      	$("[name='province']").change(function(){
+		$("[name='city']").html('<option value="">loading……</option>');
+                getcity($(this).val());
+                $("[name='district']").val();
+	})
+	$("[name='city']").change(function(){
+		$("[name='district']").html('<option value="">loading……</option>');
+                getdistrict($(this).val());
+	})
+	var pro_id=$("[name='province']").val();
+        if(pro_id>0){
+            $("[name='city']").html('<option value="">loading……</option>');
+            getcity($("[name='province']").val());
+            $("[name='district']").html('<option value="">loading……</option>');
+            getdistrict($("[name='city']").val());
+        }
+        
+              // 上传文件
+	$('#upload_file').on('change', function(){
+		
+		var uploadFile = $(this).get(0).files[0];
+		
+		if(typeof uploadFile == 'undefined'){
+			return false;
+		}
+		
+		var formData = new FormData();
+		
+		formData.append('upload_file', uploadFile);
+		var ajaxOption = {
+			url 	: '{:url("advance/Upload/upload")}',
+			type	: 'post',
+			data	: formData,
+			dataType: 'json',
+			timeout	: 0,
+			processData : false,
+			contentType : false,
+			success	: function(res){
+				
+				if(res.code == 1){
+					$('#upload_result').html('<span >['+res.data.hash+'.'+res.data.ext+']</span>');
+				       $('#upload_file').before('<input type="hidden" value="'+res.data.url+'" name="options"/>');
+				}else{
+					$('#upload_result').html('<span >['+res.msg+']</span>');
+				}
+			},
+			error : function(xhr){
+				
+				$('#upload_result').html('<span >[Network link error]</span>');
+			}
+		};
+		$.ajax(ajaxOption);
+	});
+        
+        
+       
+
+
+});
+   
+</script>
+{/block}

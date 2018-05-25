@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{$site_title}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/perfect-scrollbar.min.css">
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/DateTimePicker.css">
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/DateTimePicker-ltie9.min.css">
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/app.css">
+  <link rel="stylesheet" type="text/css" href="{$static_path}/advance/css/m_form.css">
+</head>
+<body>
+  <div id="page-wrapper">
+    <div class="form-wrapper">
+      <div class="mobile-form-logo-header">
+        <a class="logo-wrapper visible-xs clearfix" href="{:url('/Allianz/EMO/Thai')}">
+          <span class="logo1"><img src="{$static_path}/advance/img/logo.png" alt=""></span>
+          <span class="logo2 visible-xs">{$minedata.user_name}</span>
+        </a>
+        <a class="login-wrapper visible-xs clearfix" href="{:url('login/logout')}"><span class="formlogout">ออกจากระบบ</span></a>
+      </div>
+      <div class="m-form-step-indicator clearfix"><div><span>ข้อมูลของผู้ป่วย</span></div><div><span>ข้อมูลของผู้ขอสมัครใช้บริการ</span></div><div><span>รายละเอียด</span></div></div>
+      <form class="medical-form  form-horizontal" role="form">
+        <input type="hidden" id="form-type" name="case_type" value="{$service_id}">
+        <div class="form-section current">
+          <div class="form-group">
+            <label for="patient-name" class="col-xs-4 col-sm-3 control-label medical-label">ชื่อผู้ป่วย</label>
+            <div class="col-xs-8 col-sm-9">
+              <input type="text" class="form-control" id="patient-name" name="username">
+            </div>
+          </div>
+          <div class="form-group date-select">
+            <label for="birth-date" class="col-xs-4 col-sm-3 control-label medical-label">วัน/เดือน/ปี เกิด</label>
+            <div class="col-xs-8 col-sm-9">
+              <input type="text" class="form-control" id="patient-birth" name="birthday" data-field="date" readonly="">
+              <div class="box-container"><div id="dtBox"></div></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="patient-gender" class="col-xs-4 col-sm-3 control-label medical-label">เพศ</label>
+            <div class="col-xs-8 col-sm-9">
+              <div class="col-xs-6 col-sm-4 gender-single">
+                <label for="patient-gender1"><input type="radio" name="sex" id="patient-gender1" value="1" checked><span>ชาย</span></label>
+              </div>
+              <div class="col-xs-6 col-sm-4 gender-single">
+                <label for="patient-gender2"><input type="radio" name="sex" id="patient-gender2" value="0"><span>หญิง</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-group">
+            <label for="" class="col-xs-6 col-sm-4 control-label medical-label">ท่านเป็นผู้ป่วยใช่หรือไม่?</label>
+            <div class="col-xs-6 col-sm-8 relation-between">
+              <div class="col-xs-6 col-sm-6 relation-single">
+                <label for="is-patient-self1"><input type="radio" name="isme" id="is-patient-self1" value="1" checked><span>ใช่</span></label>
+              </div>
+              <div class="col-xs-6 col-sm-6 relation-single">
+                <label for="is-patient-self2"><input type="radio" name="isme" id="is-patient-self2" value="0"><span>ไม่ใช่</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="other-relation" class="col-xs-5 col-sm-4 control-label medical-label">ความสัมพันธ์กับผู้ป่วย
+</label>
+            <div class="col-xs-7 col-sm-8">
+              <div class="select-wrapper"><select id="other-relation" disabled="" name="relationship" class="not-mandatory">
+                
+                <option value="parents">ผู้ปกครอง</option>
+                <option value="child">ลูก</option>
+                <option value="spouse">คู่สมรส</option>
+                <option value="other">อื่นๆ </option>
+              </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="applicant-name" class="col-xs-5 col-sm-4 control-label medical-label">ชื่อผู้สมัคร</label>
+            <div class="col-xs-7 col-sm-8">
+              <input type="text" class="form-control" id="applicant-name" name="applicant_name">
+            </div>
+          </div>
+          
+            <div class="form-group">
+              <label for="country" class="col-xs-5 col-sm-4 control-label medical-label">ประเทศ</label>
+              <div class="col-xs-7 col-sm-8">
+                <select id="country" name="country">
+                  {volist name="country_list" id="cl"}
+                  {if condition="$cl.value eq 71"}
+                    <option  value="{$cl['value']}" >{$cl['name']}</option>
+                   {/if}
+                  {/volist}
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="country" class="col-xs-5 col-sm-4 control-label medical-label">จังหวัด</label>
+              <div class="col-xs-7 col-sm-8">
+                <input type="text" class="form-control" id="e_province" name="e_province">
+              </div>
+            </div>
+<div class="form-group">
+              <label for="user-address" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">ที่อยู่</span></label>
+              <div class="col-xs-7 col-sm-8">
+<!--                 <div class="col-xs-4 col-sm-4 address-choose">
+                    <div class="select-wrapper">
+                  <select id="province" name="province">
+                      <option value="">Province</option>
+                       {volist name="area" id="vo"}
+                         <option  value="{$vo['id']}" >{$vo['area_name']}</option>
+                         {/volist}
+                  </select>
+                    </div>
+                </div> 
+                 <div class="col-xs-4 col-sm-4 address-choose">
+                    <div class="select-wrapper">
+                  <select id="city" name="city">
+                      <option value="">City</option>
+                  
+                  </select>
+                    </div>
+                </div> 
+                 <div class="col-xs-4 col-sm-4 address-choose">
+                    <div class="select-wrapper">
+                  <select id="district" name="district">
+                      <option value="">District</option>
+                  
+                  </select>
+                    </div>
+                </div> -->
+                <div class="col-xs-12 col-sm-12 address-details">
+                  <input type="text" class="form-control" id="address-details" name="address" placeholder="รายละเอียดที่อยู่">
+                </div>
+              </div>
+            </div>
+          <div class="form-group">
+            <label for="user-zip" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">รหัสไปรษณีย์</span></label>
+            <div class="col-xs-7 col-sm-8">
+              <input type="text" class="form-control" id="zip_code" name="zip_code">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="user-first-phone" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">หมายเลขโทรศัพท์ที่ติดต่อได้</span></label>
+            <div class="col-xs-7 col-sm-8">
+              <input type="text" class="form-control" id="user-first-phone" name="preferred_phone">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="user-second-phone" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">หมายเลขโทรศัพท์อื่นๆ</span></label>
+            <div class="col-xs-7 col-sm-8">
+              <input type="text" class="form-control" id="user-second-phone" name="standby_phone">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="user-email" class="col-xs-5 col-sm-4 control-label medical-label"><span class="has-width">อีเมล</span></label>
+            <div class="col-xs-7 col-sm-8">
+              <input type="text" class="form-control" id="user-email" name="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="user-time" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label medical-label special-label"><div class="time-grid"><span>เวลาที่สะดวกให้ติดต่อกลับ</span></div></label>
+            <div class="col-xs-7 mobile-time-trigger"><button class="btn">เวลาที่เลือก</button></div>
+            <div class="col-sm-6 col-md-7 col-lg-8 user-time">
+              <div class="user-time-wrapper">
+                  <div class="time-wrapper"><div class="time-inner-wrapper"><label><input type="checkbox" name="preferred_time" value="9am-12am"><span>9.00-12.00
+</span></label></div><div class="time-inner-wrapper"><label><input type="checkbox" name="preferred_time" value="12am-3pm"><span>12.00-15.00</span></label></div></div>
+                  <div class="time-wrapper"><div class="time-inner-wrapper"><label><input type="checkbox" name="preferred_time" value="3pm-6pm"><span>15.00-18.00</span></label></div><div class="time-inner-wrapper"><label><input type="checkbox" name="preferred_time" value="6pm-9pm"><span>18.00-21.00</span></label></div></div>
+                  <div class="user-time-close">ตกลง</div>
+                </div>
+                <div class="user-time-error"></div>
+            </div>
+          </div>
+        </div>
+        <div class="form-section">
+        <div class="form-group">
+          <label class="col-xs-12 col-sm-12 medical-label">ข้าพเจ้าได้อ่านและยอมรับข้อตกลงและเงื่อนไขแล้ว</label>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12 col-sm-12">
+            <textarea class="info-details" name="illness"></textarea>
+          </div>
+        </div>
+        <a href="javascript:;" class="a-uploadphone">
+                <input type="file" name="upload_file" id="upload_file">อัปโหลดประวัติทางการแพทย์ของฉัน
+                
+        </a><span id="upload_result"></span>
+        <p>ไฟล์ที่รองรับคือ JPG PDF JPEG PNG DOC และ ZIP โดยสามารถอัปโหลดได้ครั้งละ 1 ไฟล์เท่านั้น หากคุณมีไฟล์ที่ต้องการส่งหลายไฟล์ กรุณาบีบอัดให้เป็นไฟล์ ZIP โดยขนาดอัปโหลดสูงสุด คือ 10 เมกะไบต์ </p>
+        <div class="form-group optional-checkbox mform-group">
+          <div class="col-sm-12">
+            <input type="checkbox" id="doctor-checkbox" name="doctor_checkbox">
+            <label for="doctor-checkbox">ข้อมูลของแพทย์คนปัจจุบัน (ตัวเลือก)</label>
+          </div>
+        </div>
+        <div class="form-group doctor-group">
+          <label for="doctor-name" class="col-xs-5 col-sm-4 control-label medical-label">ชื่อแพทย์</label>
+          <div class="col-xs-7 col-sm-8">
+            <input type="text" class="form-control doctor-name doctor"  name="treatment_doctor">
+          </div>
+        </div>
+        <div class="form-group doctor-group">
+          <label for="doctor-hospital" class="col-xs-5 col-sm-4 control-label medical-label">โรงพยาบาล</label>
+          <div class="col-xs-7 col-sm-8">
+            <input type="text" class="form-control doctor-hospital doctor"  name="treatment_hospital">
+          </div>
+        </div>
+        <div class="form-group doctor-group">
+          <label for="doctor-major" class="col-xs-5 col-sm-4 control-label medical-label">ความเชี่ยวชาญ</label>
+          <div class="col-xs-7 col-sm-8">
+            <input type="text" class="form-control doctor-major doctor"  name="specialty">
+          </div>
+        </div>
+        </div>
+        <div class="checkbox-wrapper">
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="checkbox" id="contract-checkbox" name="contract-checkbox" checked>
+              <label for="contract-checkbox">ข้าพเจ้าได้อ่านและยอมรับ</label><span class="contract-click">ข้อตกลงและเงื่อนไขแล้ว</span>
+            </div>
+          </div>
+        </div>
+        <div class="contract-check-error"></div>
+        <div class="form-navigation clearfix">
+          <a type="button" class="back-to-home btn btn-navigate pull-left" href="{:url('/Allianz/EMO/Thai')}">ย้อนกลับ</a>
+          <button type="button" class="previous btn btn-navigate pull-left"> ย้อนกลับ </button>
+          <button type="button" class="next btn btn-navigate pull-right"> ส่ง </button>
+          <input type="submit" value="ส่ง" class="btn btn-navigate pull-right">
+        </div>
+      </form>
+    </div>
+    <div class="form-feedback-wrapper">
+      <div class="form-feedback">
+        <p>ขอขอบคุณ</p>
+        <p>เราจะติดต่อคุณในไม่ช้า.</p>
+        <a class="btn form-feedback-btn" href="{:url('/Allianz/EMO/Thai')}">กลับไปหน้าหลัก</a>
+        <p><span class="submit-logo-m"><img src="{$static_path}/advance/img/logo.png" alt=""></span></p>
+      </div>
+    </div>
+    <div class="contract-context">
+      <div class="contract-header">
+        <span>ข้อตกลงและเงื่อนไข</span><span class="contract-close-button"><i class="fa fa-times"></i></span>
+      </div>
+      <div class="contract-para" id="contract-para">
+      <div class="para-outter-wrapper"><p>ข้าพเจ้าขอยืนยันว่าข้อมูลที่ระบุตามข้างต้นเป็นความจริงทุกประการ และข้าพเจ้ามีความเข้าใจบริการขอความเห็นที่สองทางการแพทย์จากแพทย์ผู้เชี่ยวชาญระดับโลก และตกลงยินยอมตามเงื่อนไขที่ระบุดังต่อไปนี้</p></div>
+      <div class="para-outter-wrapper"><span></span><p>1.การบริการขอความเห็นที่สองจากแพทย์ผู้เชี่ยวชาญนี้ ดำเนินการโดยบริษัทแอดวานซ์ เมดิคอล (บริษัทคู่ค้าที่ได้รับอนุญาต) ดังนั้นการใช้บริการนี้ไม่เกี่ยวข้องกับการประกันชีวิต หรือผลประโยชน์ตามกรมธรรม์ที่ออกโดยบริษัทอลิอันซ์ อยุธยา ประกันชีวิต จำกัด (มหาชน)
+      </p></div>
+      <div class="para-outter-wrapper"><span></span><p>2.ข้อมูลส่วนบุคคลและข้อมูลทางการแพทย์ซึ่งถูกอ้างถึงในฐานะที่เป็น “ข้อมูลความลับ” ที่ถูกระบุอยู่ในแบบฟอร์มนี้หรือถูกจัดเตรียมให้กับบริษัทแอดวานส์ เมดิคอล และ/หรือ บมจ.อลิอันซ์ อยุธยา ประกันชีวิต ไม่ว่าในลักษณะใดก็ตาม จะถูกใช้เพื่อการขอรับบริการความเห็นที่สองจากแพทย์ผู้เชี่ยวชาญเท่านั้น ทั้งนี้ข้อมูลดังกล่าวอาจถูกเปิดเผยให้กับผู้เชี่ยวชาญที่เกี่ยวข้อง รวมถึงสถาบันทางการแพทย์ต่างๆ ในกรณีที่มีเหตุจำเป็น
+      </p></div>
+      <div class="para-outter-wrapper"><span></span><p>3.ข้อมูลของข้าพเจ้าจะถูกปกปิดเพื่อปกป้องความเป็นส่วนตัวของข้าพเจ้า ทั้งนี้ข้อมูลของข้าพเจ้าจะถูกนำไปใช้ในทางที่เหมาะสมและปลอดภัย
+      </p></div>
+      <div class="para-outter-wrapper"><span></span><p>4.ข้าพเจ้าตกลงและยินยอมให้ บมจ.อลิอันซ์ อยุธยา ประกันชีวิต และบริษัทคู่ค้าที่ได้รับอนุญาต คือบริษัทแอดวานส์ เมดิคอล และพนักงานของบริษัทดังกล่าว สามารถติดต่อข้าพเจ้าเพื่อขอข้อมูลที่จำเป็นสำหรับการเข้ารับบริการนี้ โดยข้อมูลทั้งหมดจะถูกเก็บไว้เพื่อใช้ในกรณีที่เกี่ยวข้องกับบริการนี้เท่านั้น
+      </p></div>
+      <div class="para-outter-wrapper"><span></span><p>5.ข้าพเจ้าตกลงและยิมยอมจัดเตรียมข้อมูลส่วนบุคคลและข้อมูลทางการแพทย์เพื่อใช้ในการเข้ารับบริการความเห็นที่สองจากแพทย์ผู้เชี่ยวชาญ และให้สิทธิ์แก่บริษัทแอดวานส์ เมดิคอล และ/หรือ บมจ.อลิอันซ์ อยุธยา ประกันชีวิต ในการใช้และเปิดเผยข้อมูลซึ่งเป็นไปตามที่ระบุอยู่ในประกาศเกี่ยวกับนโยบายความเป็นส่วนตัวของเรา
+      </p></div>
+      <div class="para-outter-wrapper"><span></span><p>6.ข้าพเจ้าเข้าใจดีว่า แพทย์ผู้ให้ความเห็นในรายงานความเห็นที่สองจากแพทย์ผู้เชี่ยวชาญนั้นจะไม่ได้รับประโยชน์ใดๆ เป็นการส่วนตัว ทั้งการขอให้ทำการตรวจเพิ่มเติม หรือการได้รับข้อมูลเพิ่มเติมที่นอกเหนือไปจากที่ข้าพเจ้าได้ให้ข้อมูลไว้ การให้บริการที่จัดให้กับข้าพเจ้านี้ไม่ถือเป็นการวินิจฉัยทางการแพทย์ และไม่ถือว่าเป็นการรักษาในรูปแบบใดก็ตาม ทั้งนี้ ข้อมูลที่ระบุอยู่ในรายงานความเห็นที่สองจากแพทย์ผู้เชี่ยวชาญนี้เป็นเพียงอีกมุมมองหนึ่งของทางเลือก ซึ่งไม่สามารถใช้ทดแทนคำแนะนำของแพทย์ผู้ทำการรักษาของข้าพเจ้าได้
+      </p></div>
+      <div class="para-outter-wrapper"><span></span><p>7.หลังจากได้รับรายงานความเห็นที่สองจากแพทย์ผู้เชี่ยวชาญ ข้าพเจ้าจะทำการตัดสินใจใช้ข้อมูลนั้นด้วยตัวของข้าพเจ้าเอง ทั้งนี้ บมจ.อลิอันซ์ อยุธยา ประกันชีวิต และบริษัทแอดวานส์ เมดิคอล ไม่ให้คำแนะนำอย่างมีอคติ ดังนั้น จึงไม่มีส่วนร่วมในการรับผิดชอบใดๆ ในการตัดสินใจของข้าพเจ้า
+      </p></div>
+    </div>
+    </div>
+  </div>
+      <script type="text/javascript" src="{$static_path}/advance/js/vendor/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+    window.__addurl__='{:url(\'Index/addCase\')}';
+    window.__loginurl__='{:url(\'Login/index\')}';
+     $(function(){
+        
+
+function isChina(){
+             var country_val=$("select[name='country']").val();
+             if(country_val!=1){
+                 $("#province").hide();
+                 $("#city").hide();
+                 $("#district").hide();
+                 $("#zip_code").parent().parent().hide();
+                 $("#e_province").parent().parent().show();
+             }else{
+                 $("#province").show();
+                 $("#city").show();
+                 $("#district").show();
+                 $("#zip_code").parent().parent().show();
+                 $("#e_province").parent().parent().hide();
+             }
+         }
+            
+
+    isChina();
+
+      $("select[name='country']").change(function(){
+          
+            isChina();
+      });
+  
+      
+      function getcity(id){
+          		var current_province_id=id;
+                  
+		
+		$.ajax({
+			url:"{:url('@module/cases/Interfaces/getCity')}",
+			data:{ParentId:current_province_id},
+			dataType:'json',
+			type:'post',
+                        async: false,
+			success:function(re){
+				var html='<option value="0">Please choose</option>';
+                                $("[name='district']").html(html);
+				var item=re.data;
+				for(var i in item){
+					html +='<option value="'+item[i]['id']+'" >'+item[i]['area_name']+'</option>';
+				}
+				$("[name='city']").html(html);
+                                
+			}
+		})
+      }
+      
+      
+      function getdistrict(id){
+          		var current_city=id;
+		$.ajax({
+			url:"{:url('@module/cases/Interfaces/getDistrict')}",
+			data:{ParentId:current_city},
+			dataType:'json',
+			type:'post',
+			success:function(re){
+				var html='<option value="0">Please choose</option>';
+				var item=re.data;
+				for(var i in item){
+					html +='<option value="'+item[i]['id']+'" >'+item[i]['area_name']+'</option>';
+				}
+				$("[name='district']").html(html);
+			}
+		})
+      }
+      	$("[name='province']").change(function(){
+		$("[name='city']").html('<option value="0">Please choose</option>');
+                getcity($(this).val());
+                $("[name='district']").val();
+	})
+	$("[name='city']").change(function(){
+		$("[name='district']").html('<option value="0">Please choose</option>');
+
+                getdistrict($(this).val());
+	})
+	var pro_id=$("[name='province']").val();
+        if(pro_id>0){
+            $("[name='city']").html('<option value="0">Please choose</option>');
+            getcity($("[name='province']").val());
+            $("[name='district']").html('<option value="0">Please choose</option>');
+            getdistrict($("[name='province']").val());
+        }
+
+// 上传文件
+	$('#upload_file').on('change', function(){
+		
+		var uploadFile = $(this).get(0).files[0];
+		
+		if(typeof uploadFile == 'undefined'){
+			return false;
+		}
+		
+		var formData = new FormData();
+		
+		formData.append('upload_file', uploadFile);
+		var ajaxOption = {
+			url 	: '{:url("emo/Upload/upload")}',
+			type	: 'post',
+			data	: formData,
+			dataType: 'json',
+			timeout	: 0,
+			processData : false,
+			contentType : false,
+			success	: function(res){
+				
+				if(res.code == 1){
+					$('#upload_result').html('<span >['+res.data.hash+'.'+res.data.ext+']</span>');
+				       $('#upload_file').before('<input type="hidden" value="'+res.data.url+'" name="options"/>');
+				}else{
+					$('#upload_result').html('<span >['+res.msg+']</span>');
+				}
+			},
+			error : function(xhr){
+				
+				$('#upload_result').html('<span >[Network error]</span>');
+			}
+		};
+		$.ajax(ajaxOption);
+	});
+   
+})
+</script>
+
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/jquery.flexslider.js"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/imagesloaded.pkgd.min.js"></script>
+
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/perfect-scrollbar.min.js"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/perfect-scrollbar.jquery.min.js"></script>
+  <script type="text/javascript" src="{$static_path}/advance/js/vendor/DateTimePicker.min.js"></script>
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="{$static_path}/advance/js/vendor/DateTimePicker-ltie9.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="{$static_path}/advance/js/vendor/DatetimePicker-i18n-zh-CN.js?v=1.0"></script> 
+    <script src="{$static_path}/layer_mobile/layer.js?_={$site_version}"></script>
+    <script type="text/javascript" src="{$static_path}/advance/js/m_form.js?v=1.0"></script>
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?php
+// +----------------------------------------------------------------------
+// | ThinkPHP [ WE CAN DO IT JUST THINK ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2006~2016 http://thinkphp.cn All rights reserved.
+// +----------------------------------------------------------------------
+// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+// +----------------------------------------------------------------------
+// | Author: liu21st <liu21st@gmail.com>
+// +----------------------------------------------------------------------
+return [
+    '__pattern__' => [
+        'name' => '\w+'
+    ],
+    
+ 
+    
+
+    
+    // 后台
+    'module/:_module_/:_controller_/:_action_' => 'manage/loader/run',
+//    'admin'=>'manage/start/login',
+    //AM聊天
+//    'service'=>'laychatphone/Login/index',
+    
+    //advance
+//   'Allianz/DCP/services/:id'=>'dcp/Index/service_details',
+//    'Allianz/DCP/mobile_form/:id'=>'dcp/Index/mobile_form',
+//    'Allianz/DCP'=>'dcp/Index/service_details',
+    
+    'Allianz/EMO/Thai/services/:id'=>'emo/Index/service_details',
+    'Allianz/EMO/Thai/mobile_form/:id'=>'emo/Index/mobile_form',
+     'Allianz/EMO/Thai'=>'emo/Index/service_details',
+
+    
+    //英文版
+    'Allianz/EMO/En/services/:id'=>'emoEn/Index/service_details',
+    'Allianz/EMO/En/mobile_form/:id'=>'emoEn/Index/mobile_form',
+     'Allianz/EMO/En'=>'emoEn/Index/service_details',
+    
+        'Allianz'=>'emo/Index/service_details',
+//    'services/:id'=>'advance/Index/service_details',
+//    'mobile_form/:id'=>'advance/Index/mobile_form',
+
+];

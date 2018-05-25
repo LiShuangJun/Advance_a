@@ -1,0 +1,68 @@
+body,
+html
+{
+    font-size: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset */
+*,
+*:after,
+*:before
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after
+{
+    display: table;
+
+    content: ' ';
+}
+
+.clearfix:after
+{
+    clear: both;
+}
+
+body
+{
+    font-family: 'Microsoft YaHei','Segoe UI', 'Lucida Grande', Helvetica, Arial,sans-serif;
+    font-size: 1.05em;
+    font-weight: 500;
+
+    color: #d5d6e2;
+    background: #00b4ef;
+}
+a
+{
+    -webkit-transition: .2s;
+            transition: .2s;
+    text-decoration: none;
+
+    color: rgba(255, 255, 255, .6);
+    outline: none;
+}
+a:hover,
+a:focus
+{
+    text-decoration: none;
+
+    color: #74777b;
+}
+@media only screen and (min-width:768px){
+    .demo{
+        padding:12% 0;
+    }
+}
+@media only screen and (max-width:767px){
+    .demo{
+        padding: 30% 0;
+    }
+}

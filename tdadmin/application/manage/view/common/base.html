@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+	<meta name="renderer" content="webkit">
+	<title>{$site_title}</title>
+	<link rel="stylesheet" href="{$lib_path}/amazeui/2.7.2/css/amazeui.css?_={$site_version}" />
+</head>
+<body class="theme-white">
+<link rel="stylesheet" href="{$static_path}/manage/common.css?_={$site_version}">
+{block name="style"}{/block}
+{block name="body"}
+<div class="am-g tpl-g">
+	{block name="header"}
+		{include file="manage@common/header" /}
+	{/block}
+	{block name="siderbar"}
+		{include file="manage@common/siderbar" /}
+	{/block}
+        
+	<div class="tpl-content-wrapper">
+            
+
+		<div class="row-content am-cf">
+                   
+			<div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                            
+                               <ol class="am-breadcrumb wizard_style" >
+                                   {php}$wizard_count=0;$wcount=count($wizard);{/php}
+                                   {foreach name="wizard" item="wi" key="k"}
+                                   {php}$wizard_count++;{/php}
+                                   
+                                  
+                                  
+                                  
+                                  {if condition="$k lt 2"}
+                                      {if condition="$wizard_count eq 1"}
+                                        <li class="am-icon-home am-active">{$wi.menu_name}</li>
+                                        {else/}
+                                         <li class="am-active">{$wi.menu_name}</li>
+                                        {/if}
+                                  {else/}
+                                     {if condition="$wizard_count eq $wcount"}
+                                   <li >{$wi.menu_name}</li>
+                                    {else/}
+                                     <li><a href="{$wi.menu_url}" >{$wi.menu_name}</a></li>
+                                    {/if}
+                                  {/if}
+                                  {/foreach}
+                                </ol>
+				{block name="content"}{/block}
+			</div>
+		</div>
+	</div>
+</div>
+{/block}
+<script type="text/javascript" src="{$lib_path}/jquery/2.0.0/jquery.min.js?_={$site_version}"></script>
+<script type="text/javascript" src="{$lib_path}/require/2.3.1/require.js?_={$site_version}"></script>
+<script type="text/javascript" >
+var CMS = {
+	'version' : '{$site_version}',
+	'editor' : '{$manage_editor}',
+	'path' : {
+		'lib' : '{$lib_path}',
+		'static' : '{$static_path}'
+	},
+	'api' : {
+		'upload' : '{:url("manage/upload/upload")}',
+		'upload_editor' : '{:url("manage/upload/editor")}'
+	}
+};
+require.config({
+	'baseUrl' : CMS.path.lib,
+	'urlArgs' : '_=' + CMS.version,
+	'packages' : [
+		{
+			'name' : "codemirror",
+			'location' : CMS.path.lib + '/code.mirror/5.25.0',
+			'main' : "lib/codemirror"
+	    }
+	],
+	'paths' : {
+		'jquery' : 'jquery/2.0.0/jquery.min',
+		'amazeui' : 'amazeui/2.7.2/js/amazeui.min',
+		'alertify' : 'alertify.js/1.8.0/alertify.min',
+		'color-picker' : 'color.picker/1.0/colorPicker',
+		'wangEditor' : 'wang.editor/2.1.23/js/wangEditor',
+		'beautify' : 'js.beautify/1.6.4/beautify.min',
+		'beautify-css' : 'js.beautify/1.6.4/beautify-css.min',
+		'beautify-html' : 'js.beautify/1.6.4/beautify-html.min',
+		'json-editor' : 'json.editor/5.5.11/jsoneditor-minimalist.min',
+		'tag-editor' : 'tag.editor/1.0.20/jquery.tag-editor.min',
+		'baiduEditor' : 'ueditor/1.4.3.3/ueditor.all.min',
+		'ZeroClipboard' : 'zeroclipboard/2.2.0/ZeroClipboard.min',
+		'jquery-nestable' : 'jquery.nestable/jquery.nestable',
+		'jquery-sortable' : 'jquery.sortable/0.9.13/jquery-sortable-min'
+	},
+    'shim' : {
+    	'alertify' : [
+    		'css!alertify.js/1.8.0/css/alertify.min',
+    		'css!alertify.js/1.8.0/css/themes/default.min'
+    	],
+    	'color-picker' : [
+    		'color.picker/1.0/colors',
+    		'color.picker/1.0/colorPicker.data',
+    		'color.picker/1.0/jqColor'
+    	],
+    	'wangEditor': [
+    		'css!wang.editor/2.1.23/css/wangEditor.min',
+    		'css!code.mirror/5.25.0/lib/codemirror'
+    	],
+    	'json-editor' : [
+    		'css!json.editor/5.5.11/jsoneditor.min'
+    	],
+    	'tag-editor' : [
+    		'css!tag.editor/1.0.20/jquery.tag-editor',
+    		'tag.editor/1.0.20/jquery.caret.min'
+    	]
+    },
+	'map' : {
+        '*': {
+            'css': 'require.css/0.1.8/css'
+        }
+    },
+    'waitSeconds' : 10
+});
+require(['amazeui'], function(amazeui, alertify){
+	$.AMUI.progress.start();
+	require(['alertify', CMS.path.static + '/manage/common.js'], function(alertify){
+		
+		// 发现alertify与wangEditor冲突，原因待查
+		window.alertify = alertify;
+		
+		$.AMUI.progress.done();
+	});
+});
+</script>
+{block name="script"}{/block}
+</body>
+</html>

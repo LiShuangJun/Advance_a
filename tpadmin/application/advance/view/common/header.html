@@ -1,0 +1,61 @@
+  <div class="hide-image" style="display:none;">
+    <img src="{$static_path}/advance/img/001.jpg">
+  </div>
+  <div id="page-wrapper">
+    <section id="preloader">
+      <div class="loader" id="loader">
+          <div class="loader-img"></div>
+      </div>
+    </section>
+    <div class="top-nav clearfix">
+      <a class="logo-wrapper" href="{:url('/am')}">
+        <span class="logo1"><img src="{$static_path}/advance/img/logo.png" alt=""></span>
+      </a>
+        {if condition="$userid neq 0"}
+      <a class="login-wrapper" href="{:url('Login/logout')}">{$minedata.user_name|mb_substr=###,0,4,'utf-8'},退出</a>
+       {else/}
+        <a class="login-wrapper" href="{:url('Login/index')}">登录</a>
+       {/if}
+      <ul class="menu-wrapper clearfix">
+         {volist name="service_list" id="sl"}
+         <li class="menubar menubar-{$sl.id}"><a href="{:url('/services/'.$sl.id)}"><span class="bar-background"></span><span class="bar-text">{$sl.typename}</span><span class="bottom-gradient"></span></a><span class="right-gradient"></span></li>
+        {/volist}
+
+      </ul>
+    </div>
+    <div class="flex-container-outer-wrapper">
+    <div class="flex-container-wrapper mb--l">
+      <div class="flex-container">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="{$static_path}/advance/img/001.jpg">
+            </li>
+            <li>
+              <img src="{$static_path}/advance/img/002.jpg">
+            </li>
+            <li>
+              <img src="{$static_path}/advance/img/003.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex-mask">
+        <div class="diagnose logvilad" >
+          <div class="image-wrapper"><img src="{$static_path}/advance/img/diagnose.png" alt=""></div>
+          <div class="diagnose-text">一键咨询</div>
+        </div>
+        <div class="flex-phone-wrapper">
+          <span>400&#45;920&#45;2069</span>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="mobile-header mb--s mt--s">
+      <div class="image-wrapper">
+        <img src="{$static_path}/advance/img/444.jpg" alt="">
+      </div>
+    </div>
+    <div class="mobile-diagnose logvilad">
+      <div class="diagnose-text">一键咨询</div>
+    </div>

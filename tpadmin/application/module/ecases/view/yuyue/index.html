@@ -1,0 +1,60 @@
+{extend name="common/base" }
+
+{block name="style"}
+
+{/block}
+
+{block name="content"}
+
+<div class="am-g">
+    <div class="am-u-sm-12">
+    
+        <table class="am-table am-table-striped am-table-radius am-table-bordered am-form">
+            <thead>
+                <tr>
+                    <th style="text-align:center;">Consulting Profile</th>
+                    <th style="text-align:center;">Reservation days</th>
+                    <th style="text-align:center;">Schedule a time period</th>
+                    <th style="text-align:center;">User Name</th>
+                    <th style="text-align:center;">Status</th>
+                    <th>Operate</th>
+                </tr>
+            </thead>
+            <tbody>
+                {volist name="info" id="vo"}
+                     <tr>   
+                            <td  class="am-text-middle">{$vo.advisory_details|mb_substr=0,30,'utf-8'}........</td>
+		                    <td align="center" class="am-text-middle">{$vo.submitdate}</td>
+		                    <td align="center" class="am-text-middle">{$vo.time_quantum}</td>
+		                    <td align="center" class="am-text-middle">{$vo.user_name}</td>
+		                    <td align="center" class="am-text-middle">
+		                          {if condition="$vo.appointment_state eq 1"}
+		                                                                                                              Delegating
+		                          <a class="am-btn am-btn-link am-btn-xs am-text-primary"  href="{:module_url('yuyue/doctor',['id'=>$vo.id])}">Designated doctor</a>
+		                          {elseif condition="$vo.appointment_state eq 2"/}Reservation successful
+		                          {elseif condition="$vo.appointment_state eq 3"/}Completed
+		                          {elseif condition="$vo.appointment_state eq 4"/}Reservation canceled{/if}
+		                    </td>
+		                    <!--操作 -->
+		                    <td class="am-text-middle">
+			                        <div class="am-btn-toolbar">
+			                            <div class="am-btn-group am-btn-group-xs">
+			                               {$widget->row('button', ['title' => 'Cancel appointment', 'class' => 'am-text-danger ajax-get ajax-confirm', 'icon' => 'am-icon-trash-o', 'url' => module_url('cancel', ['id' => $vo['id']])])}
+			             
+			                                <!-- {$widget->row('button', ['title' => '编辑', 'class' => 'am-text-secondary', 'icon' => 'am-icon-pencil-square-o', 'url' => module_url('edit', ['id' => $vo['id']])])} -->
+			                            </div>
+			                        </div>
+		                    </td>
+                    </tr>
+                {/volist}
+            </tbody>
+        </table>
+        
+  
+          
+            <div class="am-fr"></div>
+    
+    </div>
+</div>
+{/block}
+

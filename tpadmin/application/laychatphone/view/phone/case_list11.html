@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="__PHONE__/css/aui.css">
+    <link rel="stylesheet" type="text/css" href="__PHONE__/css/new.css">
+    <link rel="stylesheet" type="text/css" href="__PHONE__/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="__PHONE__/css/lCalendar.css">
+    <style type="text/css">
+    * {
+        -webkit-appearance: none;
+        -webkit-touch-callout: none;
+        box-sizing: border-box;
+    }
+    html,
+    body {
+        overflow-x: hidden;
+        -webkit-user-select: none;
+    }
+    
+    body {
+        -webkit-text-size-adjust: 100%;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+    }
+    .input {
+        width: 90%;
+        height: 40px;
+        font-size: 18px;
+        border: 1px solid #19b5ee;
+        border-radius: 5px;
+        margin: 20px 5% 0 5%;
+        padding: 5px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <section class="my-content-padded">
+        <footer class="aui-bar aui-bar-tab" id="footer">
+            <div class="aui-bar-tab-item aui-active" tapmode>
+                <i class="aui-iconfont aui-icon-calendar"></i>
+                <div class="aui-bar-tab-label">Case</div>
+            </div>
+            <div class="aui-bar-tab-item" tapmode>
+                <i class="aui-iconfont aui-icon-comment"></i>
+                <div class="aui-bar-tab-label">Appointment</div>
+            </div>
+            <div class="aui-bar-tab-item" tapmode>
+                <i class="aui-iconfont aui-icon-my"></i>
+                <div class="aui-bar-tab-label">My</div>
+            </div>
+        </footer>
+        <div id="demo"></div>
+        <div id="main1" class="main-hide">
+            <div class="content-main">
+                 <!-- {eq name="userdata.is_manager" value="0"}-->
+                <div class="main-header">
+                    <div class="mheader-top"><img src="__PHONE__/img/huanzhe1.jpg"></div>
+                    <p class="mheader-bottom-one">王强</p>
+                    <p class="mheader-bottom-two">蜜柚网</p>
+                </div>
+               <!-- {else/}-->
+                                <div class="main-header">
+                    <div class="mheader-top"><img src="__PHONE__/img/doctor1.jpg"></div>
+                    <p class="mheader-bottom-one">Mary</p>
+      
+                </div>
+               <!-- {/eq}-->
+                    <table class="maintable" >
+                        <thead>
+                            <tr>
+                                <th class="table-case">CASE</th>
+                                <th class="table-time">时间</th>
+                                <th class="table-change">状态</th>
+                            </tr>
+                        </thead>
+                            <tbody id="maintable">
+                               <!-- {volist name="case_list" id="cl"}-->
+                                <tr onclick="javascript:window.location.href='{:url(\'Phone/case_content\',array(\'id\'=>$cl.id))}'">
+                                    <td class="case">{$cl.typename}</td>
+                                    <td class="time">{$cl.case_time|strtotime|date="Y-m-d",###}</td>
+                                    <td class="ongoing">{$cl.name}</td>
+                                </tr>
+                               <!-- {/volist}-->
+                                <tr>
+                                    <td class="case">Expert Medical Report</td>
+                                    <td class="time">2017.03.15</td>
+                                    <td class="ongoing">进行中</td>
+                                </tr>
+                                <tr>
+                                    <td class="case">Stress Management</td>
+                                    <td class="time">2017.04.10</td>
+                                    <td class="ongoing">进行中</td>
+                                </tr>
+                                <tr>
+                                    <td class="case">Expert Medical Report</td>
+                                    <td class="time">2017.03.15</td>
+                                    <td class="ungoing">已完成</td>
+                                </tr>
+                                <tr>
+                                    <td class="case">Expert Medical Report</td>
+                                    <td class="time">2017.03.15</td>
+                                    <td class="ungoing">已完成</td>
+                                </tr>
+                                <tr>
+                                    <td class="case">Expert Medical Report</td>
+                                    <td class="time">2017.03.15</td>
+                                    <td class="ungoing">已完成</td>
+                                </tr>
+                                <tr>
+                                    <td class="case">Expert Medical Report</td>
+                                    <td class="time">2017.03.15</td>
+                                    <td class="ungoing">已完成</td>
+                                </tr>
+                                <tr>
+                                    <td class="case">Expert Medical Report</td>
+                                    <td class="time">2017.03.15</td>
+                                    <td class="ungoing">已完成</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="lodemore" style="display: none;"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>加载更多</p>
+            </div>
+        </div>
+        <div id="main2" class="main-hide">
+            <div class="content-main-order">
+                <div class="order-main-header">
+                    <div class="order-mheader-top"><img src="__PHONE__/img/logo.png"></div>
+                    <p class="order-mheader-bottom-one">Callback Service</p>
+                    <div><input class="input demo_input"  type="text" readonly="" name="input_date" placeholder="请选择日期" data-lcalendar="2017-01-00,3000-01-00" /></div>
+                    <table class="order-maintable" >
+                            <tbody id="order-table">
+                                <tr>
+                                    <td class="order-time">9.30-9.45</td>
+                                    <td><button type="button" class="aui-btn aui-btn-info" onclick="openDialog('text')">预定</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="order-time">10.00-10.15</td>
+                                    <td><button type="button" class="aui-btn aui-btn-info" onclick="coloseDialog('text')">已预定</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="order-time">10.30-10.45</td>
+                                    <td><button type="button" class="aui-btn aui-btn-info">预定</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="order-time">11.00-11.15</td>
+                                    <td><button type="button" class="aui-btn aui-btn-info">已预定</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="order-time">10.30-10.45</td>
+                                    <td><button type="button" class="aui-btn aui-btn-info">预定</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="order-time">11.00-11.15</td>
+                                    <td><button type="button" class="aui-btn aui-btn-info">已预定</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="order-time">11.30-11.45</td>
+                                    <td><button type="button" class="aui-btn aui-btn-info">预定</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="order-time">12.00-12.15</td>
+                                    <td><button type="button" class="aui-btn aui-btn-info">已预定</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </div>
+        <div id="main3" class="main-hide">个人主页（暂无）</div>
+    </section>
+</body>
+<script type="text/javascript" src="__PHONE__/script/api.js" ></script>
+<script type="text/javascript" src="__PHONE__/script/aui-tab.js" ></script>
+<script type="text/javascript" src="__PHONE__/script/jquery-1.8.3.js" ></script>
+<script type="text/javascript" src="__PHONE__/script/lCalendar.js"></script>
+<script type="text/javascript" src="__PHONE__/script/aui-dialog.js"></script>
+<script type="text/javascript">
+    window.onload=function(){ 
+        document.getElementById("demo").innerHTML = document.getElementById("main1").innerHTML;
+        var table = $("#maintable tr");
+        for (var i = 0; i < table.length; i++) {
+            if((i+1)%2==0){
+                table[i].style.background = "#eceef2";
+            }else{
+                table[i].style.background = "white";
+            }   
+        }
+        var ordertable = document.getElementById("order-table");
+        var order_table = ordertable.getElementsByTagName("tr"); 
+        for (var i = 0; i < order_table.length; i++) {
+            if((i+1)%2==0){
+                var td = order_table[i].getElementsByTagName("td");
+                // console.log(td); 
+                td[0].style.color = "black";                
+                order_table[i].style.background = "#eceef2";
+            }else{
+                order_table[i].style.background = "#008fff";
+            }   
+        }
+        time();
+    } 
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("footer")
+    },function(ret){
+        // console.log(ret);
+        if(ret){
+            var mains='main'+ret.index;
+            document.getElementById("demo").innerHTML= document.getElementById(mains).innerHTML;
+        }
+        time();
+       
+    });
+    function time(){
+        var calendar = new lCalendar();
+        calendar.init({
+            'trigger': '.demo_input',
+            'type': 'date'
+        });
+    }
+</script>
+<script type="text/javascript">
+    var dialog = new auiDialog({})
+    function openDialog(type){
+        switch (type) {
+            case "text":
+                dialog.alert({
+                    title:"提示",
+                    msg:'预约成功,已发送至邮箱',
+                    buttons:['确定']
+                },function(ret){
+                     console.log(ret);
+                })
+        }
+
+    }
+    function coloseDialog(type){
+        switch (type) {
+            case "text":
+                dialog.alert({
+                    title:"提示",
+                    msg:'已经预约,请勿重复',
+                    buttons:['确定']
+                },function(ret){
+                     console.log(ret);
+                })
+        }
+    }
+
+</script>
+</html>

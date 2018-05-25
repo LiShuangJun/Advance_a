@@ -1,0 +1,133 @@
+.login-wrapper
+{
+    display: inline-block;
+    text-decoration:none;
+}
+.login-wrapper:hover{
+    text-decoration:none;
+}
+.login-wrapper span
+{
+    width: 100%;
+}
+@media (min-width:1439px){
+    .phonenum{
+        font-weight: bold;
+        font-size:2.5em !important;;
+    }
+}
+@media (min-width: 1200px){
+    .phonenum{
+        font-weight: bold;
+        font-size:2.3em !important;;
+    }
+}
+@media (min-width: 993px){
+    .phonenum{
+        font-weight: bold;
+        font-size:2.3em !important;;
+    }
+
+}
+@media (min-width:768px)
+{
+    .login-wrapper
+    {
+        float: left;
+
+        margin-left: 40px;
+    }
+    .diagnose-step-title{
+        font-size:2em;
+    }
+    .expert-titles-two{
+        font-size:2.8em;
+        font-weight: bold;
+    }
+}@media (min-width:993px)
+{
+    .login-wrapper
+    {
+        margin-left: 60px;
+    }
+}@media (min-width:1200px)
+{
+    .login-wrapper
+    {
+    	font-size: 18px;
+        margin-left: 80px;
+        margin-top: 20px;
+        color:#0085c4;
+        font-weight: bold;
+    }
+}
+@media (max-width:767px)
+{
+    .login-wrapper
+    {
+    font-size:1.5rem;
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+    color:#0085c4;
+    font-weight: bold;
+    width: 100%;
+    }
+    .diagnose-step-title{ 
+        font-size:1.3em; 
+    }
+    .expert-titles-two{
+        font-size:1.8em;
+    }
+}
+/*20170731*/
+.a-upload {
+    padding: 4px 10px;
+    height:30px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+.a-upload  input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+
+.a-upload:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none
+}
+.submit-logo-m{
+    margin-top: 10px;
+    display: block;
+}
+.pcmail{
+    word-break: break-all;
+    margin-top: 6px;
+}
+.diagnose-step-title{
+    z-index: 99;
+    position: relative;
+    color:#017f4f;
+    margin-left: 20px;
+    font-weight: bolder;
+}
+.expert-titles-two{
+    color: #017f4f;
+}

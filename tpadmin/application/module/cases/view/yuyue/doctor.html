@@ -1,0 +1,52 @@
+{extend name="common/base" }
+
+{block name="style"}
+
+{/block}
+
+{block name="content"}
+
+<div class="am-g">
+    <div class="am-u-sm-12">
+    
+        <table class="am-table am-table-striped am-table-radius am-table-bordered am-form">
+            <thead>
+                <tr>
+                    <th style="text-align:center;">医生姓名</th>
+                    <th style="text-align:center;">联系电话</th>
+                    <th style="text-align:center;">邮箱</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <input style="display:none;" id="yuyueinfoid" type="text" value="{$yuyueinfoid}"/>
+            <tbody>
+              {volist name="_list" id="vo"}
+            
+                     <tr>   
+                            <!-- 医生姓名 -->
+		                    <td align="center" class="am-text-middle">{$vo.user_name}</td>
+		                    <!-- 联系电话 -->
+		                    <td align="center" class="am-text-middle">{$vo.tel}</td>
+		                    <!-- 邮箱 -->
+		                    <td align="center" class="am-text-middle">{$vo.email}</td>
+	                        <!-- 指定医生 -->		                               
+		                    <td class="am-text-middle">
+			                    <a id="zhidin" class="am-btn am-btn-link am-btn-xs am-text-primary"  href="{:module_url('yuyue/doctormeeting',['id'=>$vo.id,'username'=>$vo.user_name,'yuyueid'=>$yuyueinfoid])}">指定医生</a>
+
+		                        
+		                    </td>
+                    </tr>
+              {/volist}
+            </tbody>
+        </table>
+        
+  
+          
+            <div class="am-fr"></div>
+    
+    </div>
+</div>
+
+
+{/block}
+

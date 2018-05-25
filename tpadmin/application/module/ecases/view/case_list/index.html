@@ -1,0 +1,151 @@
+{extend name="common/base" }
+
+{block name="style"}
+<style type="text/css">
+.article-cover{
+    width: 60px;
+    height: 40px;
+    margin: auto;
+    background-size: cover;
+}
+</style>
+{/block}
+
+{block name="content"}
+<form action="{:module_url('index')}" class="search-form">
+<div class="am-g shuaixuan">
+
+    <div class="am-u-sm-12 am-u-md-12">
+        <div class="am-btn-toolbar">
+            <div class="am-btn-group am-btn-group-xs">
+                <a class="am-btn am-btn-default" href="{:module_url('add')}">
+                    <span class="am-icon-plus"></span> Add
+                </a>
+                <a class="am-btn am-btn-default nd-refresh">
+                    <span class="am-icon-refresh"></span> Refresh
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="am-g">
+    {$widget->search('select', ['name' => 'casetype', 'value' => $casetype, 'list' => $typelist,'md_num' => 3,'search_name'=>'Service Item','select_default'=>'All'])}
+    {$widget->search('select', ['name' => 'country', 'value' => $country, 'list' => $country_list,'md_num' => 3,'search_name'=>'Country','select_default'=>'All'])}
+    {$widget->search('select', ['name' => 'status', 'value' => $status, 'list' => $status_list,'md_num' => 3,'search_name'=>'Status','select_default'=>'All'])}
+    {$widget->search('keyword', ['name' => 'keyword', 'holder' => 'Enter your name', 'value' => $keyword,'md_num' => 3,'text'=>'Search'])}
+    </div>
+</form>
+
+<div class="am-g">
+    <div class="am-u-sm-12">
+    
+        <table class="am-table am-table-striped am-table-radius am-table-bordered am-form">
+            <thead>
+                <tr>
+                    <th style="text-align:center;">Case ID</th>
+                    <th style="text-align:center;">Current Status</th>
+                    
+                    <th style="text-align:center;">Name</th>
+                    <th style="text-align:center;">Country</th>
+                    <th style="text-align:center;">Company</th>
+                    <th style="text-align:center;">Category</th>
+                    <th style="text-align:center;">Case manager</th>
+                    <th style="text-align:center;">Status</th>
+                    <th style="text-align:center;">Time</th>
+                    <th style="text-align:center;">Options</th>
+                </tr>
+            </thead>
+            <tbody>
+            {volist name="_list" id="vo"}
+                <tr>
+                    
+                    <td class="am-text-center am-text-middle" style="text-align:center;">
+                        <div class="am-text-middle"><a class="am-btn am-btn-link am-btn-xs am-text-primary"  href="{:module_url('case_content',['id'=>$vo.id])}">{$vo.case_code}</a></div>
+                    </td>
+                    <td class="am-text-middle" style="text-align:center;">
+                        <span class="am-badge {$vo.statuscolor}  am-round">{$vo.statusname}</span>
+                         </td>
+                    <td class="am-text-middle" style="text-align:center;">{$vo.username}</td>
+                    <td class="am-text-middle" style="text-align:center;">{$vo.country_ename}</td>
+                    <td class="am-text-middle" style="text-align:center;">{$vo.company_name}</td>
+                    <td class="am-text-middle" style="text-align:center;">{$vo.typeename}</td>
+                    
+            {php}
+             
+             
+            $status_arr=[];
+           
+            $jt_status=0;
+            
+            switch($vo['case_status']){
+                  case 1:
+                  foreach($status_list as $k=>$v){
+                      if($v['value']==4||$v['value']==$vo['case_status']){
+                         $status_arr[]=$status_list[$k];
+                      }
+                  }
+                  
+                  break;
+                  case 2 :
+                  foreach($status_list as $k=>$v){
+                      if($v['value']==1||$v['value']==4||$v['value']==5||$v['value']==$vo['case_status']){
+                         $status_arr[]=$status_list[$k];
+                      }
+                  }
+                 
+                  break;
+                
+
+                  case 5:
+                  foreach($status_list as $k=>$v){
+                      if($v['value']==1||$v['value']==4||$v['value']==3||$v['value']==$vo['case_status']){
+                         $status_arr[]=$status_list[$k];
+                      }
+                  }
+                 
+                  $jt_status=1;
+                  
+                  break;
+                 default:
+                  foreach($status_list as $k=>$v){
+                      if($v['value']==$vo['case_status']){
+                         $status_arr[]=$status_list[$k];
+                      }
+                  }
+                 
+                  break;
+                  
+            }{/php}
+            <td class="am-text-middle" style="text-align:center;">
+            {if condition='$vo.case_status eq 1'}<a class="am-btn am-btn-link am-btn-xs am-text-primary"  href="{:module_url('cmlist/index',['caseid'=>$vo.id])}">Assign a case manager</a>{else/}{$vo.managername}{/if}     
+             </td>
+                    <td class="am-text-middle">
+                        
+                        {$widget->row('select', ['value' => $vo['case_status'], 'list' => $status_arr, 'url' => module_url('modify', ['id' => $vo['id'], 'field' => 'case_status'])])}
+                        
+                    </td>
+                    <td class="am-text-middle" style="text-align:center;">{$vo.create_time}</td>
+                    <td class="am-text-middle">
+                        <div class="am-btn-toolbar">
+                            <div class="am-btn-group am-btn-group-xs">
+                                {if condition="$is_jt eq 1 and $jt_status eq 1 and in_array($userid, $vo['jtarr']) eq 1"}
+                                {$widget->row('button', ['title' => 'Help', 'class' => 'am-text-primary', 'icon' => 'am-icon-eye', 'attr' => 'target="new"', 'url' => url('laychatphone/Phone/index', ['id' => $vo['id']])])}
+                                {/if}
+                                {$widget->row('button', ['title' => 'Edit', 'class' => 'am-text-secondary ', 'icon' => 'am-icon-pencil-square-o', 'url' => module_url('edit', ['id' => $vo['id']])])}
+                                {$widget->row('button', ['title' => 'Delete', 'class' => 'am-text-danger ajax-get ajax-confirm', 'icon' => 'am-icon-trash-o', 'url' => module_url('delete', ['id' => $vo['id']])])}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            {/volist}
+            </tbody>
+        </table>
+        
+        {if condition="!empty($_page)"}
+            <div class="am-fl">Total: {$_total}</div>
+            <div class="am-fr"> {$_page}</div>
+        {/if}
+    </div>
+</div>
+
+{/block}

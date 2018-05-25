@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>详情</title>
+    <!-- inject editor -->
+    <link rel="stylesheet" href="{$static_path}/edm/stylesheets/bootstrap.min.css"/>
+    <link rel="stylesheet" href="{$static_path}/edm/stylesheets/editor.css"/>
+    <script src="{$static_path}/edm/scripts/jquery-2.1.3.min.js"></script>
+    <script src="{$static_path}/edm/scripts/editor.js"></script>
+    <!-- end inject editor -->
+</head>
+<body>
+    <div id="email-content-wrap">
+        <style>
+            body {
+                font-family: "SF Pro SC","HanHei SC","SF Pro Text","Myriad Set Pro","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial", "Microsoft Yahei",sans-serif;
+                -webkit-font-smoothing: antialiased;
+            }
+            *, p, h1, h2, h3, h4 {
+                padding: 0;
+                margin: 0;
+            }
+            img {
+                vertical-align: top;
+            }
+
+            table * {
+                box-sizing: content-box;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            p {
+                /* word-break: break-all; */
+            }
+
+            tr {
+                vertical-align: top;
+            }
+			div{line-height: 1.5;}
+			.details{width:100%;}
+            @media screen and (max-width: 700px) {
+                .block  {
+                    display: block !important;
+                    width: 100%!important;
+                    direction: ltr!important;
+                    padding-left: 0!important;
+                    padding-right: 0!important;
+                }
+                .center {
+                    text-align: center;
+                    padding-left: 0!important;
+                }
+
+                .readmore-thumb a {
+                    width: 100%;
+                }
+
+                .readmore-thumb img {
+                    width: 100%!important;
+                    height: auto!important;
+                }
+
+                .readmore-thumb {
+                    padding-top: 5.555%!important;
+                }
+
+                .readmore-content {
+                    padding-top: 4.444%!important;
+                }
+
+                .readmore-content p {
+                    padding-top: 0!important;
+                    font-size: 14px!important;
+                    line-height: 1.777em!important;
+                    padding-left: 10%!important;
+                    padding-right: 10%!important;
+                    margin-bottom: 0!important;
+                    height: auto!important;
+                    padding-bottom: 2.777%!important;
+                    word-break: break-all!important;
+                }
+
+                .readmore-button-wrap {
+                    text-align: center;
+                }
+
+                .readmore-button-wrap a {
+                    width: 120px!important;
+                    height: 35px!important;
+                    line-height: 35px!important;
+                    font-size: 16px!important;
+                }
+
+                .summary {
+                    font-size: 14px!important;
+                    line-height: 1.75em!important;
+                    padding-bottom: 22%!important;
+                }
+
+                .follow {
+                    background: none!important;
+                    border-bottom: 1px solid #e6e5e5;
+                }
+
+                .follow-content dt {
+                    font-size: 16px!important;
+                    line-height: 1.17em!important;
+                }
+
+                .follow-content dd {
+                    font-size: 12px!important;
+                    line-height: 1.45em!important;
+                }
+
+                .qrcode {
+                    margin-left: 40px!important;
+                    margin-right: 40px!important;
+                    margin-bottom: 10px!important;
+                }
+
+                .qrcode img {
+                    width: 100%!important;
+                    height: auto!important;
+                }
+
+                .qrcode-name {
+                    padding-bottom: 0!important;
+                }
+
+                .slogan {
+                    font-size: 18px!important;
+                    line-height: 1.48em!important;
+                }
+            }
+
+        </style>
+        <div class="wrap" style=" max-width: 720px; margin: 0 auto; ">
+            <table cellspacing="0" cellpadding="0" border="0" style="width: 100%;border-collapse:collapse; line-height: 0;">
+                <tr>
+                    <td>
+                        <div style="background: #fff; text-align: center; padding: 3.75% 0 3% 0;">
+                            <!-- logo -->
+
+                            <a  style="vertical-align: middle; display: inline-block; max-width: 40%;" href="https://www.google.com">
+                                <img src="{$static_path}/edm/img/LOGO1.jpg" alt="" style="max-width: 100%; max-height: 48px;">
+                            </a>
+                            <span style="display: inline-block; vertical-align: middle; height: 60px; margin: 0 3.888%; border-right: 2px solid #4275a4;"></span>
+
+                            <a  style="vertical-align: middle; display: inline-block; max-width: 40%;" href="https://www.google.com">
+                                <img src="{$static_path}/edm/img/LOGO2.jpg" alt="" style="max-width: 100%; max-height: 48px;">
+                            </a>
+                            <!-- logo -->
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="width: 100%;height:80px;color:#fff;background:#4074a3;line-height: 80px;font-size:32px;text-align: center;">我和健康有个约会</div>
+                        <div  style="width:100%;border-top:2px solid #000;margin:50px 0;margin-bottom:20px;position: relative;">
+
+                            <h2    style="text-align: center;background:#fff;padding:0 25px;font-size:25px;position: absolute;top:0;left:50%;transform: translate(-50%,-50%);background:#fff;"> 数码时代的健康隐忧
+                            </h2>
+                            <p style="text-align: right;margin-top:35px;"><span style="display:inline-block;width:120px; text-align: left;">Dr. Freeha Ahmed</span></p>
+                            <p style="text-align: right;"><span style="display:inline-block;width:120px; text-align: left;">译: Dr. Arthur Liu</span></p>
+                        </div>
+                       
+                    </td>
+                </tr>
+
+
+
+
+            	<tr class="details">
+					<td id="one" style="width: 100%;">
+						<div style="width:98%;margin:auto;"><img style="width: 100%;height:100%;" src="{$static_path}/edm/img/1.jpg" alt=""></div>
+
+						<h3 style="text-align: justify;margin:10px 1%;"  data-text-en="Our Health in the Digital World" data-text-cn="数码时代的健康隐忧">
+						</h3>
+						<p style="margin:20px 1%;" >
+							
+						</p>
+						<p style="margin:20px 1%;"></p>
+
+						<div style="padding:1%;line-height: 1.5;"  data-text-en="Our smartphones are amazing multifunctional devices. There are now 1.86 billion smartphone users in the world and 626 million are in China. What are the effects of smartphone and online media use on its impact on individuals and society? " data-text-cn="随着智能应用、移动互联网的发展，智能手机已成为人们生活、工作中至关重要的随身设备。调查数据显示：目前全球有18.6亿智能手机使用者，其中6.26亿在中国！人们对智能手机和线上媒体的依赖已达到历史巅峰，它会对个人和社会产生什么影响？">随着智能应用、移动互联网的发展，智能手机已成为人们生活、工作中至关重要的随身设备。调查数据显示：目前全球有18.6亿智能手机使用者，其中6.26亿在中国！人们对智能手机和线上媒体的依赖已达到历史巅峰，它会对个人和社会产生什么影响？
+						</div>
+
+						<div style="padding:1%;"  data-text-en="The Asia pacific region accounts for more than half of all social media users worldwide1, and 
+as early as 2008, the Chinese government recognised internet addiction as a new disease2. Just last year, China was the first country to label online addiction disorder, with some parents enrolling their children into dubious ‘treatment’ centres to help their children ‘cure’ their addictions3. With 24 million young people in China estimated to have online usage issues, internet giant Tencent recently began limiting play time on one of their games to only 1-2 hours a day for children under the age of twelve4." data-text-cn="全球所有社交媒体用户数量中，亚太地区占一半以上1。早在2008年，中国政府就认识到“网瘾”是一种新的疾病2，就在去年，中国还成为了全球第一个将“网瘾”归为“疾病”的国家。一些父母甚至将他们的孩子送进一些非正式的“治疗中心”，以 “治疗”孩子的“网瘾”3。据估计，中国有2400万年轻人有这种成瘾问题，近日，互联网巨头腾讯公司开始将游戏时间限制在12岁以下儿童每天1-2小时。">
+							全球所有社交媒体用户数量中，亚太地区占一半以上1。早在2008年，中国政府就认识到“网瘾”是一种新的疾病2，就在去年，中国还成为了全球第一个将“网瘾”归为“疾病”的国家。一些父母甚至将他们的孩子送进一些非正式的“治疗中心”，以 “治疗”孩子的“网瘾”3。据估计，中国有2400万年轻人有这种成瘾问题，近日，互联网巨头腾讯公司开始将游戏时间限制在12岁以下儿童每天1-2小时。
+						</div>
+						
+					</td>
+					
+            	</tr>    	
+               	
+               	<tr class="details">
+					<td id="two">
+						
+
+						<div style="padding:1%;line-height: 1.5;"  data-text-en="Mobile phones have dramatically changed everything from our own personal and social behaviours and also how we steer ourselves in the commercial world. Our toddlers can co-ordinate their fine motor skills to use a phone before they can speak. Our list of friends and connectivity through social media sites allows an insight into peoples’ lives whom we may not have stayed in touch with. We have instant and infinite knowledge at the tip of our fingertips on any subject we choose to explore. However, is this impacting our physical health, social skills, literacy, and communication? " data-text-cn="手机极大地改变了我们生活的方方面面，甚至改变了我们进入商业世界的渠道。婴儿们在学会说话之前，就可以协调精细运动来使用智能手机；我们通过社交媒体网站，就可以“窥视”久未联系的朋友们的生活； 不管我们要探索任何事物，都可以通过手机及时了解。然而，它会影响我们的身体健康，社交技能，读写能力和沟通吗？">手机极大地改变了我们生活的方方面面，甚至改变了我们进入商业世界的渠道。婴儿们在学会说话之前，就可以协调精细运动来使用智能手机；我们通过社交媒体网站，就可以“窥视”久未联系的朋友们的生活； 不管我们要探索任何事物，都可以通过手机及时了解。然而，它会影响我们的身体健康，社交技能，读写能力和沟通吗？
+						</div>
+
+						<div style="padding:1%;"  data-text-en="Wilmer et al. reviewed research exploring links between mobile habits and cognitive functioning1. Many studies highlighted that our attention, memory, and knowledge were negatively impacted. Even the use of map apps has impaired our own ability to map out routes in our mind. The studies emphasized how social media sites caused a cultural shift in our younger generation where they seek immediate gratification to displays of their life on social media websites. This leaves our current generation of children and teenagers less capable of waiting for rewards, as well as feeding anxiety and unrealistic image expectations. Phones and online usage amplifies my concerns of how our young generations will cope in the real world, where immediate gratification is not present nor readily available." data-text-cn="Wilmer团队正在探索手机使用习惯与认知功能之间的联系1。许多研究指出：依赖手机对我们的注意力，记忆力和认知有着负面的影响。甚至仅使用手机地图软件，也会弱化我们大脑描绘路线的能力。这些研究还强调了社交媒体网站对年轻族群的改变：让他们形成一种在社交媒体网站上及时展示自己生活的文化，并从中寻求“立即的满足”。这让年轻族群丧失了等待的能力，并助长了焦虑和不切实际的期待。在现实世界中，“立即的满足”无疑是痴人做梦，过度使用手机和网路，年轻一代将如何应对真实的世界？我们为此感到忧心忡忡。">
+							Wilmer团队正在探索手机使用习惯与认知功能之间的联系1。许多研究指出：依赖手机对我们的注意力，记忆力和认知有着负面的影响。甚至仅使用手机地图软件，也会弱化我们大脑描绘路线的能力。这些研究还强调了社交媒体网站对年轻族群的改变：让他们形成一种在社交媒体网站上及时展示自己生活的文化，并从中寻求“立即的满足”。这让年轻族群丧失了等待的能力，并助长了焦虑和不切实际的期待。在现实世界中，“立即的满足”无疑是痴人做梦，过度使用手机和网路，年轻一代将如何应对真实的世界？我们为此感到忧心忡忡。
+						</div>
+					</td>		
+               	</tr>	
+				
+					<tr class="details">
+						<td id="three">
+							
+
+						<div style="padding:1%;"  data-text-en="However, not surprisingly all studies are inconclusive and ongoing. As a physician, I already question the impact on our social skills feeding avoidance behaviour. Many can relate to having serious discussions through messaging apps rather than in person, as it is for some, messaging is less anxiety provoking and confrontational. We may have questioned, which of our social media friends would be there in times of need? Is the quality of our friendships diminishing with social media sites? " data-text-cn="然而，毫不意外的是，研究并没有取得决定性的结果，探索还在持续进行中。作为一名医生，我关注的是这些因社交能力减退而出现的“退缩行为”，所带来的冲击影响。许多人可能会说，通过即时通讯软件可以有更多的交流，因为可以避免不必要的焦虑和冲突。让我们试想一下，当我们需要帮助时，网上的朋友谁可以及时拔刀相助呢？友谊的质量是否因社交媒体的存在，而有所减损？">然而，毫不意外的是，研究并没有取得决定性的结果，探索还在持续进行中。作为一名医生，我关注的是这些因社交能力减退而出现的“退缩行为”，所带来的冲击影响。许多人可能会说，通过即时通讯软件可以有更多的交流，因为可以避免不必要的焦虑和冲突。让我们试想一下，当我们需要帮助时，网上的朋友谁可以及时拔刀相助呢？友谊的质量是否因社交媒体的存在，而有所减损？ 
+						</div>
+                        <div style="width: 100%;height: 100%;"><img style="width: 100%;height: 100%;" src="{$static_path}/edm/img/1-2.jpg" alt=""></div>
+
+						<div style="padding:1%;"  data-text-en="As a society, we also need to consider the physical health concerns of smartphone and online media use. Excessive use can cause eye strain and have been linked to dry eyes from reduced blinking. Interestingly, benefits of new game apps developed for children with a ‘lazy’ eye have been praised and seen as even better than conventional treatments. The age of smartphone and online media is not all doom and gloom—this magnificent world is opened to us all through the internet." data-text-cn="值得我们深思的是：在整个社会中，智能手机和网络媒体的使用，会给身体健康带来什么样的影响。过度使用手机会导致眼睛疲劳、眨眼减少会导致眼睛干涩，但有趣的是，为“弱视“儿童所开发的新手机游戏却被人们称赞，并被认为是比传统治疗更有效的方法。智能手机和线上媒并非一无是处，因为有了互联网，一个宏伟的世界正向我们敞开大门">
+								值得我们深思的是：在整个社会中，智能手机和网络媒体的使用，会给身体健康带来什么样的影响。过度使用手机会导致眼睛疲劳、眨眼减少会导致眼睛干涩，但有趣的是，为“弱视“儿童所开发的新手机游戏却被人们称赞，并被认为是比传统治疗更有效的方法。智能手机和线上媒并非一无是处，因为有了互联网，一个宏伟的世界正向我们敞开大门
+						</div>
+					</td>		
+               	</tr>
+				
+				<tr class="details" ">
+					<td id="three">
+
+						<div style="padding:1%;"  data-text-en="I recall the apprehension and media coverage when microwaves were first introduced into the household in the 1970s. Over 40 years later, we no longer feel they are a health risk. 
+						We must accept that smartphones and social media networks are in our lives. While we currently have little knowledge of how this amount of technology and connectivity will affect us and future generations, we can first start by making ourselves aware of how and how much we use these platforms." data-text-cn="我想起20世纪70年代微波炉首次引入家庭时，也给人们带来了担忧并引发了媒体的关注，但40多年后，我们不再觉得微波炉是一个健康隐患。我们必须承认，在我们生活中，智能手机和社交媒体已无所不在，对于这些科技和网络会如何影响我们和我们的下一代，我们目前所知不多，但我们可以有意识的掌控好这些平台的使用方式和频次。">
+						我想起20世纪70年代微波炉首次引入家庭时，也给人们带来了担忧并引发了媒体的关注，但40多年后，我们不再觉得微波炉是一个健康隐患。我们必须承认，在我们生活中，智能手机和社交媒体已无所不在，对于这些科技和网络会如何影响我们和我们的下一代，我们目前所知不多，但我们可以有意识的掌控好这些平台的使用方式和频次。
+						
+						</div>
+						<div style="padding:1%; margin:15px 0;font-size:12px;margin-bottom:35px;">
+							<p>1. Smartphones and Cognition: A Review of Research Exploring the Links between Mobile Technology Habits and Cognitive Functioning. Wilmer H. H, Sherman L. E, Chein J. M. Frontiers in Psychology. Vol 8. April 2017</p>
+							<p>2. Chinese recognise internet addition as a new disease. The Guardian. Tuesday Nov 2008.</p>
+							<p>3. ‘Electronic heroin’ China’s boot camps get tough on addicts. The Guardian. 28 August 2017</p>
+							<p>4. Chinese internet giant limits online game play for children over health concerns. The Guardian.  4 July 2017.</p>
+						</div>
+					</td>	
+				</tr>
+
+	            <!-- follow us -->
+	            <td style="background: #f7f9fa;">
+	                <div style="padding: 4.72% 8.333% 1.52% 8.333%">
+
+	                    <h2 class="follow" style="font-size: 22px;line-height: 31px;color: #4275a4; background: url('http://mercurymage.com/h5/juflower/title-line.jpg') no-repeat  right center;"><span  data-fixtext-en="Follow Us On WeChat" data-fixtext-cn="关注官方微信" style="display: inline-block; padding-right: 10px; background-color: #f7f9fa;">联系我们</span> <span style="display: inline-block;background-color: #f7f9fa;float:right;font-size: 22px;padding-left:10px;">联络汇医</span><div style="clear:both;"></div></h2>
+	                </div>
+	                <table cellspacing="0" cellpadding="0" border="0" style="width: 100%; border-collapse:collapse">
+	                    <tr style="vertical-align: top;">
+	                        <td class="block center" width="40%">
+	                            <table style="width: 100%;">
+	                                <tr style="vertical-align: top; text-align: center;">
+	                                    <td>
+	                                        <div class="qrcode" style="margin-right: 45px; margin-left: 60px;padding-top: 10px;">
+
+
+	                                            <img  src="{$static_path}/edm/img/left.jpg" alt="" width="115">
+	                                            <p class="qrcode-name"  style="font-size: 13px;line-height: 24px; text-align: center; color: #646569; padding-bottom: 28px;">汇医微信公众号</p>
+	                                        </div>
+	                                    </td>
+	                                    <td>
+	                                        <div class="qrcode" style="padding-top: 10px;">
+
+
+	                                            <img  src="{$static_path}/edm/img/right.jpg" alt="" width="115">
+	                                            <p class="qrcode-name"  style="font-size: 13px;line-height: 24px; text-align: center; color: #646569; padding-bottom: 28px;">汇医领英主页</p>
+	                                        </div>
+	                                    </td>
+	                                </tr>
+	                            </table>
+
+	                        </td>
+	                        <td class="block follow-content">
+	                            <dl style="margin-left: 40px; padding-top: 3px; padding-right: 60px; margin-bottom: 28px;">
+	                                <dt style="font-size:20px; line-height: 28px; color: #4275a4;" data-fixtext-en="Contact Advance Medical at" data-fixtext-cn="联系汇医"></dt>
+	                                <dd style="font-size: 17px; color: #646569; line-height: 20px;">	                                    <p data-edittype="para" data-text-en="generali@advance-medical.com.cn" data-text-cn="generali@advance-medical.com.cn">generali@advance-medical.com.cn</p>
+	                                    <p  data-text-en="generali@advance-medical.com.cn" data-text-cn="generali@advance-medical.com.cn">generali@advance-medical.com.cn</p>
+	                                </dd>
+
+	                                <dd style="font-size: 17px; color: #646569; line-height: 22px;">
+
+
+
+	                                    <p  data-text-en="400-820-7691" data-text-cn="400-820-7691">400-820-7691</p>
+	                                    <p  data-text-en="Monday - Friday, 9:00 - 17:00" data-text-cn="周一至周五， 9：00-17：00">Monday - Friday, 9:00 - 17:00</p>
+	                                    <p  data-text-en="excludes public holidays" data-text-cn="国定假日除外">excludes public holidays</p>
+	                                </dd>
+	                            </dl>
+	                        </td>
+	                    </tr>
+	                </table>
+	            </td>
+	            <!-- follow us -->
+                
+                <tr>
+                    <td style="background: #3cadb8 url('http://mercurymage.com/h5/juflower/bg2.jpg') no-repeat center center ; background-size: cover;">
+                        <div style="padding-bottom: 3.21%; color: #fff; text-align: center;">
+                            <h2 class="slogan" style="font-size: 21px;line-height: 31px; padding: 3% 0 1.666% 0" data-fixtext-en="Independent | Expert | Personalized" data-fixtext-cn="独立 | 权威 | 个性化">独立 | 权威 | 个性化</h2>
+
+                            <p style="line-height: 18px;font-size: 11px; padding-left: 12%; padding-right: 12%;"  data-text-en="Barcelona, Spain | Boston, USA | Budapest, Hungary | Lisbon, Portugal | London, UK | Santiago, Chile | São Paulo, Brazil | Shanghai, China" data-text-cn="巴塞罗那 西班牙 | 波士顿 美国 | 布达佩斯 匈牙利 | 里斯本 葡萄牙 | 伦敦 英国 | 圣地亚哥 智利 | 圣保罗 巴西 | 上海 中国">巴塞罗那 西班牙 | 波士顿 美国 | 布达佩斯 匈牙利 | 里斯本 葡萄牙 | 伦敦 英国 | 圣地亚哥 智利 | 圣保罗 巴西 | 上海 中国</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="font-size: 11px; color: #646569; line-height: 15px; text-align: center; padding: 22px 7.5% 28px 7.5%; word-break: break-all;">
+
+
+                            <p style="margin-bottom: 5px;line-height: 16px;"  data-text-en="Copyright © 2018 Advance Medical, All rights reserved." data-text-cn="2018 汇医版权所有，并保留最终解释权。">2018 汇医版权所有，并保留最终解释权。</p>
+                            <p style="margin-bottom: 13px;"  data-text-en="Disclaimer: Advance Medical physicians offering advisory services will not examine you nor have additional information beyond what you provide; this service in not a medical diagnosis nor is it a treatment. The information shared with you provides alternative perspectives and education; it is NOT a substitute for your own physician’s recommendations." data-text-cn="声明： 汇医医师提供的服务中不包括身体检查和超出您所提供的医学资料范围外的意见；本服务既不是医疗诊断，也不是医学治疗。所给出的医疗信息是可供选择的观点和宣教；此医疗信息不能替代您主治医生的建议。">声明： 汇医医师提供的服务中不包括身体检查和超出您所提供的医学资料范围外的意见；本服务既不是医疗诊断，也不是医学治疗。所给出的医疗信息是可供选择的观点和宣教；此信息不能替代您主治医生的建议。</p>
+                            <a href="https://www.google.com" style="font-size: 10px; color: #646569;" data-edittype="textlink" data-text-en="You have received this newsletter as a valued client of Generali China Life Insurance. If you wish to unsubscribe, please click here." data-edittype="textlink" data-text-cn="您已收到中意人寿尊享会员的通讯稿。注销，请按此处。"></a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+   
+    <!--emailStar-->
+    <div class="result-panel">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span>Please copy the whole email html code below.</span>
+                <i class="edit-cancel close">x</i>
+            </div>
+            <div class="panel-body">
+                <form action="">
+                    <div class="form-group">
+                        <h3>English News Letter</h3>
+                        <textarea class="result-en"></textarea>
+                        <h3>Chinese News Letter</h3>
+                        <textarea class="result-cn"></textarea>
+                    </div>
+                    <div class="form-group text-right">
+                        <div class="btn btn-success">Ok</div>
+                        <div class="btn btn-default">Cancel</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--emailStar end-->
+
+    
+</body>
+</html>

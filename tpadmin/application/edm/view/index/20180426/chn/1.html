@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>详情</title>
+    <!-- inject editor -->
+    <link rel="stylesheet" href="{$static_path}/edm/stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="{$static_path}/edm/stylesheets/editor.css" />
+    <script src="{$static_path}/edm/scripts/jquery-2.1.3.min.js"></script>
+    <script src="{$static_path}/edm/scripts/editor.js"></script>
+    <!-- end inject editor -->
+</head>
+
+<body>
+    <div id="email-content-wrap">
+        <style>
+        body {
+            font-family: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", "Microsoft Yahei", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        *,
+        p,
+        h1,
+        h2,
+        h3,
+        h4 {
+            padding: 0;
+            margin: 0;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        table * {
+            box-sizing: content-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        p {
+            /* word-break: break-all; */
+        }
+
+        tr {
+            vertical-align: top;
+        }
+
+        div {
+            line-height: 1.5;
+        }
+
+        .details {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 700px) {
+            .block {
+                display: block !important;
+                width: 100%!important;
+                direction: ltr!important;
+                padding-left: 0!important;
+                padding-right: 0!important;
+            }
+            .center {
+                text-align: center;
+                padding-left: 0!important;
+            }
+
+            .readmore-thumb a {
+                width: 100%;
+            }
+
+            .readmore-thumb img {
+                width: 100%!important;
+                height: auto!important;
+            }
+
+            .readmore-thumb {
+                padding-top: 5.555%!important;
+            }
+
+            .readmore-content {
+                padding-top: 4.444%!important;
+            }
+
+            .readmore-content p {
+                padding-top: 0!important;
+                font-size: 14px!important;
+                line-height: 1.777em!important;
+                padding-left: 10%!important;
+                padding-right: 10%!important;
+                margin-bottom: 0!important;
+                height: auto!important;
+                padding-bottom: 2.777%!important;
+                word-break: break-all!important;
+            }
+
+            .readmore-button-wrap {
+                text-align: center;
+            }
+
+            .readmore-button-wrap a {
+                width: 120px!important;
+                height: 35px!important;
+                line-height: 35px!important;
+                font-size: 16px!important;
+            }
+
+            .summary {
+                font-size: 14px!important;
+                line-height: 1.75em!important;
+                padding-bottom: 22%!important;
+            }
+
+            .follow {
+                background: none!important;
+                border-bottom: 1px solid #e6e5e5;
+            }
+
+            .follow-content dt {
+                font-size: 16px!important;
+                line-height: 1.17em!important;
+            }
+
+            .follow-content dd {
+                font-size: 12px!important;
+                line-height: 1.45em!important;
+            }
+
+            .qrcode {
+                margin-left: 40px!important;
+                margin-right: 40px!important;
+                margin-bottom: 10px!important;
+            }
+
+            .qrcode img {
+                height: auto!important;
+            }
+
+            .qrcode-name {
+                padding-bottom: 0!important;
+            }
+
+            .slogan {
+                font-size: 18px!important;
+                line-height: 1.48em!important;
+            }
+        }
+        </style>
+        <div class="wrap" style=" max-width: 720px; margin: 0 auto; ">
+            <table cellspacing="0" cellpadding="0" border="0" style="width: 100%;border-collapse:collapse; line-height: 0;">
+                <tr>
+                    <td>
+                        <div style="background: #fff; text-align: center; padding: 3.75% 0 3% 0;">
+                            <!-- logo -->
+                            <a style="vertical-align: middle; display: inline-block; max-width: 40%;" href="https://www.google.com">
+                                <img src="{$static_path}/edm/img/LOGO1.jpg" alt="" style="max-width: 100%; max-height: 48px;">
+                            </a>
+                            <span style="display: inline-block; vertical-align: middle; height: 60px; margin: 0 3.888%; border-right: 2px solid #4275a4;"></span>
+                            <a style="vertical-align: middle; display: inline-block; max-width: 40%;" href="https://www.google.com">
+                                <img src="{$static_path}/edm/img/LOGO2.jpg" alt="" style="max-width: 100%; max-height: 48px;">
+                            </a>
+                            <!-- logo -->
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="width: 100%;height:80px;color:#fff;background:#4074a3;line-height: 80px;font-size:32px;text-align: center;">我和健康有个约会</div>
+                        <div style="width:100%;border-top:2px solid #000;margin:50px 0;margin-bottom:20px;position: relative;">
+                            <h2 style="text-align: center;background:#fff;padding:0 25px;font-size:25px;position: absolute;top:0;left:50%;transform: translate(-50%,-50%);background:#fff;"> 涨知识：情绪化饮食
+                            </h2>
+                            <p style="text-align: left;margin-top:35px;"><span style="display:inline-block; text-align: right;">By: Sprout Lifestyle</span></p>
+                            <p style="text-align: left;"><span style="display:inline-block;width:120px; text-align: left;">译：Dr. Arthur Liu</span></p>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="details">
+                    <td id="one" style="width: 100%;">
+                        <div style="width:98%;margin:auto;"><img style="width: 100%;height:100%;" src="{$static_path}/edm/img/8.jpg" alt=""></div>
+                        <div style="padding:1%;line-height: 1.5;" data-text-en=" " data-text-cn="">对许多人来说，情绪化饮食（或压力饮食）是一个真正的问题，许多人并不知道他们正在做这件事，也没有意识到其可能的后果。
+                        </div>
+                        <div style="padding:1%;" data-text-en="" data-text-cn="">
+                            <b>什么是压力？</b>
+                            <div>压力是身体的一种状态，不一定总是负面的。事实上，在一些人中，我们的身体在压力下，适应的很好，压力是一种对能量提升和激励的方式。许多人因工作感到压力，有些则是缺乏时间以及社会和家庭等诸多因素感到压力。长时间的压力是不健康的，会导致做出糟糕食物的选择。</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="details">
+                    <td id="two">
+                        <div style="padding:1%;line-height: 1.5;" data-text-en="" data-text-cn="">当我们受到压力时，无论成人和孩子，往往想吃下列东西：
+                        </div>
+                        <div style="padding:1%;margin-top:-10px;">
+                            <p> - 高糖，特别是在软饮料，巧克力，蛋糕，饼干和小吃等</p>
+                            <p>- 新鲜和干果</p>
+                            <p>- 甜品</p>
+                            <p> - 葡萄酒，啤酒，酒精</p>
+                            <p> - 辛辣食物</p>
+                            <p> -（香烟）</p>
+                        </div>
+                        <div style="padding:1%;" data-text-en="" data-text-cn="">
+                            有一个很好的理由我们会想要吃所有这些食物：他们使我们放松，也似乎可使我们“冷静”，让我们的味蕾开心。然而，进食这些食物并不健康，因为它们会酸化我们的身体，且通常容易上瘾，而且大多数会对我们的器官造成伤害，特别是对胃，小肠和大肠，肝脏和结肠。
+                        </div>
+                    </td>
+                </tr>
+                <tr class="details">
+                    <td id="three">
+                        <div style="padding:1%;" data-text-en="" data-text-cn="">那些来自人际交往、孩子们、乃至于日常交通阻塞的外部压力源，都可能可能会导致我们“压力饮食”，然而却使身体更紧张，又吃的更多。并进入一个恶性循环，使我们一再地想要吃上面列出令我们“放松”的食物。
+                        </div>
+                        <div style="padding:1%;" data-text-en="" data-text-cn="">
+                            这些食品中的许多都经过加工处理，含盐量高，并且像肉，蛋，奶酪，乳制品（牛奶/酸奶/奶油），烘焙食品和油炸食品等，含热量很高的。 可尝试着评估一下吃这些食物的频率，因为它们反应着也影响着你们的压力水平。
+                        </div>
+                        <div style="padding:1%;"><b>什么是无意识进食？</b></div>
+                        <div style="padding:1%;">这是当你购买快餐，在上班途中或在办公桌上吃饭时，吃得太快，而且一般来说，不会真正想到你正在把什么放进你的嘴里。听起来有点熟悉？我们大多数人都对此感到罪恶。</div>
+                        <div style="padding:1%;">所以，你可以做什么？“有意识的进食”。把订购食品、购买健康的食材，作为你的首要任务。学习并观察不同食物对消化和情绪的影响。请记住，你吃的东西直接影响你的身体健康。</div>
+                    </td>
+                </tr>
+                <tr class="details" ">
+					<td id="three ">
+
+						<div style="padding:1%; "  data-text-en=" " data-text-cn=" ">
+						我们应该做什么，吃什么？
+						</div>
+						<div style="width: 100%;height: 100%; "><img style="width: 100%;height: 100%; " src="{$static_path}/edm/img/9.jpg " alt=" "></div>
+						<div style="padding:1%; ">我们的身体需要天然、未加工食物。增加如下食物的每日摄入量：</div>
+						<div style="padding:1%; ">
+							<p>- 新鲜的时令水果和蔬菜</p>
+							<p> - 坚果，谷物，新鲜干豆</p>
+							<p> - 豆腐和海藻</p>
+							<p>- 全麦，如糙米和黑米，荞麦和小米（和他们的面条，面包和点心类产品）</p>
+							
+						</div>
+						<div style="padding:1% ">喝大量的水和新鲜果汁，并限制咖啡和甜茶。多睡觉，多做运动。</div>
+						<div style="padding:1% "><b>如何开始</b>
+							<div>今天，开始增加您纯天然食物的摄入量。一个简单的方法就是每周尝试增加一种新的蔬菜。首先尝试使用全麦谷物，如糙米或黑米与常规白米饭混合。慢慢品尝每一口食物。多了解一下你的饮食习惯并做出小小的改变，就是对你的压力和整体情绪产生重大影响的一小步！</div>
+						</div>
+					</td>	
+				</tr>
+
+
+
+	            <!-- follow us -->
+	            <td style="background: #f7f9fa; ">
+	                <div style="padding: 4.72% 8.333% 1.52% 8.333% ">
+
+	                    <h2 class="follow " style="font-size: 22px;line-height: 31px;color: #4275a4; background: url( 'http://mercurymage.com/h5/juflower/title-line.jpg') no-repeat right center; "><span  data-fixtext-en="Follow Us On WeChat " data-fixtext-cn="关注官方微信 " style="display: inline-block; padding-right: 10px; background-color: #f7f9fa; ">联系我们</span> <span style="display: inline-block;background-color: #f7f9fa;float:right;font-size: 22px;padding-left:10px; ">联络汇医</span><div style="clear:both; "></div></h2>
+	                </div>
+	                <table cellspacing="0 " cellpadding="0 " border="0 " style="width: 100%; border-collapse:collapse ">
+	                    <tr style="vertical-align: top; ">
+	                        <td class="block center " width="40% ">
+	                            <table style="width: 100%; ">
+	                                <tr style="vertical-align: top; text-align: center; ">
+	                                    <td>
+	                                        <div class="qrcode " style="margin-right: 45px; margin-left: 60px;padding-top: 10px; ">
+
+
+	                                            <img  src="{$static_path}/edm/img/right.jpg " alt=" " width="115 ">
+	                                            <p class="qrcode-name "  style="font-size: 13px;line-height: 24px; text-align: center; color: #646569; padding-bottom: 28px; ">中意人寿公众号</p>
+	                                        </div>
+	                                    </td>
+	                                    <td>
+	                                        <div class="qrcode " style="padding-top: 10px; ">
+
+
+	                                            <img  src="{$static_path}/edm/img/left.jpg " alt=" " width="115 ">
+	                                            <p class="qrcode-name "  style="font-size: 13px;line-height: 24px; text-align: center; color: #646569; padding-bottom: 28px; ">汇医微信公众号</p>
+	                                        </div>
+	                                    </td>
+	                                </tr>
+	                            </table>
+
+	                        </td>
+	                        <td class="block follow-content ">
+	                            <dl style="margin-left: 40px; padding-top: 3px; padding-right: 60px; margin-bottom: 28px; ">
+	                                <dt style="font-size:20px; line-height: 28px; color: #4275a4; " data-fixtext-en="Contact Advance Medical at " data-fixtext-cn="联系汇医 "></dt>
+	                                <dd style="font-size: 17px; color: #646569; line-height: 20px; ">	                                    <p data-edittype="para " data-text-en="generali@advance-medical.com.cn " data-text-cn="generali@advance-medical.com.cn "></p>
+	                                    <p  data-text-en="generali@advance-medical.com.cn " data-text-cn="generali@advance-medical.com.cn ">generali@advance-medical.com.cn</p>
+	                                </dd>
+
+	                                <dd style="font-size: 17px; color: #646569; line-height: 22px; ">
+
+
+
+	                                    <p  data-text-en="400-820-7691 " data-text-cn="400-820-7691 ">400-820-7691</p>
+	                                    <p  data-text-en="Monday - Friday, 9:00 - 17:00 " data-text-cn="周一至周五， 9：00-17：00 ">周一至周五， 9：00-17：00</p>
+	                                    <p  data-text-en="excludes public holidays " data-text-cn="国定假日除外 ">国定假日除外</p>
+	                                </dd>
+	                            </dl>
+	                        </td>
+	                    </tr>
+	                </table>
+	            </td>
+	            <!-- follow us -->
+                
+                <tr>
+                    <td style="background: #3cadb8 url( 'http://mercurymage.com/h5/juflower/bg2.jpg') no-repeat center center ; background-size: cover; ">
+                        <div style="padding-bottom: 3.21%; color: #fff; text-align: center; ">
+                            <h2 class="slogan " style="font-size: 21px;line-height: 31px; padding: 3% 0 1.666% 0 " data-fixtext-en="Independent | Expert | Personalized " data-fixtext-cn="独立 | 权威 | 个性化 ">独立 | 权威 | 个性化</h2>
+
+                            <p style="line-height: 18px;font-size: 11px; padding-left: 16%; padding-right: 16%; "  data-text-en="Barcelona, Spain | Boston, USA | Budapest, Hungary | Lisbon, Portugal | London, UK | Santiago, Chile | São Paulo, Brazil | Shanghai, China " data-text-cn="巴塞罗那 西班牙 | 波士顿 美国 | 布达佩斯 匈牙利 | 里斯本 葡萄牙 | 伦敦 英国 | 圣地亚哥 智利 | 圣保罗 巴西 | 上海 中国 ">巴塞罗那 西班牙 | 波士顿 美国 | 布达佩斯 匈牙利 | 里斯本 葡萄牙 | 伦敦 英国 | 圣地亚哥 智利 | 圣保罗 巴西 | 上海 中国</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="font-size: 11px; color: #646569; line-height: 15px; text-align: center; padding: 22px 7.5% 28px 7.5%; word-break: break-all; ">
+
+
+                            <p style="margin-bottom: 5px;line-height: 16px; "  data-text-en="Copyright © 2018 Advance Medical, All rights reserved. " data-text-cn="2018 汇医版权所有，并保留最终解释权。 ">2018 汇医版权所有，并保留最终解释权。</p>
+                            <p style="margin-bottom: 13px; "  data-text-en="Disclaimer: Advance Medical physicians offering advisory services will not examine you nor have additional information beyond what you provide; this service in not a medical diagnosis nor is it a treatment. The information shared with you provides alternative perspectives and education; it is NOT a substitute for your own physician’s recommendations. " data-text-cn="声明： 汇医医师提供的服务中不包括身体检查和超出您所提供的医学资料范围外的意见；本服务既不是医疗诊断，也不是医学治疗。所给出的医疗信息是可供选择的观点和宣教；此医疗信息不能替代您主治医生的建议。 ">声明： 汇医医师提供的服务中不包括身体检查和超出您所提供的医学资料范围外的意见；本服务既不是医疗诊断，也不是医学治疗。所给出的医疗信息是可供选择的观点和宣教；此信息不能替代您主治医生的建议。</p>
+                            <a href="https://www.google.com " style="font-size: 10px; color: #646569; " data-edittype="textlink " data-text-en="You have received this newsletter as a valued client of Generali China Life Insurance. If you wish to unsubscribe, please click here. " data-edittype="textlink " data-text-cn="您已收到中意人寿尊享会员的通讯稿。注销，请按此处。 "></a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+   
+    <!--emailStar-->
+    <div class="result-panel ">
+        <div class="panel panel-default ">
+            <div class="panel-heading ">
+                <span>Please copy the whole email html code below.</span>
+                <i class="edit-cancel close ">x</i>
+            </div>
+            <div class="panel-body ">
+                <form action=" ">
+                    <div class="form-group ">
+                        <h3>English News Letter</h3>
+                        <textarea class="result-en "></textarea>
+                        <h3>Chinese News Letter</h3>
+                        <textarea class="result-cn "></textarea>
+                    </div>
+                    <div class="form-group text-right ">
+                        <div class="btn btn-success ">Ok</div>
+                        <div class="btn btn-default ">Cancel</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--emailStar end-->
+
+    
+</body>
+</html>

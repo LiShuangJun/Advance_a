@@ -1,0 +1,89 @@
+  <div class="hide-image" style="display:none;">
+    <img src="{$static_path}/advance_en/img/001.jpg">
+  </div>
+  <div id="page-wrapper">
+    <section id="preloader">
+      <div class="loader" id="loader">
+          <div class="loader-img"></div>
+      </div>
+    </section>
+    <div class="top-nav clearfix">
+      <a class="logo-wrapper clearfix" href="{:url('/Allianz/EMO/En')}">
+        <span class="logo1 visible-lg visible-md visible-sm"><img src="{$static_path}/advance_en/img/logo.png" alt="logo"></span>
+        {if condition="$userid neq 0"}
+        <span class="logo1 visible-xs"><img src="{$static_path}/advance_en/img/logo.png" alt=""></span>
+        <span class="logo2 visible-xs">{$minedata.user_name}</span>
+        {else/}
+        <span class="logo3 visible-xs"><img src="{$static_path}/advance_en/img/logo.png" alt=""></span>
+        {/if}
+      </a>
+        {if condition="$userid neq 0"}
+          <a class="login-wrapper visible-xs col-xs-6" href="{:url('Allianz/EMO/Thai')}">ไทย</a>
+<!--          <a class="login-wrapper visible-xs col-xs-6" href="{:url('Login/logout')}">Log out</a>-->
+          <div style="clear:both;" class="visible-xs"></div>
+       {else/}
+          <a class="login-wrapper visible-xs col-xs-6" href="{:url('Allianz/EMO/Thai')}">ไทย</a>
+<!--           <a class="login-wrapper visible-xs col-xs-6" href="{:url('Login/index')}">Log In</a> -->
+          <div style="clear:both;" class="visible-xs"></div>
+       {/if}
+      <ul class="menu-wrapper clearfix">
+        {if condition="$userid neq 0"}
+        <li class="menubar-login hidden-xs">
+            <a href="{:url('Allianz/EMO/Thai')}">ไทย</a>
+<!--          <a href="{:url('Allianz/EMO/Thai')}">ไทย</a>丨<a href="{:url('Login/logout')}">{$minedata.user_name}丨Log out</a>-->
+        </li>
+        {else/}
+        <li class="menubar-login hidden-xs">
+            <a href="{:url('Allianz/EMO/Thai')}">ไทย</a>
+<!--          <a href="{:url('Allianz/EMO/Thai')}">ไทย</a> 丨<a href="{:url('Login/index')}" class="mlogin"><i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp;Log In</a> -->
+        </li>
+        {/if}
+         {volist name="service_list" id="sl"}
+         {in name="$sl.id" value="1"}
+         <li class="menubar menubar-{$sl.id}"><a href="#"><span class="bar-background"></span><span class="bar-text">Expert Second Medical Opinion</span><span class="bottom-gradient"></span></a><span class="right-gradient"></span></li>
+
+         {/in}
+         {/volist}
+
+      </ul>
+    </div>
+    <div class="flex-container-outer-wrapper">
+    <div class="flex-container-wrapper mb--l">
+      <div class="flex-container">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="{$static_path}/advance_en/img/001.jpg">
+            </li>
+            <li>
+              <img src="{$static_path}/advance_en/img/002.jpg">
+            </li>
+            <li>
+              <img src="{$static_path}/advance_en/img/003.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex-mask" >
+        <div class="diagnose logvilad" >
+          <div class="image-wrapper" ><img src="{$static_path}/advance_en/img/diagnose.png" ></div>
+          <div class="diagnose-text"  style="line-height: 1.5">Allianz Ayudhya</div>
+          <div class="diagnose-text" style="line-height: 1.1">Customer Care Centre</div>
+          <div class="diagnose-text" style="line-height: 1.7">Get Started  </div>
+        </div>
+        <div class="flex-phone-wrapper" >
+          <span class="phonenum"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;Contact 1373</span>
+          <span>(24 hours everyday)</span>
+          <span class="pcmail"><i class="fa fa-envelope" aria-hidden="true"></i>customercare@azay.co.th</span>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="mobile-header mb--s mt--s">
+      <div class="image-wrapper">
+        <img src="{$static_path}/advance_en/img/444.jpg" alt="">
+      </div>
+    </div>
+    <div class="mobile-diagnose logvilad" >
+      <div class="diagnose-text" ><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;Contact 1373</div>
+    </div>

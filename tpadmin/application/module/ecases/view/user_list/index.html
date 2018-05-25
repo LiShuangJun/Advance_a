@@ -1,0 +1,121 @@
+{extend name="common/base" }
+
+{block name="style"}
+<style type="text/css">
+.article-cover{
+    width: 60px;
+    height: 40px;
+    margin: auto;
+    background-size: cover;
+}
+</style>
+{/block}
+
+{block name="content"}
+<form action="{:module_url('index')}" class="search-form">
+<div class="am-g">
+
+    <div class="am-u-sm-12 am-u-md-5">
+        <div class="am-btn-toolbar">
+            <div class="am-btn-group am-btn-group-xs">
+                <a class="am-btn am-btn-default" href="{:module_url('add')}">
+                    <span class="am-icon-plus"></span> Add
+                </a>
+                <a class="am-btn am-btn-default nd-refresh">
+                    <span class="am-icon-refresh"></span> Refresh
+                </a>
+                <a class="am-btn am-btn-default " id="export">
+                    <span class="am-icon-level-down"></span> Export excel
+                </a>
+                
+                <a class="am-btn am-btn-default "   href="{:module_url('importUser')}">
+                    <span class="am-icon-level-up"></span> Import excel
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    {$widget->search('keyword', ['name' => 'user_name', 'holder' => 'User Name', 'value' => $keyword, 'md_num' => 3,'text'=>'Search'])}
+
+</div>
+</form>
+
+<div class="am-g">
+    <div class="am-u-sm-12">
+    
+        <table class="am-table am-table-striped am-table-radius am-table-bordered am-form">
+            <thead>
+                <tr>
+                    <th >Avatar</th>
+                    <th>User Name</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th >Email</th>
+                    <th >Telephone</th>
+                    <th >Company</th>
+                    <th >Time</th>
+                    <th >Status</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+            {volist name="_list" id="vo"}
+                <tr>
+                    <td class="am-text-center am-text-middle">
+                        <div class="article-cover" style="background-image: url('{$vo.avatar}');"></div>
+                    </td>
+                    <td class="am-text-middle">{$vo.user_name}</td>
+                    <td class="am-text-middle">{$vo.nickname}</td>
+                    <td class="am-text-middle">{if condition="$vo.sex eq 1"}Male{else/}Female{/if}</td>
+                    <td class="am-text-middle">
+                        {$vo.email}
+                    </td>
+                    <td class="am-text-middle">
+                        {$vo.tel}
+                    </td>
+                     <td class="am-text-middle">
+                        {$vo.companyname}
+                    </td>
+                    <td class="am-text-middle">
+                        {$vo.create_time}
+                    </td>
+                    <td class="am-text-middle">
+                        {$widget->row('select',['value' => $vo['u_status'], 'list' => $userstatus, 'url' => module_url('modify', ['id' => $vo['id'], 'field' => 'u_status'])])}
+                    </td>
+                    <td class="am-text-middle">
+                        <div class="am-btn-toolbar">
+                            <div class="am-btn-group am-btn-group-xs">
+
+                                {$widget->row('button', ['title' => 'Edit', 'class' => 'am-text-secondary', 'icon' => 'am-icon-pencil-square-o', 'url' => module_url('edit', ['id' => $vo['id']])])}
+                                {$widget->row('button', ['title' => 'Delete', 'class' => 'am-text-danger ajax-get ajax-confirm', 'icon' => 'am-icon-trash-o', 'url' => module_url('delete', ['id' => $vo['id']])])}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            {/volist}
+            </tbody>
+        </table>
+        
+        {if condition="!empty($_page)"}
+            <div class="am-fl">Total: {$_total} </div>
+            <div class="am-fr"> {$_page}</div>
+        {/if}
+    </div>
+</div>
+{/block}
+
+{block name="script"}
+
+<script type="text/javascript" src="{$lib_path}/jquery/2.0.0/jquery.min.js?_={$site_version}"></script>
+ <script type="text/javascript">
+     $("#export").click(function(e){
+         e.preventDefault();
+         window.location.href="{:module_url('exportUser',array('map'=>$wherelist))}";
+       
+       
+     });
+     
+ </script>
+{/block}

@@ -1,0 +1,870 @@
+.form-wrapper {
+  max-width: 700px;
+  margin: auto;
+  background-color: #fff; }
+  .form-wrapper a,
+  .form-wrapper a:hover {
+    text-decoration: none; }
+
+.mobile-form-logo-header .logo-wrapper {
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  text-decoration: none;
+  text-align: center; }
+
+.mobile-form-logo-header .logo1 {
+  display: inline-block;
+  width: 175px; }
+
+.mobile-form-logo-header .logo2 {
+  display: inline-block;
+  width: 60px; }
+
+.mobile-form-logo-header img {
+  width: 100%;
+  height: auto; }
+
+.m-form-step-indicator {
+  width: 100%; }
+  .m-form-step-indicator div {
+    width: 25%;
+    float: left; }
+  .m-form-step-indicator span {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 1px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    background-color: #52cc9d; }
+  .m-form-step-indicator span.current {
+    height: 45px;
+    line-height: 45px;
+    margin-top: -5px;
+    background-color: #017f4f; }
+  .m-form-step-indicator span.completed {
+    background-color: #017f4f; }
+  .m-form-step-indicator div:first-child span {
+    margin-left: 0; }
+
+.m-form-step-indicator2 span {
+  background-color: #1ba9f5; }
+
+.m-form-step-indicator2 span.current,
+.m-form-step-indicator2 span.completed {
+  background-color: #0775aa; }
+
+.m-form-step-indicator3 span {
+  background-color: #e645a5; }
+
+.m-form-step-indicator3 span.current,
+.m-form-step-indicator3 span.completed {
+  background-color: #9d3373; }
+
+.m-form-step-indicator4 span {
+  background-color: #8b5ef5; }
+
+.m-form-step-indicator4 span.current,
+.m-form-step-indicator4 span.completed {
+  background-color: #563e96; }
+
+.medical-form ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #017f4f;
+  font-size: 1em; }
+
+.medical-form :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #017f4f;
+  opacity: 1;
+  font-size: 1em; }
+
+.medical-form ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #017f4f;
+  opacity: 1;
+  font-size: 1em; }
+
+.medical-form :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #017f4f;
+  font-size: 1em; }
+
+.medical-form :placeholder-shown {
+  /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color: #017f4f;
+  font-size: 1.1em; }
+
+.medical-form input {
+  height: 35px;
+  border-radius: 0; }
+
+.medical-form input[type="text"] {
+  border-color: #017f4f;
+  color: #017f4f;
+  padding-left: 7px;
+  font-size: 1.4em; }
+
+.medical-form input[type="radio"] {
+  position: absolute;
+  left: -999em; }
+
+.medical-form input[type="checkbox"] {
+  opacity: 0;
+  z-index: 1; }
+
+.medical-form select {
+  display: block;
+  height: 35px;
+  font-size: 1.4em;
+  padding-left: 5px;
+  width: 100%;
+  border-radius: 0;
+  border-color: #017f4f;
+  color: #017f4f; }
+
+.medical-form .select-wrapper {
+  border: 1px solid #017f4f;
+  position: relative; }
+  .medical-form .select-wrapper select {
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none; }
+
+.medical-form .select-wrapper:before {
+  position: absolute;
+  right: 10px;
+  height: 35px;
+  line-height: 35px;
+  top: 0;
+  bottom: 0;
+  font-family: 'FontAwesome';
+  content: "\f0d7";
+  color: #017f4f;
+  font-size: 2em; }
+
+.medical-form select[disabled] {
+  background-color: #e6f2ee;
+  cursor: not-allowed; }
+
+.medical-form .form-section {
+  padding: 10px 15px;
+  display: none; }
+
+.medical-form .form-section.current {
+  display: block; }
+
+.medical-form .form-group {
+  margin-bottom: 5px; }
+
+.medical-form .medical-label {
+  font-size: 1.5em;
+  margin-top: 5px;
+  font-weight: 400;
+  color: #017f4f; }
+
+.medical-form .gender-single,
+.medical-form .relation-single {
+  padding-left: 6px;
+  padding-right: 0; }
+  .medical-form .gender-single label,
+  .medical-form .relation-single label {
+    display: block;
+    width: 100%;
+    padding: 0; }
+
+.medical-form .gender-single:first-child,
+.medical-form .relation-single:first-child {
+  padding-left: 0; }
+
+.medical-form input[type="radio"] + span {
+  display: block;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #52cc9d;
+  text-align: center;
+  font-weight: 400;
+  cursor: pointer; }
+
+.medical-form input[type="radio"]:checked + span {
+  background-color: #017f4f; }
+
+.medical-form .gender-single input[type="radio"] + span {
+  height: 32px;
+  line-height: 32px; }
+
+.medical-form .form-navigation {
+  width: 100%;
+  margin-top: 10px;
+  height: 60px;
+  padding: 15px 10px;
+  border-top: 1px solid #017f4f;
+  background-color: #fff; }
+
+.medical-form .btn-navigate {
+  display: inline-block;
+  height: 35px;
+  width: 100px;
+  border-radius: 0;
+  color: #fff;
+  background-color: #52cc9d; }
+
+.medical-form .btn-navigate:active {
+  background-color: #017f4f; }
+
+.medical-form .has-width {
+  display: inline-block;
+  width: 5em;
+  text-align: justify;
+  -moz-text-align-last: justify;
+  text-align-last: justify; }
+
+.medical-form .address-choose {
+  padding-left: 6px;
+  padding-right: 0; }
+
+.medical-form .little-character {
+  font-size: 0.9em;
+  letter-spacing: -0.5px; }
+
+.medical-form .address-choose:first-child {
+  padding-left: 0; }
+
+.medical-form .address-details {
+  padding: 5px 0 0; }
+
+.medical-form .form-text {
+  margin-top: 120px;
+  padding-left: 15px;
+  font-size: 1.2em;
+  color: #017f4f; }
+  .medical-form .form-text .sup-ast {
+    margin-right: 4px;
+    vertical-align: super;
+    font-size: 0.8em; }
+
+.medical-form .info-details {
+  padding: 5px;
+  display: block;
+  width: 100%;
+  height: 140px;
+  resize: none;
+  font-size: 1.4em;
+  border-color: #017f4f; }
+
+.medical-form .input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+.medical-form .input-file + label {
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  overflow: hidden; }
+
+.medical-form .file-name {
+  width: 100%;
+  display: none;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #017f4f;
+  border: 1px solid #017f4f;
+  margin-bottom: 5px; }
+
+.medical-form .file-choose {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #017f4f;
+  line-height: 30px;
+  display: inline-block;
+  font-size: 1.4em; }
+
+.medical-form .form-another-text {
+  margin: 0;
+  font-size: 1.2em;
+  color: #017f4f; }
+  .medical-form .form-another-text .sup-ast {
+    margin-right: 4px;
+    vertical-align: super; }
+
+.medical-form .checkbox-wrapper {
+  width: 100%;
+  background-color: #cef2e4;
+  color: #017f4f;
+  margin-top: 40px; }
+  .medical-form .checkbox-wrapper .form-group {
+    padding: 13px 0;
+    margin: 0; }
+  .medical-form .checkbox-wrapper label,
+  .medical-form .checkbox-wrapper .contract-click {
+    height: 25px;
+    line-height: 25px;
+    font-size: 1.4em;
+    font-weight: 400;
+    display: inline-block;
+    position: relative;
+    padding-left: 5px;
+    cursor: pointer;
+    margin-bottom: 0; }
+  .medical-form .checkbox-wrapper .contract-click {
+    padding-left: 0;
+    font-weight: 700;
+    text-decoration: underline; }
+  .medical-form .checkbox-wrapper label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 0;
+    margin-left: -16px;
+    margin-top: 5px;
+    border: 1px solid #017f4f;
+    background-color: #fff; }
+  .medical-form .checkbox-wrapper label::after {
+    display: inline-block;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    left: 0;
+    top: 0;
+    margin-left: -17px;
+    padding-left: 3px;
+    font-size: 11px;
+    color: #555; }
+  .medical-form .checkbox-wrapper input[type="checkbox"] {
+    height: 1px; }
+  .medical-form .checkbox-wrapper input[type="checkbox"]:checked + label::before {
+    background-color: #017f4f;
+    border-color: #017f4f; }
+  .medical-form .checkbox-wrapper input[type="checkbox"]:checked + label::after {
+    font-family: 'FontAwesome';
+    content: "\f00c";
+    color: #fff; }
+
+.medical-form .mobile-time-trigger button {
+  display: block;
+  width: 100%;
+  border-radius: 0;
+  height: 35px;
+  background-color: #52cc9d;
+  text-align: center;
+  color: #fff;
+  font-size: 1.4em; }
+
+.medical-form .time-grid {
+  letter-spacing: -1px; }
+
+.medical-form .user-time {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff; }
+  .medical-form .user-time .user-time-wrapper {
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -100px; }
+  .medical-form .user-time .time-inner-wrapper {
+    display: inline-block;
+    width: 33.3333333%;
+    height: 38px;
+    margin-bottom: 12px;
+    padding-left: 5px; }
+  .medical-form .user-time .time-inner-wrapper:first-child {
+    padding-left: 0; }
+  .medical-form .user-time .user-time-close {
+    height: 38px;
+    line-height: 38px;
+    font-size: 1.4em;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #fff;
+    background-color: #017f4f;
+    margin-top: 10px;
+    cursor: pointer; }
+  .medical-form .user-time label {
+    display: block; }
+  .medical-form .user-time input[type="checkbox"] {
+    height: 1px;
+    position: absolute; }
+  .medical-form .user-time input[type="checkbox"] + span {
+    display: inline-block;
+    width: 100%;
+    background-color: #52cc9d;
+    text-align: center;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: -1px;
+    height: 35px;
+    line-height: 35px;
+    cursor: pointer; }
+  .medical-form .user-time input[type="checkbox"]:checked + span {
+    background-color: #017f4f; }
+
+.medical-form2 ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #0775aa;
+  font-size: 1em; }
+
+.medical-form2 :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #0775aa;
+  opacity: 1;
+  font-size: 1em; }
+
+.medical-form2 ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #0775aa;
+  opacity: 1;
+  font-size: 1em; }
+
+.medical-form2 :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #0775aa;
+  font-size: 1em; }
+
+.medical-form2 :placeholder-shown {
+  /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color: #0775aa;
+  font-size: 1.1em; }
+
+.medical-form2 input[type="text"] {
+  border-color: #0775aa;
+  color: #0775aa; }
+
+.medical-form2 select {
+  border-color: #0775aa;
+  color: #0775aa; }
+
+.medical-form2 select[disabled] {
+  background-color: #caecfc; }
+
+.medical-form2 .medical-label {
+  color: #0775aa; }
+
+.medical-form2 input[type="radio"] + span {
+  background-color: #1ba9f5; }
+
+.medical-form2 input[type="radio"]:checked + span {
+  background-color: #0775aa; }
+
+.medical-form2 .select-wrapper {
+  border: 1px solid #0775aa; }
+
+.medical-form2 .select-wrapper:before {
+  color: #0775aa; }
+
+.medical-form2 .form-navigation {
+  border-top: 1px solid #0775aa; }
+
+.medical-form2 .btn-navigate {
+  background-color: #1ba9f5; }
+
+.medical-form2 .btn-navigate:active {
+  background-color: #0775aa; }
+
+.medical-form2 .form-text {
+  color: #0775aa; }
+
+.medical-form2 .info-details {
+  border-color: #0775aa; }
+
+.medical-form2 .file-name {
+  color: #0775aa;
+  border: 1px solid #0775aa; }
+
+.medical-form2 .file-choose {
+  background-color: #0775aa; }
+
+.medical-form2 .form-another-text {
+  color: #0775aa; }
+
+.medical-form2 .checkbox-wrapper {
+  background-color: #caecfc;
+  color: #0775aa; }
+  .medical-form2 .checkbox-wrapper label::before {
+    border: 1px solid #0775aa; }
+  .medical-form2 .checkbox-wrapper label::after {
+    color: #555; }
+  .medical-form2 .checkbox-wrapper input[type="checkbox"]:checked + label::before {
+    background-color: #0775aa;
+    border-color: #0775aa; }
+
+.medical-form2 .mobile-time-trigger button {
+  background-color: #1ba9f5; }
+
+.medical-form2 .mobile-time-trigger button:active {
+  background-color: #0775aa; }
+
+.medical-form2 .user-time .user-time-close {
+  background-color: #0775aa; }
+
+.medical-form2 .user-time input[type="checkbox"] + span {
+  background-color: #1ba9f5; }
+
+.medical-form2 .user-time input[type="checkbox"]:checked + span {
+  background-color: #0775aa; }
+
+.medical-form3 ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #9d3373;
+  font-size: 1em; }
+
+.medical-form3 :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #9d3373;
+  opacity: 1;
+  font-size: 1em; }
+
+.medical-form3 ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #9d3373;
+  opacity: 1;
+  font-size: 1em; }
+
+.medical-form3 :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #9d3373;
+  font-size: 1em; }
+
+.medical-form3 :placeholder-shown {
+  /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color: #9d3373;
+  font-size: 1.1em; }
+
+.medical-form3 input[type="text"] {
+  border-color: #9d3373;
+  color: #9d3373; }
+
+.medical-form3 select {
+  border-color: #9d3373;
+  color: #9d3373; }
+
+.medical-form3 select[disabled] {
+  background-color: #f2cee4; }
+
+.medical-form3 .select-wrapper {
+  border: 1px solid #9d3373; }
+
+.medical-form3 .select-wrapper:before {
+  color: #9d3373; }
+
+.medical-form3 .medical-label {
+  color: #9d3373; }
+
+.medical-form3 input[type="radio"] + span {
+  background-color: #e645a5; }
+
+.medical-form3 input[type="radio"]:checked + span {
+  background-color: #9d3373; }
+
+.medical-form3 .form-navigation {
+  border-top: 1px solid #9d3373; }
+
+.medical-form3 .btn-navigate {
+  background-color: #e645a5; }
+
+.medical-form3 .btn-navigate:active {
+  background-color: #9d3373; }
+
+.medical-form3 .form-text {
+  color: #9d3373; }
+
+.medical-form3 .info-details {
+  border-color: #9d3373; }
+
+.medical-form3 .file-name {
+  color: #9d3373;
+  border: 1px solid #9d3373; }
+
+.medical-form3 .file-choose {
+  background-color: #9d3373; }
+
+.medical-form3 .form-another-text {
+  color: #9d3373; }
+
+.medical-form3 .checkbox-wrapper {
+  background-color: #f2cee4;
+  color: #9d3373; }
+  .medical-form3 .checkbox-wrapper label::before {
+    border: 1px solid #9d3373; }
+  .medical-form3 .checkbox-wrapper label::after {
+    color: #555; }
+  .medical-form3 .checkbox-wrapper input[type="checkbox"]:checked + label::before {
+    background-color: #9d3373;
+    border-color: #9d3373; }
+
+.medical-form3 .mobile-time-trigger button {
+  background-color: #e645a5; }
+
+.medical-form3 .mobile-time-trigger button:active {
+  background-color: #9d3373; }
+
+.medical-form3 .user-time .user-time-close {
+  background-color: #9d3373; }
+
+.medical-form3 .user-time input[type="checkbox"] + span {
+  background-color: #e645a5; }
+
+.medical-form3 .user-time input[type="checkbox"]:checked + span {
+  background-color: #9d3373; }
+
+.medical-form4 ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #563e96;
+  font-size: 1em; }
+
+.medical-form4 :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #563e96;
+  opacity: 1;
+  font-size: 1em; }
+
+.medical-form4 ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #563e96;
+  opacity: 1;
+  font-size: 1em; }
+
+.medical-form4 :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #563e96;
+  font-size: 1em; }
+
+.medical-form4 :placeholder-shown {
+  /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color: #563e96;
+  font-size: 1.1em; }
+
+.medical-form4 input[type="text"] {
+  border-color: #563e96;
+  color: #563e96; }
+
+.medical-form4 select {
+  border-color: #563e96;
+  color: #563e96; }
+
+.medical-form4 select[disabled] {
+  background-color: #e1d7fc; }
+
+.medical-form4 .select-wrapper {
+  border: 1px solid #563e96; }
+
+.medical-form4 .select-wrapper:before {
+  color: #563e96; }
+
+.medical-form4 .medical-label {
+  color: #563e96; }
+
+.medical-form4 input[type="radio"] + span {
+  background-color: #8b5ef5; }
+
+.medical-form4 input[type="radio"]:checked + span {
+  background-color: #563e96; }
+
+.medical-form4 .form-navigation {
+  border-top: 1px solid #563e96; }
+
+.medical-form4 .btn-navigate {
+  background-color: #8b5ef5; }
+
+.medical-form4 .btn-navigate:active {
+  background-color: #563e96; }
+
+.medical-form4 .form-text {
+  color: #563e96; }
+
+.medical-form4 .info-details {
+  border-color: #563e96; }
+
+.medical-form4 .file-name {
+  color: #563e96;
+  border: 1px solid #563e96; }
+
+.medical-form4 .file-choose {
+  background-color: #563e96; }
+
+.medical-form4 .form-another-text {
+  color: #563e96; }
+
+.medical-form4 .checkbox-wrapper {
+  background-color: #e1d7fc;
+  color: #563e96; }
+  .medical-form4 .checkbox-wrapper label::before {
+    border: 1px solid #563e96; }
+  .medical-form4 .checkbox-wrapper label::after {
+    color: #555; }
+  .medical-form4 .checkbox-wrapper input[type="checkbox"]:checked + label::before {
+    background-color: #563e96;
+    border-color: #563e96; }
+
+.medical-form4 .mobile-time-trigger button {
+  background-color: #8b5ef5; }
+
+.medical-form4 .mobile-time-trigger button:active {
+  background-color: #563e96; }
+
+.medical-form4 .user-time .user-time-close {
+  background-color: #563e96; }
+
+.medical-form4 .user-time input[type="checkbox"] + span {
+  background-color: #8b5ef5; }
+
+.medical-form4 .user-time input[type="checkbox"]:checked + span {
+  background-color: #563e96; }
+
+.medical-form2 .dtpicker-content {
+  border: 1px solid #0775aa; }
+
+.medical-form2 .dtpicker-header .dtpicker-close {
+  color: #0775aa; }
+
+.medical-form2 .dtpicker-header .dtpicker-value {
+  color: #0775aa; }
+
+.medical-form2 .dtpicker-components .dtpicker-comp > * {
+  color: #0775aa; }
+
+.medical-form2 .dtpicker-components .dtpicker-comp .dtpicker-compButton a:hover,
+.medical-form2 .dtpicker-components .dtpicker-comp .dtpicker-compButton a:focus {
+  color: #0775aa; }
+
+.medical-form2 .dtpicker-buttonCont .dtpicker-button {
+  background: #0775aa; }
+
+.medical-form3 .dtpicker-content {
+  border: 1px solid #9d3373; }
+
+.medical-form3 .dtpicker-header .dtpicker-close {
+  color: #9d3373; }
+
+.medical-form3 .dtpicker-header .dtpicker-value {
+  color: #9d3373; }
+
+.medical-form3 .dtpicker-components .dtpicker-comp > * {
+  color: #9d3373; }
+
+.medical-form3 .dtpicker-components .dtpicker-comp .dtpicker-compButton a:hover,
+.medical-form3 .dtpicker-components .dtpicker-comp .dtpicker-compButton a:focus {
+  color: #9d3373; }
+
+.medical-form3 .dtpicker-buttonCont .dtpicker-button {
+  background: #9d3373; }
+
+.medical-form4 .dtpicker-content {
+  border: 1px solid #563e96; }
+
+.medical-form4 .dtpicker-header .dtpicker-close {
+  color: #563e96; }
+
+.medical-form4 .dtpicker-header .dtpicker-value {
+  color: #563e96; }
+
+.medical-form4 .dtpicker-components .dtpicker-comp > * {
+  color: #563e96; }
+
+.medical-form4 .dtpicker-components .dtpicker-comp .dtpicker-compButton a:hover,
+.medical-form4 .dtpicker-components .dtpicker-comp .dtpicker-compButton a:focus {
+  color: #563e96; }
+
+.medical-form4 .dtpicker-buttonCont .dtpicker-button {
+  background: #563e96; }
+
+.contract-context {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: none;
+  background-color: #fff;
+  color: #017f4f; }
+  .contract-context .contract-header {
+    height: 50px;
+    line-height: 50px;
+    background-color: #cef2e4;
+    font-size: 1.4em;
+    color: #017f4f;
+    padding-left: 20px;
+    font-weight: 700; }
+  .contract-context .contract-close-button {
+    display: inline-block;
+    float: right;
+    color: #017f4f;
+    font-size: 1.2em;
+    cursor: pointer; }
+    .contract-context .contract-close-button i {
+      line-height: 1;
+      display: inline-block;
+      margin-top: 10px;
+      margin-right: 10px; }
+  .contract-context .contract-para {
+    padding: 15px 15px 40px;
+    font-size: 1.4em;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    .contract-context .contract-para .para-outter-wrapper {
+      position: relative; }
+    .contract-context .contract-para p {
+      text-indent: 2em;
+      text-align: justify; }
+    .contract-context .contract-para span {
+      position: absolute;
+      left: 0;
+      top: 0; }
+
+.contract-context2 {
+  color: #0775aa; }
+  .contract-context2 .contract-header {
+    color: #0775aa;
+    background-color: #caecfc; }
+  .contract-context2 .contract-close-button {
+    color: #0775aa; }
+
+.contract-context3 {
+  color: #9d3373; }
+  .contract-context3 .contract-header {
+    color: #9d3373;
+    background-color: #f2cee4; }
+  .contract-context3 .contract-close-button {
+    color: #9d3373; }
+
+.contract-context4 {
+  color: #563e96; }
+  .contract-context4 .contract-header {
+    color: #563e96;
+    background-color: #e1d7fc; }
+  .contract-context4 .contract-close-button {
+    color: #563e96; }
+
+.box-container {
+  position: relative;
+  width: 100%; }
+
+#dtBox a,
+#dtBox a:hover {
+  text-decoration: none; }

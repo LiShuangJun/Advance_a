@@ -1,0 +1,39 @@
+{extend name="common/base" }
+
+{block name="style"}
+
+{/block}
+
+{block name="content"}
+<div class="am-g">
+	<div class="am-u-sm-12">
+		<form class="am-form ajax-form" method="post" action="{:module_url('edit',['id' => $_id])}">
+		         <!--  用户名 -->
+                 {$widget->form('text', ['title' => 'User Name', 'name' => 'user_name', 'value' => $yuyue_list[0]['user_name'],'r_md_num'=>3,'attr'=>' maxlength="30"'])}
+                 <!--  联系电话 -->
+                 {$widget->form('text', ['title' => 'Contact number', 'name' => 'phone', 'value' => $yuyue_list[0]['phone'],'r_md_num'=>3,'attr'=>' maxlength="30"'])}
+		         <!--  邮箱 -->
+                 {$widget->form('text', ['title' => 'Email', 'name' => 'email', 'value' => $yuyue_list[0]['email'],'r_md_num'=>3,'attr'=>' maxlength="30"'])}
+		         <!--  咨询简介 -->
+                 {$widget->form('textarea', ['title' => 'Consulting Profile', 'name' => 'advisory_details', 'value' =>$yuyue_list[0]['advisory_details']])}
+		         <!--  预约日期 -->
+                 {$widget->form('text', ['title' => 'Appointment date ', 'name' => 'submitdate', 'value' => $yuyue_list[0]['submitdate'],'r_md_num'=>3,'attr'=>' maxlength="30"'])}
+		         <!--  预约时间段 -->
+                 {$widget->form('text', ['title' => 'Schedule a time period', 'name' => 'time_quantum', 'value' => $time_quantum[0]['time_quantum'],'r_md_num'=>3,'attr'=>' maxlength="30"'])}
+		         <!--  预约状态 -->
+		           {if condition="$yuyue_list[0]['appointment_state'] eq 1"}
+		               {$widget->form('text', ['title' => 'Appointment status', 'name' => 'appointment_state', 'value' => 'Delegating','r_md_num'=>3,'attr'=>' maxlength="30"'])}
+		           {elseif condition="$yuyue_list[0]['appointment_state'] eq 2"/}
+		               {$widget->form('text', ['title' => 'Appointment status', 'name' => 'appointment_state', 'value' => 'Reservation is successful','r_md_num'=>3,'attr'=>' maxlength="30"'])}
+		           {elseif condition="$yuyue_list[0]['appointment_state'] eq 3"/}
+		               {$widget->form('text', ['title' => 'Appointment status', 'name' => 'appointment_state', 'value' => 'Completed','r_md_num'=>3,'attr'=>' maxlength="30"'])}
+		           {elseif condition="$yuyue_list[0]['appointment_state'] eq 4"/}
+		               {$widget->form('text', ['title' => 'Appointment status', 'name' => 'appointment_state', 'value' => 'Cancel appointment','r_md_num'=>3,'attr'=>' maxlength="30"'])}
+		           {/if}
+                 
+                 {$widget->form('submit', ['title' => '用户操作'])}
+		</form>
+	</div>
+</div>
+{/block}
+

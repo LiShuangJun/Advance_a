@@ -1,0 +1,40 @@
+{extend name="common/base" }
+
+{block name="content"}
+<div class="am-g">
+	<div class="am-u-sm-12">
+		<form class="am-form ajax-form" method="post" action="{:module_url('add')}">
+                    <input type="hidden" value="{$managerid}" name="managerid"/>
+			{$widget->form('text', ['title' => '用户名', 'name' => 'user_name', 'value' => '','r_md_num'=>3])}
+                        {$widget->form('text', ['title' => '姓名', 'name' => 'nickname', 'value' => '','r_md_num'=>1])}
+                                                {$widget->form('select', ['title' => '公司', 'name' => 'company', 'value' => '1','list'=>$company_list])}
+			
+                        {$widget->form('text', ['title' => '登录密码', 'type' => 'password', 'name' => 'pwd', 'value' => '','r_md_num'=>3])}
+			
+			{$widget->form('text', ['title' => '重复密码', 'type' => 'password', 'name' => 'pwd_again', 'value' => '','r_md_num'=>3])}
+			{if condition="$isCm eq 1"}
+			{$widget->form('select', ['title' => '擅长科室', 'name' => 'kslist[]', 'value' => '', 'list' => $kslist, 'attr' => 'multiple','tip'=>'*可多选,重复点击可取消'])}
+                        {$widget->form('select', ['title' => '擅长语言', 'name' => 'langlist[]', 'value' => '', 'list' => $bestlang, 'attr' => 'multiple','tip'=>'*可多选,重复点击可取消'])}
+                        {/if}
+                        {$widget->form('radio', ['title' => '性别', 'name' => 'sex', 'value' => 1,'list'=>$sexlist])}
+			     {$widget->form('text', ['title' => '联系地址', 'name' => 'area', 'value' => '','r_md_num'=>3])}
+			{$widget->form('text', ['title' => '邮箱', 'name' => 'email', 'value' => '','r_md_num'=>3])}
+			
+                        {$widget->form('text', ['title' => '手机号码', 'name' => 'tel', 'value' => '','r_md_num'=>3])}
+                        {$widget->form('select', ['title' => '通知语言', 'name' => 'language', 'value' =>3,'list'=>$languagelist])}
+
+		
+			{$widget->form('image', ['title' => '头像', 'name' => 'avatar', 'value' => '', 'width' => 600,'require'=>false])}
+			
+			{$widget->form('radio', ['title' => '用户状态', 'name' => 'u_status', 'value' => 1, 'list' => $userstatus])}
+	               
+		
+		
+			
+			
+			{$widget->form('submit', ['title' => '用户操作'])}
+			
+		</form>
+	</div>
+</div>
+{/block}

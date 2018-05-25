@@ -1,0 +1,40 @@
+{extend name="common/base" }
+
+{block name="content"}
+<div class="am-g">
+	<div class="am-u-sm-12">
+		<form class="am-form ajax-form" method="post" action="{:module_url('add')}">
+                    <input type="hidden" value="{$managerid}" name="managerid"/>
+			{$widget->form('text', ['title' => 'User Name', 'name' => 'user_name', 'value' => '','r_md_num'=>3])}
+                        {$widget->form('text', ['title' => 'Name', 'name' => 'nickname', 'value' => '','r_md_num'=>1])}
+                                                {$widget->form('select', ['title' => 'Company', 'name' => 'company', 'value' => '1','list'=>$company_list])}
+			
+                        {$widget->form('text', ['title' => 'Login Password', 'type' => 'password', 'name' => 'pwd', 'value' => '','r_md_num'=>3])}
+			
+			{$widget->form('text', ['title' => 'Confirm Password', 'type' => 'password', 'name' => 'pwd_again', 'value' => '','r_md_num'=>3])}
+                        {if condition="$isCm eq 1"}
+			{$widget->form('select', ['title' => 'Specialty', 'name' => 'kslist[]', 'value' => '', 'list' => $kslist, 'attr' => 'multiple','select_default'=>'Please choose','tip'=>'*Can be multiple choice, click repeatedly to cancel.'])}
+                        {$widget->form('select', ['title' => 'Good at language', 'name' => 'langlist[]', 'value' => '', 'list' => $bestlang, 'attr' => 'multiple','select_default'=>'Please choose','tip'=>'*Can be multiple choice, click repeatedly to cancel.'])}
+                        {/if}
+                        {$widget->form('radio', ['title' => 'Gender', 'name' => 'sex', 'value' => 1,'list'=>$sexlist])}
+			     {$widget->form('text', ['title' => 'Residence Address', 'name' => 'area', 'value' => '','r_md_num'=>3])}
+			{$widget->form('text', ['title' => 'Email', 'name' => 'email', 'value' => '','r_md_num'=>3])}
+			
+                        {$widget->form('text', ['title' => 'Mobile Number', 'name' => 'tel', 'value' => '','r_md_num'=>3])}
+                        {$widget->form('select', ['title' => 'Notification language', 'name' => 'language', 'value' =>3,'list'=>$languagelist])}
+
+		
+			{$widget->form('image', ['title' => 'Avatar', 'name' => 'avatar', 'value' => '', 'width' => 600,'require'=>false])}
+			
+			{$widget->form('radio', ['title' => 'User Status', 'name' => 'u_status', 'value' => 1, 'list' => $userstatus])}
+	               
+		
+		
+			
+			
+			{$widget->form('submit', ['title' => 'User Operating','text_ok' => 'Ok','text_cancel' => 'Cancel'])}
+			
+		</form>
+	</div>
+</div>
+{/block}

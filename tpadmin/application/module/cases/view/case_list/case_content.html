@@ -1,0 +1,117 @@
+{extend name="common/base" }
+
+{block name="style"}
+<style type="text/css">
+.article-cover{
+    width: 60px;
+    height: 40px;
+    margin: auto;
+    background-size: cover;
+}
+.myam-g{
+    margin-bottom: 10px;
+}
+</style>
+{/block}
+
+{block name="content"}
+ <section class="am-panel am-panel-success">
+  <header class="am-panel-hd">
+    <h3 class="am-panel-title">case详情</h3>
+  </header>
+  <div class="am-panel-bd">
+     <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>caseID</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.case_code}</span></div>
+       <div class="am-u-sm-3"><strong>salesforceID</strong></div>
+       <div class="am-u-sm-3">88888888888</div>
+     </div>
+      <div class="am-g myam-g">
+          <div class="am-u-sm-3"><strong>服务类型</strong></div>
+          <div class="am-u-sm-3"><span>{$case_list.typename}</span></div>
+          <div class="am-u-sm-3"><strong>科室</strong></div>
+          <div class="am-u-sm-3"><span>{$case_list.ks_name}({$case_list.ks_ename})</span></div>
+      </div>
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>负责的casemanager</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="empty($users) eq 1"}N/N{else/}{$users.nickname}({$users.user_name}){/if}</span></div>
+       <div class="am-u-sm-3"><strong>提交的用户</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.case_username}</span></div>
+       </div>
+      <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>负责的管理员</strong></div>
+       <div class="am-u-sm-9"><span>{if condition="$jtstr eq ''"}N/N{else/}{$jtstr}{/if}</span></div>
+       
+       </div>
+       <hr data-am-widget="divider" style="" class="am-divider am-divider-default" />
+       
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>患者姓名</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.username}</span></div>
+       <div class="am-u-sm-3"><strong>出生日期</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.birthday}</span></div>
+       </div>
+       
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>性别</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.sex eq 1"}男{else/}女{/if}</span></div>
+       <div class="am-u-sm-3"><strong>是否本人</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.isme eq 1"}是{else/}否{/if}</span></div>
+       </div>
+       
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>申请人姓名</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.applicant_name}</span></div>
+       <div class="am-u-sm-3"><strong>与患者的关系</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.relationship eq ''"}本人{else/}{$case_list.relationship}{/if}</span></div>
+       </div>
+       
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>国家</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.country_name}</span></div>
+       <div class="am-u-sm-3"><strong>所在省市区</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.country eq 1"}{$case_list.province_name}-{$case_list.city_name}-{$case_list.district_name}{else/}{$case_list.e_province}{/if}</span></div>
+       </div>
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>详细地址</strong></div>
+       <div class="am-u-sm-9"><span>{$case_list.address}</span></div>
+       
+       </div>
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>邮编</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.zip_code eq ''"}N/N{else/}{$case_list.zip_code}{/if}</span></div>
+       <div class="am-u-sm-3"><strong>邮箱</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.email}</span></div>
+       </div>
+       
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>方便接听电话时间</strong></div>
+       <div class="am-u-sm-3"><span>{$case_list.preferred_time}</span></div>
+       <div class="am-u-sm-3"><strong>当前治疗的医生姓名</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.treatment_doctor eq ''"}N/N{else/}{$case_list.treatment_doctor}{/if}</span></div>
+       </div>
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>当前治疗的医院</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.treatment_hospital eq ''"}N/N{else/}{$case_list.treatment_hospital}{/if}</span></div>
+       <div class="am-u-sm-3"><strong>当前治疗的专科</strong></div>
+       <div class="am-u-sm-3"><span>{if condition="$case_list.specialty eq ''"}N/N{else/}{$case_list.specialty}{/if}</span></div>
+       </div>
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>病情描述</strong></div>
+       <div class="am-u-sm-9"><span>{$case_list.illness}</span></div>
+       </div>
+       <div class="am-g myam-g">
+       <div class="am-u-sm-3"><strong>case备注</strong></div>
+       <div class="am-u-sm-9"><span>{$case_list.case_note}</span></div>
+       </div>
+       
+  </div>
+</section> 
+
+{/block}
+
+{block name="script"}
+
+<script type="text/javascript" src="{$lib_path}/jquery/2.0.0/jquery.min.js?_={$site_version}"></script>
+
+{/block}

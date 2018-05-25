@@ -1,0 +1,25 @@
+{extend name="common/base" }
+
+{block name="content"}
+<div class="am-g">
+	<div class="am-u-sm-12">
+		<form class="am-form ajax-form" method="post" action="{:module_url('add')}">
+			
+			{$widget->form('text', ['title' => 'User Name', 'name' => 'user_name', 'value' => ''])}
+			
+			{$widget->form('text', ['title' => 'Nickname', 'name' => 'user_nick', 'value' => ''])}
+			
+			{$widget->form('text', ['title' => 'Login Password', 'type' => 'password', 'name' => 'user_passwd', 'value' => ''])}
+			
+			{$widget->form('text', ['title' => 'Confirm Password', 'type' => 'password', 'name' => 'user_passwd_confirm', 'value' => ''])}
+			
+			{$widget->form('select', ['title' => 'Group', 'name' => 'user_gid', 'value' => '', 'list' => $select_user_group])}
+			
+			{$widget->form('select', ['title' => 'Status', 'name' => 'user_status', 'value' => '', 'list' => $select_user_status])}
+			
+			{$widget->form('submit', ['title' => 'User Operating','text_ok' => 'Ok','text_cancel' => 'Cancel'])}
+
+		</form>
+	</div>
+</div>
+{/block}

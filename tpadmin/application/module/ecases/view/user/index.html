@@ -1,0 +1,75 @@
+{extend name="common/base" }
+
+{block name="content"}
+<div class="am-g">
+	<div class="am-u-sm-12 am-u-md-6">
+		<div class="am-btn-toolbar">
+			<div class="am-btn-group am-btn-group-xs">
+				<a class="am-btn am-btn-default" href="{:module_url('add')}">
+					<span class="am-icon-plus"></span> Add
+				</a>
+				<a class="am-btn am-btn-default nd-refresh">
+					<span class="am-icon-refresh"></span> Refresh
+				</a>
+                                <a class="am-btn am-btn-default" href="{:module_url('s_user_list/exportUser')}">
+					<span class="am-icon-level-down"></span> Export casemanager
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<br/>
+
+<div class="am-g">
+	<div class="am-u-sm-12">
+		<table class="am-table am-table-striped am-table-radius am-table-bordered">
+			<thead>
+				<tr>
+					<th>User Name</th>
+					<th>Login IP</th>
+					<th>Times Logged In</th>
+					<th>Login Time</th>
+					<th>Group</th>
+					<th>Status</th>
+					<th>Options</th>
+				</tr>
+			</thead>
+			<tbody>
+			{volist name="_list" id="vo"}
+				<tr>
+					<td class="am-text-middle">{$vo.user_name}</td>
+					<td class="am-text-middle">{$vo.login_ip}</td>
+					<td class="am-text-middle">{$vo.login_count}</td>
+					<td class="am-text-middle">{$vo.login_time|date='Y-m-d H:i:s',###}</td>
+					<td class="am-text-middle">
+						{$widget->row('select', ['value' => $vo['user_gid'], 'list' => $select_user_group, 'url' => module_url('modify', ['id' => $vo['id'], 'field' =>  'user_gid'])])}
+					</td>
+					<td class="am-text-middle">
+						{$widget->row('select', ['value' => $vo['user_status'], 'list' => $select_user_status, 'url' => module_url('modify', ['id' => $vo['id'], 'field' =>  'user_status'])])}
+					</td>
+					<td class="am-text-middle">
+						<div class="am-btn-toolbar">
+							<div class="am-btn-group am-btn-group-xs">
+								
+                                {$widget->row('button', ['title' => 'Edit', 'class' => 'am-text-secondary', 'icon' => 'am-icon-pencil-square-o', 'url' => module_url('edit', ['id' => $vo['id']])])}
+                                {if condition="$vo['im_menu'] eq 'add'"}
+                                {$widget->row('button', ['title' => 'Add layim', 'class' => 'am-text-secondary', 'icon' => 'am-icon-pencil-square-o', 'url' => module_url('s_user_list/add', ['forid' => $vo['id']])])}
+                                {elseif condition="$vo['im_menu'] eq 'edit'"/}
+                                {$widget->row('button', ['title' => 'Edit layim', 'class' => 'am-text-secondary', 'icon' => 'am-icon-pencil-square-o', 'url' => module_url('s_user_list/edit', ['id' => $vo['id']])])}
+                                {/if}
+                                {$widget->row('button', ['title' => 'Delete', 'class' => 'am-text-danger ajax-get ajax-confirm', 'icon' => 'am-icon-trash-o', 'url' => module_url('delete', ['id' => $vo['id']])])}
+							</div>
+						</div>
+					</td>
+				</tr>
+			{/volist}
+			</tbody>
+		</table>
+		
+		{if condition="!empty($_page)"}
+            <div class="am-fl">Total: {$_total} </div>
+            <div class="am-fr">{$_page}</div>
+        {/if}
+	</div>
+</div>
+{/block}

@@ -1,0 +1,103 @@
+{extend name="common/base" }
+
+{block name="style"}
+<style type="text/css">
+.article-cover{
+    width: 60px;
+    height: 40px;
+    margin: auto;
+    background-size: cover;
+}
+</style>
+{/block}
+
+{block name="content"}
+ <section class="am-panel am-panel-success">
+  <header class="am-panel-hd">
+    <h3 class="am-panel-title">Casemanager List</h3>
+  </header>
+  <div class="am-panel-bd">
+    <form action="{:module_url('index',['caseid'=>$caseid])}" class="search-form">
+  
+<div class="am-g">
+
+    <div class="am-u-sm-12 am-u-md-5">
+        <div class="am-btn-toolbar">
+            <div class="am-btn-group am-btn-group-xs">
+                
+                <a class="am-btn am-btn-default nd-refresh">
+                    <span class="am-icon-refresh"></span> Refresh
+                </a>
+                
+            </div>
+        </div>
+    </div>
+    
+
+    
+    {$widget->search('keyword', ['name' => 'keyword', 'holder' => 'Name', 'value' => '', 'md_num' => 3,'text'=>'Search'])}
+
+</div>
+</form>
+
+<div class="am-g">
+    <div class="am-u-sm-12">
+    
+        <table class="am-table am-table-striped am-table-radius am-table-bordered am-form">
+            <thead>
+                <tr>
+                    <th >User name</th>
+                    <th>Language</th>
+                    <th>Specialty</th>
+                    <th>Current Case Numbers</th>
+                    <th>The number of case solutions</th>
+                    <th >Contact Telephone</th>
+                    <th>Operate</th>
+                </tr>
+            </thead>
+            <tbody>
+           {foreach name="userlist" item="vo"}
+           
+                <tr>
+                    <td class="am-text-center am-text-middle">
+                      {if condition="$vo.tuijian eq 1"}<span class="am-badge am-badge-danger am-round">!</span>{/if}
+                      {$vo.nickname}({$vo.user_name})
+                    </td>
+                    <td>{$vo.langstr}</td>
+                    <td class="am-text-middle">{$vo.ksstr}</td>
+                    <td class="am-text-middle">{$vo.case_count}</td>
+                    <td class="am-text-middle">{$vo.worker.complete_count}</td>
+                    <td class="am-text-middle">
+                       {$vo.tel}
+                    </td>
+
+                    <td class="am-text-middle">
+                        <div class="am-btn-toolbar">
+                            <div class="am-btn-group am-btn-group-xs">
+
+                               {if condition="$allow_zd eq 1"}{$widget->row('button', ['title' => 'Specified', 'class' => 'am-text-danger ajax-get ajax-confirm', 'icon' => 'am-icon-twitter', 'url' => module_url('case_list/modify', ['id' => $caseid, 'field' => 'case_manager','value'=>$vo['managerid']])])}{/if} 
+                                {if condition="$vo.case_count gt 0 "}{$widget->row('button', ['title' => 'Check his case', 'class' => 'am-text-primary', 'icon' => 'am-icon-eye', 'attr' => 'target="new"', 'url' => module_url('case_list/index', ['managerid' => $vo['managerid']])])}{/if}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+             {/foreach}
+            </tbody>
+        </table>
+        
+        {if condition="!empty($_page)"}
+            <div class="am-fl">Total {$_total} </div>
+            <div class="am-fr"> {$_page}</div>
+        {/if}
+    </div>
+</div>
+  </div>
+</section> 
+
+{/block}
+
+{block name="script"}
+
+<script type="text/javascript" src="{$lib_path}/jquery/2.0.0/jquery.min.js?_={$site_version}"></script>
+
+{/block}

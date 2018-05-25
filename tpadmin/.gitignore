@@ -1,0 +1,9 @@
+.idea
+.settings
+.buildpath
+.project
+*.log
+thinkphp
+composer.lock
+/application/extra
+/nbproject/private/
